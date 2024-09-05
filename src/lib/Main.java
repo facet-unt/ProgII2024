@@ -1,7 +1,10 @@
 package lib;
 
+import productos.modelos.Producto;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("sasaa");
+        Producto unProducto = new Producto();
+        unProducto.mostrar();
     }
 }
