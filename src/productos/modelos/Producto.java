@@ -1,14 +1,22 @@
 package productos.modelos;
 
+import usuarios.modelos.Cliente;
+
 public class Producto {
-    String nombre;
-    String descripcion;
-    float precio;
-    String estado;
-    
-    public void mostrar() {
-        System.out.println("Soy un producto");
+    public String nombre;
+    public String descripcion;
+    public float precio;
+    public String estado;
+
+    /**
+     * Este método permite mostrar un Producto
+     * @return devuelve nada
+     */
+    public void mostrar() {        
+        System.out.println(nombre);
+        System.out.println(precio);        
     }
+       
 }
 
 
