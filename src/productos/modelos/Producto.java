@@ -12,6 +12,7 @@ public class Producto {
      * Este método permite mostrar un Producto
      * @return devuelve nada
      */
+    
     public void mostrar() {        
         System.out.println(nombre);
         System.out.println(precio);        

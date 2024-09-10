@@ -8,7 +8,7 @@ package usuarios.modelos;
  *
  * @author joaquincoro
  */
-public class Cliente {
+public class Empleado {
     String correo = new String();
     String clave = new String();
     String apellido = new String();

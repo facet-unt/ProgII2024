@@ -8,11 +8,11 @@ package usuarios.modelos;
  *
  * @author joaquincoro
  */
-public class Cliente {
+public class Encargado {
     String correo = new String();
     String clave = new String();
     String apellido = new String();
-    String nombre = new String();
+    String nombre = new String();   
     
     public void mostrar(){
         System.out.println(nombre);
