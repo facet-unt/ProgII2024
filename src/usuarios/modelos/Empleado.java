@@ -1,7 +1,8 @@
 
 package usuarios.modelos;
 
-public class Cliente {
+
+public class Empleado {
     
     String correo;
     String clave;
