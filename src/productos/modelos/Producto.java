@@ -4,7 +4,7 @@ import usuarios.modelos.Cliente;
 
 public class Producto {
     public String nombre;
-    public String descripcion;
+    public String descripcion="detalles";
     public float precio;
     public String estado;
 
@@ -16,7 +16,9 @@ public class Producto {
         System.out.println(nombre);
         System.out.println(precio);        
     }
-       
+    public String toString(){
+        return descripcion;
+    }
 }
 
 
