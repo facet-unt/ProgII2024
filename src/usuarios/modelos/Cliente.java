@@ -2,15 +2,15 @@
 package usuarios.modelos;
 
 public class Cliente {
-    String Nombre;
-    String Apellido;
-    String Correo;
-    String Clave;
+    public String Nombre;
+    public String Apellido;
+    public String Correo;
+    public String Clave;
     
     public void mostrar(){
-        System.out.println(Nombre);
-        System.out.println(Apellido);
-        System.out.println(Correo);
+        System.out.println("Nombre: "+Nombre);
+        System.out.println("Apellido: " +Apellido);
+        System.out.println("Correo: " +Correo);
         
     }
 }

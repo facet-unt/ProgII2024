@@ -18,11 +18,11 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "El producto es: "+descripcion+", Su codigo es: "+ Codigo+ "Su precio es: "+precio+"Su estado es: "+estado;
+        return "El producto es: "+descripcion;
     }
   
 }
 
-
+//Su codigo es: "+ Codigo+ "Su precio es: "+precio+"Su estado es: "+estado
 
 
