@@ -1,0 +1,35 @@
+[33mcommit 954fab507ca06663cb74e839d2505f7846378f87[m[33m ([m[1;36mHEAD -> [m[1;32mdocentes[m[33m, [m[1;31morigin/docentes[m[33m)[m
+Author: Luis Nieto <lnieto@herrera.unt.edu.ar>
+Date:   Mon Sep 9 18:24:32 2024 -0300
+
+    Creación de Cliente
+
+[33mcommit 7e50f6191c260eddec4aa89413da17661ec19ae4[m
+Author: Luis Nieto <lnieto@herrera.unt.edu.ar>
+Date:   Mon Sep 9 18:24:19 2024 -0300
+
+    Modificación de Producto
+
+[33mcommit 2c66da7c389390abd8144e969a5b1ff76579353d[m
+Author: Luis Nieto <lnieto@herrera.unt.edu.ar>
+Date:   Thu Sep 5 18:41:16 2024 -0300
+
+    Creación de la clase Producto
+
+[33mcommit 9fd5e1f5e446b294e2866596f4c3163602b0b11a[m
+Author: Luis Nieto <lnieto@herrera.unt.edu.ar>
+Date:   Mon Sep 2 18:52:48 2024 -0300
+
+    Corrección de gitignore
+
+[33mcommit e1fb1cffc07bf708865c619e246394a03e4a2c0e[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Luis Nieto <lnieto@herrera.unt.edu.ar>
+Date:   Mon Sep 2 18:12:53 2024 -0300
+
+    Inicio del proyecto
+
+[33mcommit 4a55cb69f79c19772ba3d384d854770d8071a648[m
+Author: Luis Nieto <lnieto@herrera.unt.edu.ar>
+Date:   Mon Sep 2 18:05:03 2024 -0300
+
+    Commit inicial
