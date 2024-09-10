@@ -10,12 +10,13 @@ package usuarios.modelos;
  */
 public class Empleado {
     
-    String correo;
-    String clave;
-    String apellido;
-    String nombre;
+    public String correo;
+    public String clave;
+    public String apellido;
+    public String nombre;
     
     public void mostrar() {
+        System.out.println("Datos del empleado");
         System.out.println("Correo: " + correo);
         System.out.println("Clave: " + clave);
         System.out.println("Apellido: " + apellido);
