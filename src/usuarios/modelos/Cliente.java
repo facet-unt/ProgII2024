@@ -1,6 +1,6 @@
 
 package usuarios.modelos;
 
-public class Cliente {
-    
-}
+    public class Cliente {
+
+    }    
