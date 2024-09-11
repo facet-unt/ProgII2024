@@ -3,16 +3,27 @@ package productos.modelos;
 import usuarios.modelos.Cliente;
 
 public class Producto {
-    public int codigo;
-    public String nombre;
-    public String descripcion;
-    public float precio;
-    public String estado;
+    private int codigo;
+    private String nombre;
+    private String descripcion;
+    private float precio;
+    private String estado;
 
     /**
-     * Este método permite mostrar un Producto
+   
      * @return devuelve nada
      */
+    
+    
+    
+    public Producto(int codigo, String nombre, String descripcion, float precio, String estado) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.estado = estado;
+    }
+
     public void mostrar() {
         System.out.println("Datos del producto");
         System.out.println("Codigo: " + codigo);
