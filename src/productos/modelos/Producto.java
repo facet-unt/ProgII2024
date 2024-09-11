@@ -3,58 +3,30 @@ package productos.modelos;
 import usuarios.modelos.Cliente;
 
 public class Producto {
-   
-    private String descripcion;
-    private float precio;
-    private String estado;
-    private int Codigo;
+    public int codigo;
+    public String nombre;
+    public String descripcion;
+    public float precio;
+    public String estado;
 
-    public String getDescripcion() {
+    /**
+     * Este método permite mostrar un Producto
+     * @return devuelve nada
+     */
+    public void mostrar() {
+        System.out.println("Datos del producto");
+        System.out.println("Codigo: " + codigo);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Precio: " + precio);
+        System.out.println("Descripcion: " + descripcion);
+        System.out.println("Estado: " + estado);
+    }
+       
+    public String toString(){
         return descripcion;
     }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public int getCodigo() {
-        return Codigo;
-    }
-
-    public void setCodigo(int Codigo) {
-        this.Codigo = Codigo;
-    }
-
-    public void mostrar(){
-        System.out.println(descripcion);
-        System.out.println(precio);
-        System.out.println(estado);
-        System.out.println(Codigo);
-    }
-
-    @Override
-    public String toString() {
-        return "El producto es: "+descripcion + Codigo;
-    }
-  
 }
 
-//Su codigo es: "+ Codigo+ "Su precio es: "+precio+"Su estado es: "+estado
+
 
 
