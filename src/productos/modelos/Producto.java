@@ -16,8 +16,10 @@ public class Producto {
         System.out.println(nombre);
         System.out.println(precio);        
     }
+    
+    
     public String toString(){
-        return descripcion;
+        return "Nombre de producto: " +nombre + "\n" + "Descripcion: " + descripcion + "\n" + "Precio " + precio;
     }
 }
 

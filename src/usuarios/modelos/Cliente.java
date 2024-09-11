@@ -2,10 +2,10 @@
 package usuarios.modelos;
 
 public class Cliente {
-    String correo;
-    String clave;
-    String apellido;
-    String nombre;
+    public String correo;
+    public String clave;
+    public String apellido;
+    public String nombre;
 
     void mostrar() {        
         System.out.println(correo);
@@ -13,4 +13,9 @@ public class Cliente {
         System.out.println(apellido);
         System.out.println(nombre);        
     }
+    @Override
+    public String toString(){
+        return "Apellido y nombre: " + apellido + nombre  + "\n" + "correo: " + correo + "\n";
+    }
+    
 }

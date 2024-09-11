@@ -9,15 +9,20 @@ package usuarios.modelos;
  * @author estudiante
  */
 public class Encargado {
-    String correo;
-    String clave;
-    String apellido;
-    String nombre;
+    public String correo;
+    public String clave;
+    public String apellido;
+    public String nombre;
 
     void mostrar() {        
         System.out.println(correo);
         System.out.println(clave);
         System.out.println(apellido);
-        System.out.println(nombre);        
+        System.out.println(nombre);
+    }    
+    @Override
+     public String toString(){
+        return "Apellido y nombre: " + apellido + nombre  + "\n" + "correo: " + correo + "\n";
     }
+     
 }
