@@ -9,6 +9,9 @@ public class Empleado {
     String apellido;
     String nombre;
     
+    public void mostrar(){
     
+        System.out.println("Nombre:" + nombre +", apellido:" + apellido +", correo:" + correo);
+    }
     
 }

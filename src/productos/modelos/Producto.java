@@ -7,6 +7,7 @@ public class Producto {
     public String descripcion;
     public float precio;
     public String estado;
+    public int codigo;
 
     /**
      * Este método permite mostrar un Producto
@@ -17,6 +18,8 @@ public class Producto {
         System.out.println(precio);        
     }
        
+    
+    
 }
 
 

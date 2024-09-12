@@ -9,5 +9,7 @@ public class Main {
         unProducto.nombre = "Pizza";
         unProducto.precio = 35.50f;
         unProducto.mostrar();
+        unProducto.toString();
+        System.out.println(unProducto.toString());
     }
 }
