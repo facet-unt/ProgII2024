@@ -1,7 +1,14 @@
-
+    /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package usuarios.modelos;
 
-public class Cliente {
+/**
+ *
+ * @author estudiante
+ */
+public class Encargado {
     
     public String correo;
     public String clave;
@@ -9,7 +16,7 @@ public class Cliente {
     public String nombre;
     
     public void mostrar() {
-        System.out.println("Datos del cliente");
+        System.out.println("Datos del encargado");
         System.out.println("Correo: " + correo);
         System.out.println("Clave: " + clave);
         System.out.println("Apellido: " + apellido);
