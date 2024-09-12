@@ -17,6 +17,11 @@ public class Producto {
         System.out.println(precio);        
     }
        
+public String toString(){
+        return "Descripcion: " + descripcion;
+    }
+
+
 }
 
 
