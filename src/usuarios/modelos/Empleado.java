@@ -1,18 +1,18 @@
 
 package usuarios.modelos;
 
-public class empleado {
+public class Empleado {
     public String correo;
     public String clave;
     public String apellido;
     public String nombre;
 
-    void mostrar() {   
+    public void mostrar() {   
      
-        System.out.println("Correo:" +correo);
+        System.out.println("Correo: " +correo);
         System.out.println("Clave: " +clave);
-        System.out.println("Apellido" +apellido);
-        System.out.println("Nombre:" +nombre);
+        System.out.println("Apellido " +apellido);
+        System.out.println("Nombre: " +nombre);
         
     }
 
