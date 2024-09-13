@@ -14,7 +14,7 @@ import usuarios.modelos.Encargado;
  *
  * @author estudiante
  */
-public class ControladorPrincipal {
+public class controladorPrincipal {
 
     public static void main(String[] args) {
         ArrayList<Cliente> Clientes = new ArrayList();
@@ -59,98 +59,96 @@ public class ControladorPrincipal {
         Empleados.add(Empleado3);
 
 
-       Producto1.Codigo=1234;
+       Producto1.nombre="Gaseosa1";
        Producto1.descripcion="Gaseosa";
        Producto1.estado="Con stock";
        Producto1.precio= 1220f;
 
-       Producto2.Codigo=12345;
+       Producto2.nombre="Alfajor1";
        Producto2.descripcion="Alfajor";
        Producto2.estado="Sin stock";
        Producto2.precio= 600f;
 
-       Producto3.Codigo=123456;
+       Producto3.nombre="Agua1";
        Producto3.descripcion="Agua";
        Producto3.estado="Con stock";
        Producto3.precio= 800f;
 
-       Cliente1.Apellido="Martinez";
-       Cliente1.Nombre="Marcos";
-       Cliente1.Correo="marcos@martinez.com";
-       Cliente1.Clave="12345";
+       Cliente1.apellido="Martinez";
+       Cliente1.nombre="Marcos";
+       Cliente1.correo="marcos@martinez.com";
+       Cliente1.clave="12345";
 
-       Cliente2.Apellido="Marquez";
-       Cliente2.Nombre="Ricardo";
-       Cliente2.Correo="ricador@marquez.com";
-       Cliente2.Clave="12345";
+       Cliente2.apellido="Marquez";
+       Cliente2.nombre="Ricardo";
+       Cliente2.correo="ricador@marquez.com";
+       Cliente2.clave="12345";
 
-       Cliente3.Apellido="Lopez";
-       Cliente3.Nombre="Sandra";
-       Cliente3.Correo="sandra@lopez.com";
-       Cliente3.Clave="12345";
+       Cliente3.apellido="Lopez";
+       Cliente3.nombre="Sandra";
+       Cliente3.correo="sandra@lopez.com";
+       Cliente3.clave="12345";
 
-       Encargado1.Apellido = "Pereira";
-       Encargado1.Nombre = "Maria";
-       Encargado1.Correo = "maria@gpereira.coma";
-       Encargado1.Clave="12345";
+       Encargado1.apellido = "Pereira";
+       Encargado1.nombre = "Maria";
+       Encargado1.correo = "maria@gpereira.coma";
+       Encargado1.clave="12345";
 
-       Encargado2.Apellido = "Gerez";
-       Encargado2.Nombre = "Sabrina";
-       Encargado2.Correo = "sabrina@gerez.com";
-       Encargado2.Clave="12345";
+       Encargado2.apellido = "Gerez";
+       Encargado2.nombre = "Sabrina";
+       Encargado2.correo = "sabrina@gerez.com";
+       Encargado2.clave="12345";
 
-       Encargado3.Apellido = "Perez";
-       Encargado3.Nombre = "Mauricio";
-       Encargado3.Correo = "mauricio@perez.com";
-       Encargado3.Clave="12345";
+       Encargado3.apellido = "Perez";
+       Encargado3.nombre = "Mauricio";
+       Encargado3.correo = "mauricio@perez.com";
+       Encargado3.clave="12345";
 
 
-       Empleado1.Apellido="Martinez";
-       Empleado1.Nombre="Mario";
-       Empleado1.Correo="mario@martinez.com";
-       Empleado1.Clave="12345";
+       Empleado1.apellido="Martinez";
+       Empleado1.nombre="Mario";
+       Empleado1.correo="mario@martinez.com";
+       Empleado1.clave="12345";
 
-       Empleado2.Apellido="Marquez";
-       Empleado2.Nombre="Maria";
-       Empleado2.Correo="maria@marquez.com";
-       Empleado2.Clave="12345";
+       Empleado2.apellido="Marquez";
+       Empleado2.nombre="Maria";
+       Empleado2.correo="maria@marquez.com";
+       Empleado2.clave="12345";
 
-       Empleado3.Apellido="Pereira";
-       Empleado3.Nombre="Melanie";
-       Empleado3.Correo="melanie@pereira.com";
-       Empleado3.Clave="12345";
+       Empleado3.apellido="Pereira";
+       Empleado3.nombre="Melanie";
+       Empleado3.correo="melanie@pereira.com";
+       Empleado3.clave="12345";
          
         
-                  
+          
                 
-        for (Producto producto : Productos) {
-            Producto.mostrar();
-            System.out.println("");
-            
-        }
-
-
-        for (Cliente cliente : Clientes) {
-            Cliente.mostrar();
-            System.out.println("");
-            
-        }
-
-
-        for (Encargado encargado : Encargados) {
-            Encargado.mostrar();
-            System.out.println("");
-            
-        }
-
-
-
-        for (Empleado empleado : Empleados) {
-            Empleado.mostrar();
-            System.out.println("");
-            
-        }
-
+        for (Producto producto :Productos){
+          producto.mostrar();
+          System.out.println(producto);
+          System.out.println("");
+     
         
     }
+         for (Cliente Cliente :Clientes){
+          Cliente.mostrar();
+          System.out.println("");
+     
+        
+    }
+         
+         for (Empleado Empleado :Empleados){
+          Empleado.mostrar();
+          System.out.println("");
+     
+        
+    }
+         
+         for (Encargado Encargado :Encargados){
+          Encargado.mostrar();
+          System.out.println("");
+     
+        
+    }
+}
 }
