@@ -13,11 +13,19 @@ public class Producto {
      * @return devuelve nada
      */
     public void mostrar() {        
-        System.out.println(nombre);
-        System.out.println(precio);        
+        System.out.println("Nombre:" +nombre);
+        System.out.println("Precio:" +precio);
+        
+        
+        
     }
        
-public String toString(){
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString(){
         return "Descripcion: " + descripcion;
     }
 
