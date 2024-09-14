@@ -13,8 +13,8 @@ public class Producto {
      * Este método permite mostrar un Producto
      * @return devuelve nada
      */
-    void mostrar(){
-    System.out.println("Codigo: "+ codigo + "Descripcion: "+ descripcion + "Categoria: "+ categoria + "Estado: "+ estado + "Precio: "+ precio);
+    public void mostrar(){
+    System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
     
        
