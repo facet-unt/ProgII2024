@@ -14,8 +14,11 @@ public class Producto {
      */
     
     public void mostrar() {        
-        System.out.println(nombre);
-        System.out.println(precio);        
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Descripción: " + descripcion);
+        System.out.println("Precio: " + precio);
+        System.out.println("Estado: " + estado);
+        System.out.println(" ");   
     }
        
 }

@@ -19,5 +19,6 @@ public class Cliente {
         System.out.println("Apellido: " + apellido);
         System.out.println("Correo: " + correo);
         System.out.println("Clave de acceso: " + clave);
+        System.out.println(" ");
     }
 }
