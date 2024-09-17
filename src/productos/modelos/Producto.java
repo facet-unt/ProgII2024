@@ -1,7 +1,5 @@
 package productos.modelos;
 
-import usuarios.modelos.Cliente;
-
 public class Producto {
     public String nombre;
     public String descripcion;
@@ -16,9 +14,11 @@ public class Producto {
         System.out.println(nombre);
         System.out.println(precio);        
     }
+
+    @Override
+    public String toString() {
+        return "Producto" + "nombre" + nombre + ", descripcion" + descripcion + '}';
+    }
        
+    
 }
-
-
-
-
