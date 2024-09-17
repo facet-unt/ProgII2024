@@ -23,35 +23,35 @@ public class Empleado {
         this.nombre = nombre;
     }
 
-    public String getCorreo() {
+    public String verCorreo() {
         return correo;
     }
 
-    public void setCorreo(String correo) {
+    public void asignarCorreo(String correo) {
         this.correo = correo;
     }
 
-    public String getClave() {
+    public String verClave() {
         return clave;
     }
 
-    public void setClave(String clave) {
+    public void asignarClave(String clave) {
         this.clave = clave;
     }
 
-    public String getApellido() {
+    public String verApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void asignarApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public String getNombre() {
+    public String verNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
 }

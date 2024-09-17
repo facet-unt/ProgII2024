@@ -54,6 +54,7 @@ public class ControladorPrincipal {
 
         System.out.println("Encargados");
         System.out.println("==========");
+        
         for(Encargado e : encargados) {
             e.mostrar();
             System.out.println();
@@ -87,5 +88,35 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        
+        unProducto1.asignarNombre("Milanesa");
+        unProducto1.asignarPrecio(4000.0f);
+        unProducto1.asignarEstado("DISPONIBLE");
+        unProducto1.asignarDescripcion("PLATO PRINCIPAL");
+        
+        unProducto2.asignarNombre("Empanada");
+        unProducto2.asignarPrecio(600.0f);
+        unProducto2.asignarEstado("NO DISPONIBLE");
+        unProducto2.asignarDescripcion("ENTRADA");
+        
+        for(Producto p : productos){
+            p.mostrar();
+            System.out.println("");
+        }
+        
+        unEncargado1.asignarCorreo("juanfernande@gmail.com");
+        unEncargado1.asignarClave("12345");
+        unEncargado1.asignarApellido("Fernandez");
+        unEncargado1.asignarNombre("Juan");
+        
+        unEncargado2.asignarCorreo("sofiaperez@gmail.com");
+        unEncargado2.asignarClave("54321");
+        unEncargado2.asignarApellido("Perez");
+        unEncargado2.asignarNombre("Sofia");
+        
+       for(Encargado e : encargados){
+           e.mostrar();
+           System.out.println("");
+       }
     }
 }

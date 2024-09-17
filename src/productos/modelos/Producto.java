@@ -34,43 +34,43 @@ public class Producto {
         this.estado = estado;
     }
 
-    public String getEstado() {
+    public String verEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void asignarEstado(String estado) {
         this.estado = estado;
     }
 
-    public int getCodigo() {
+    public int verCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void asignarCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public String getNombre() {
+    public String verNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
+    public String verDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
+    public void asignarDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public float getPrecio() {
+    public float verPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void asignarPrecio(float precio) {
         this.precio = precio;
     }
 }
