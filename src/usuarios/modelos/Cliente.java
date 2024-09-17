@@ -8,6 +8,8 @@ public class Cliente {
     private String apellido;
     private String nombre;
     
+    // Metodo para mostrar la clase
+    
     public void mostrar() {
         System.out.println("Datos del cliente");
         System.out.println("Correo: " + correo);
@@ -15,6 +17,8 @@ public class Cliente {
         System.out.println("Apellido: " + apellido);
         System.out.println("Nombre: " + nombre);
     }
+    
+    // Definicion de los constructores de clase
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
@@ -27,6 +31,7 @@ public class Cliente {
         this(c, "123466", a, n);   
     }
     
+    // Definicion de los metodos get/set de la clase para las 4 variables de instancia
     
     public String verCorreo() {
         return correo;
