@@ -3,11 +3,13 @@ package productos.modelos;
 import usuarios.modelos.Cliente;
 
 public class Producto {
+
     public String nombre;
-    public int codigo;  
-    public String descripcion;
-    public float precio;
-    public String estado;
+    private int codigo;
+    private String descripcion;
+    private float precio;
+    private String estado;
+    private String correo;
 
     /**
      * Este método permite mostrar un Producto
@@ -25,13 +27,57 @@ public class Producto {
     public String toString() {
         return "Producto{" + "nombre=" + nombre + ", codigo=" + codigo + '}';
     }
-       
-       
-    public String toString(){
+
+    public Producto(String nombre, int codigo, String descripcion, float precio, String estado) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.estado = estado;
+    }
+
+    public Producto(String c, String a, String n) {
+        this(c, "123466", a, n);
+    }
+
+    public String verNombre() {
+        return nombre;
+    }
+
+    public void asignarNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int verCodigo() {
+        return codigo;
+    }
+
+    public void asignarCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String verDescripcion() {
         return descripcion;
     }
+
+    public void asignarDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public float verPrecio() {
+        return precio;
+    }
+
+    public void asignarApellido(float precio) {
+        this.precio = precio;
+    }
+    
+    public String verEstado() {
+        return estado;
+    }
+
+    public void asignarEstado(String estado) {
+        this.estado = estado;
+    }
+
 }
-
-
-
-
