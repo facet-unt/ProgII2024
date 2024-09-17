@@ -74,7 +74,7 @@ public class controladorPrincipal {
        Producto3.estado="Con stock";
        Producto3.precio= 800f;
 
-       Cliente1.apellido="Martinez";
+       Cliente1.apellid="Martinez";
        Cliente1.nombre="Marcos";
        Cliente1.correo="marcos@martinez.com";
        Cliente1.clave="12345";

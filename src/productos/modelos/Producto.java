@@ -20,6 +20,43 @@ public class Producto {
         
     }
        
+    
+    
+     public void asignarNombre (String n){
+        n = nombre;
+        
+    }
+    
+     public void asignarPrecio (Float p){
+        p = precio;
+        
+    }
+     
+      public void asignarEstado (String e){
+        e = estado;
+        
+    }
+ 
+
+    public String verNombre() {   
+     
+        return nombre;
+        
+    }
+
+    public float verPrecio() {   
+     
+        return precio;
+        
+    }
+    
+    public String verDescripcion() {   
+     
+        return descripcion;
+        
+    }
+    
+    
     /**
      *
      * @return
