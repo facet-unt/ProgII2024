@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package usuarios.modelos;
 
 public class Cliente {
-    
     private String correo;
     private String clave;
     private String apellido;
@@ -29,7 +24,6 @@ public class Cliente {
     public Cliente(String c, String a, String n) {
         this(c, "123466", a, n);   
     }
-    
     
     public String verCorreo() {
         return correo;
