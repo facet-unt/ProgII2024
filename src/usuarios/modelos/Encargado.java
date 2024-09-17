@@ -8,11 +8,11 @@ public class Encargado {
     private String nombre;
     
     public void mostrar() {
-   
-        System.out.println("El correo del encargados es:" + correo);
-        System.out.println("La clave del encargado es: " + clave);
-        System.out.println("El apellido del encargado es: " + apellido);
-        System.out.println("El Nombre del encargado es: " + nombre);
+        System.out.println("Datos del encargado");
+        System.out.println("Correo: " + correo);
+        System.out.println("Clave: " + clave);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Nombre: " + nombre);
     }
 
     public Encargado(String correo, String clave, String apellido, String nombre) {

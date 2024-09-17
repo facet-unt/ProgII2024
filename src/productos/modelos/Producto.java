@@ -1,11 +1,11 @@
 package productos.modelos;
 
 public class Producto {
-    private int codigo;
-    private String nombre;
-    private String descripcion;
-    private float precio;
-    private String estado;
+    public int codigo;
+    public String nombre;
+    public String descripcion;
+    public float precio;
+    public String estado;
 
     public void mostrar() {
         System.out.println("Datos del producto");
@@ -15,14 +15,21 @@ public class Producto {
         System.out.println("Descripcion: " + descripcion);
         System.out.println("Estado: " + estado);
     }
-
-    @Override
-    public String toString() {
-        return "Producto" + "nombre" + nombre + ", descripcion" + descripcion + '}';
+       
+    public String toString(){
+        return descripcion;
     }
 
-//    public String toString(){
-//        return descripcion;
-//    }
-
+    public Producto(int codigo, String nombre, String descripcion, float precio, String estado) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.estado = estado;
+    }
+    
 }
+
+
+
+

@@ -1,10 +1,8 @@
 package principal.controladores;
 
 import java.util.ArrayList;
-import productos.modelos.Producto;
-import usuarios.modelos.Cliente;
-import usuarios.modelos.Empleado;
-import usuarios.modelos.Encargado;
+import usuarios.modelos.*;
+import productos.modelos.*;
 
 public class ControladorPrincipal {
     
@@ -62,9 +60,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", 1.0f, "DISPONIBLE");        
-        Producto unProducto2 = new Producto(2, "Producto2", "PLATOPRINCIPAL", 2.0f, "DISPONIBLE");
-        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE", 3.0f, "DISPONIBLE");
+        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", 1.0f,"DISPONIBLE");        
+        Producto unProducto2 = new Producto(2, "Producto2", "PLATOPRINCIPAL",2.0f, "DISPONIBLE");
+        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE",3.0f, "DISPONIBLE");
 
         productos.add(unProducto1);
         productos.add(unProducto2);
@@ -89,6 +87,5 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
-        
     }
 }
