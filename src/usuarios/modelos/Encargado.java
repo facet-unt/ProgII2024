@@ -1,24 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package usuarios.modelos;
 
 /**
  *
+<<<<<<< HEAD
  * @author joaquincoro
  */
+ * @author estudiante
+ */
 public class Encargado {
-    String correo = new String();
-    String clave = new String();
-    String apellido = new String();
-    String nombre = new String();   
     
-    public void mostrar(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Apellido: " + apellido);
+    public String correo;
+    public String clave;
+    public String apellido;
+    public String nombre;
+    
+    public void mostrar() {
+        System.out.println("Datos del encargado");
         System.out.println("Correo: " + correo);
-        System.out.println("Clave de acceso: " + clave);
-        System.out.println(" ");
+        System.out.println("Clave: " + clave);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Nombre: " + nombre);
     }
 }
