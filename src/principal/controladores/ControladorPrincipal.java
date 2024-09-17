@@ -95,5 +95,69 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        
+        // Separacion del antes y dsp
+        
+        System.out.println();
+        System.out.println("========= Modificaciones hechas =========");
+        System.out.println();
+        
+        // Modificaciones a los objetos creados para su posterior muestra en pantalla
+        
+        unCliente1.asignarCorreo("nuevocorreo1@perrito.com");
+        unCliente2.asignarCorreo("nuevocorreo2@perrito.com");
+        unCliente3.asignarCorreo("nuevocorreo27@perrito.com");
+        unCliente1.asignarClave(unCliente1.verClave()+"1233");
+        unCliente2.asignarClave(unCliente2.verClave()+"1233");
+        unCliente3.asignarClave(unCliente3.verClave()+"1233");
+        
+        System.out.println("Clientes");
+        System.out.println("========");
+        for(Cliente c : clientes) {
+            c.mostrar();
+            System.out.println();
+        }
+        System.out.println();   
+        
+        unEmpleado1.asignarCorreo("entelaburantes25@losgatossonmejores.com");
+        unEmpleado2.asignarCorreo("entelaburantes2323@losgatossonmejores.com");
+        unEmpleado3.asignarCorreo("entelaburantes34971@losgatossonmejores.com");
+        unEmpleado1.asignarClave(unEmpleado1.verClave()+"666 :o");
+        unEmpleado2.asignarClave(unEmpleado2.verClave()+"7244!");
+        unEmpleado3.asignarClave(unEmpleado3.verClave()+"!!!!!!!");
+        
+        System.out.println("Empleados");
+        System.out.println("=========");
+        for(Empleado e : empleados) {
+            e.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
+        unEncargado1.asignarCorreo("todosestanbajomiMando@bussinesspersona.com");
+        unEncargado2.asignarCorreo("lomismoqueelotro@bussinesspersona.com");
+        unEncargado3.asignarCorreo("yestetmbesigual@bussinesspersona.com");
+        unEncargado1.asignarClave(unEncargado1.verCorreo());
+        unEncargado2.asignarClave(unEncargado2.verCorreo());
+        unEncargado3.asignarClave(unEncargado3.verCorreo());
+        unEncargado3.asignarNombre("Romina");
+        
+        System.out.println("Encargados");
+        System.out.println("==========");
+        for(Encargado e : encargados) {
+            e.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
+        System.out.println("Productos");
+        System.out.println("=========");
+        for(Producto p : productos) {
+            p.asignarEstado("AGOTADO");
+            p.asignarDescripcion("YOGURT");
+            p.asignarCodigo(777);
+            p.mostrar();
+            System.out.println();
+        }
     }
 }
