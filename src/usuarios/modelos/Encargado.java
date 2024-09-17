@@ -2,11 +2,16 @@
 package usuarios.modelos;
 
 public class Encargado {
-        String Correo;
-        String Clave;
-        String Apellido="Palomino";
-        String Nombre;
+    public String Correo;
+    public String Clave;
+    public String Apellido="Palomino";
+    public String Nombre;
+        
     void mostrar(){
         System.out.println(Apellido);
-    }    
+    }
+    @Override
+    public String toString() {
+        return "Encargado {" + "Apellido=" + Apellido + '}';
+    }
 }
