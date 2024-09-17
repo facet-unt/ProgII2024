@@ -23,8 +23,9 @@ public class ControladorPrincipal {
         listaDeEncargados.add(encargado2);
         listaDeEncargados.add(encargado3);
 
-        for(Encargado e : listaDeEncargados)
+        for(Encargado e : listaDeEncargados){
             e.mostrar();
+        }
         
         Empleado empleado1 = new Empleado();
         Empleado empleado2 = new Empleado();
@@ -34,8 +35,9 @@ public class ControladorPrincipal {
         listaDeEmpleados.add(empleado2);
         listaDeEmpleados.add(empleado3);
 
-        for(Empleado em : listaDeEmpleados)
+        for(Empleado em : listaDeEmpleados){
             em.mostrar();
+        }
         
         Producto producto1 = new Producto();
         Producto producto2 = new Producto();
@@ -45,8 +47,9 @@ public class ControladorPrincipal {
         listaDeProductos.add(producto2);
         listaDeProductos.add(producto3);
         
-        for(Producto p : listaDeProductos)
+        for(Producto p : listaDeProductos){
             p.mostrar();
+        }
         
         Cliente cliente1 = new Cliente();
         Cliente cliente2 = new Cliente();
@@ -56,7 +59,8 @@ public class ControladorPrincipal {
         listaDeClientes.add(cliente2);
         listaDeClientes.add(cliente3);
         
-        for(Cliente c : listaDeClientes)
+        for(Cliente c : listaDeClientes){
             c.mostrar();
+        }
     }
 }
