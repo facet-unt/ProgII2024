@@ -9,11 +9,50 @@ package usuarios.modelos;
  * @author estudiante
  */
 public class Encargado {
-    public String correo;
-    public String clave;
-    public String apellido;
-    public String nombre;
+    private String correo;
+    private String clave;
+    private String apellido;
+    private String nombre;
     public void mostrar(){
         System.out.println(correo+"\n"+apellido+"\n"+nombre);
+    }
+    //Métodos get/set
+    public String verCorreo() {
+        return correo;
+    }
+
+    public void asignarCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String verClave() {
+        return clave;
+    }
+
+    public void asignarClave(String clave) {
+        this.clave = clave;
+    }
+
+    public String verApellido() {
+        return apellido;
+    }
+
+    public void asignarApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String verNombre() {
+        return nombre;
+    }
+
+    public void asignarNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    //Constructor de la clase
+    public Encargado(String correo, String clave, String apellido, String nombre ){
+        this.apellido=apellido;
+        this.clave=clave;
+        this.correo=correo;
+        this.nombre=nombre;
     }
 }
