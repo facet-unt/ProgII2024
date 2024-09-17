@@ -18,14 +18,10 @@ public class Producto {
        // System.out.println(precio);     
         System.out.println("Producto: "+codigo + " - "+ nombre + " precio $:"+ precio);
     }
-
-    @Override
-    public String toString() {
-        return "Producto: [" + codigo + "]" + nombre + '}';
-    }
-    
-    
        
+    public String toString(){
+        return descripcion;
+    }
 }
 
 
