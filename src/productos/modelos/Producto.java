@@ -25,6 +25,15 @@ public class Producto {
     public String toString(){
         return descripcion;
     }
+
+    public Producto(int codigo, String nombre, String descripcion, float precio, String estado) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.estado = estado;
+    }
+    
 }
 
 

@@ -22,10 +22,7 @@ public class Cliente {
         this.apellido = apellido;
         this.nombre = nombre;
     }
-        
-    public Cliente(String c, String a, String n) {
-        this(c, "123466", a, n);   
-    }
+
     
     
     public String verCorreo() {

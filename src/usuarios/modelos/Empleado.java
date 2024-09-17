@@ -22,4 +22,13 @@ public class Empleado {
         System.out.println("Apellido: " + apellido);
         System.out.println("Nombre: " + nombre);
     }
+
+    public Empleado(String correo, String clave, String apellido, String nombre) {
+        this.correo = correo;
+        this.clave = clave;
+        this.apellido = apellido;
+        this.nombre = nombre;
+    }
+    
+    
 }
