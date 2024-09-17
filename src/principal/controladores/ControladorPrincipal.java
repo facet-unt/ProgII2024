@@ -75,6 +75,10 @@ public class ControladorPrincipal {
         productos.add(unProducto1);
         productos.add(unProducto2);
         productos.add(unProducto3);
+        unProducto1.setPrecio(12.4f);
+        unProducto2.setCodigo(341);
+        
+
 
         System.out.println("Productos");
         System.out.println("=========");
@@ -93,7 +97,8 @@ public class ControladorPrincipal {
             System.out.println();
         }
         System.out.println();
-
-        System.out.println(unProducto1);
+        
+        
+        //System.out.println(unProducto1);
     }
 }
