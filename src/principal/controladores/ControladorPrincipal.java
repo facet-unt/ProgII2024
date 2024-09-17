@@ -75,7 +75,9 @@ public class ControladorPrincipal {
         productos.add(unProducto1);
         productos.add(unProducto2);
         productos.add(unProducto3);
-
+unProducto1.setNombre("buedin de pan");
+ unProducto2.setNombre("pizzas");
+ unProducto3.setNombre("coca-cola");
         System.out.println("Productos");
         System.out.println("=========");
         for(Producto p : productos) {
@@ -93,7 +95,7 @@ public class ControladorPrincipal {
             System.out.println();
         }
         System.out.println();
-
+ 
         System.out.println(unProducto1);
     }
 }
