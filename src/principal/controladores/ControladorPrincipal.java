@@ -29,9 +29,9 @@ public class ControladorPrincipal {
             listaProductos.add(NombreProducto2);
             listaProductos.add(NombreProducto3);
 
-        Cliente nuevoCliente1 = new Cliente();
-        Cliente nuevoCliente2 = new Cliente();
-        Cliente nuevoCliente3 = new Cliente();
+        Cliente nuevoCliente1 = new Cliente(null,null,null,null);
+        Cliente nuevoCliente2 = new Cliente(null,null,null,null);
+        Cliente nuevoCliente3 = new Cliente(null,null,null,null);
             listaClientes.add(nuevoCliente1);
             listaClientes.add(nuevoCliente2);
             listaClientes.add(nuevoCliente3);
@@ -60,15 +60,15 @@ public class ControladorPrincipal {
                 nuevoEmpleado3.Nombre="mama";
                 nuevoEmpleado3.Correo="papa@gmail.com";
          
-         nuevoCliente1.Apellido="midajs";
-         nuevoCliente1.Nombre="Martins";
-         nuevoCliente1.Correo="holas@gmail.com";
-             nuevoCliente2.Apellido="gonzalos";
-             nuevoCliente2.Nombre="nasus";
-             nuevoCliente2.Correo="lalas@gmail.com";
-                 nuevoCliente3.Apellido="pepos";
-                 nuevoCliente3.Nombre="mamas";
-                 nuevoCliente3.Correo="papas@gmail.com";
+         nuevoCliente1.setApellido("midajs");
+         nuevoCliente1.setNombre("Martins");
+         nuevoCliente1.setCorreo("holas@gmail.com");
+             nuevoCliente2.setApellido("gonzalos");
+             nuevoCliente2.setNombre("nasus");
+             nuevoCliente2.setCorreo("lalas@gmail.com");
+                 nuevoCliente3.setApellido("pepos");
+                 nuevoCliente3.setNombre("mamas");
+                 nuevoCliente3.setCorreo("papas@gmail.com");
                   
                  
                 nuevoEncargado1.Apellido = "midajsa";
@@ -80,18 +80,18 @@ public class ControladorPrincipal {
                         nuevoEncargado3.Apellido = "peposa";
                         nuevoEncargado3.Nombre = "mamasa";
                         nuevoEncargado3.Correo = "papasagmail.com";
-                NombreProducto1.Codigo=123;
-                NombreProducto1.descripcion="Soda";
-                NombreProducto1.estado="Disponlible";
-                NombreProducto1.precio= 100f;
-                    NombreProducto2.Codigo=1234;
-                    NombreProducto2.descripcion="pespi";
-                    NombreProducto2.estado="Disponlible";
-                    NombreProducto2.precio= 120f;
-                        NombreProducto3.Codigo=1233;
-                        NombreProducto3.descripcion="coca";
-                        NombreProducto3.estado="no hay";
-                        NombreProducto3.precio= 1000f;
+                NombreProducto1.setCodigo(123);
+                NombreProducto1.setDescripcion("Soda");
+                NombreProducto1.setEstado("Disponlible");
+                NombreProducto1.setPrecio(100f);
+                    NombreProducto2.setCodigo(1234);
+                    NombreProducto2.setDescripcion("pespi");
+                    NombreProducto2.setEstado("Disponlible");
+                    NombreProducto2.setPrecio(120f);
+                        NombreProducto3.setCodigo(1233);
+                        NombreProducto3.setDescripcion("coca");
+                        NombreProducto3.setEstado("no hay");
+                        NombreProducto3.setPrecio(1000f);
         for (Empleado empleado : listaEmpleados) {
             empleado.mostrar();
             System.out.println("");
@@ -115,7 +115,7 @@ public class ControladorPrincipal {
         System.out.println(NombreProducto1);
         System.out.println(NombreProducto2);
         System.out.println(NombreProducto3);
-        nuevoCliente1.Apellido="morales";
+        nuevoCliente1.setApellido("morales");
         for (Cliente cliente : listaClientes) {
             cliente.mostrar();
             System.out.println("");
