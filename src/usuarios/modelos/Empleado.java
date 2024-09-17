@@ -9,19 +9,17 @@ package usuarios.modelos;
  * @author estudiante
  */
 public class Empleado {
+    
     public String correo;
     public String clave;
     public String apellido;
     public String nombre;
-
-    void mostrar() {        
-        System.out.println(correo);
-        System.out.println(clave);
-        System.out.println(apellido);
-        System.out.println(nombre);        
-    }
-    @Override
-     public String toString(){
-        return "Apellido y nombre: " + apellido + nombre  + "\n" + "correo: " + correo + "\n";
+    
+    public void mostrar() {
+        System.out.println("Datos del empleado");
+        System.out.println("Correo: " + correo);
+        System.out.println("Clave: " + clave);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Nombre: " + nombre);
     }
 }
