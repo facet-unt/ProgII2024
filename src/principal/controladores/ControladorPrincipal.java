@@ -1,17 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package principal.controladores;
 
 import java.util.ArrayList;
-import usuarios.modelos.*;
-import productos.modelos.*;
+import productos.modelos.Producto;
+import usuarios.modelos.Cliente;
+import usuarios.modelos.Empleado;
+import usuarios.modelos.Encargado;
 
-/**
- *
- * @author estudiante
- */
 public class ControladorPrincipal {
     
     public static void main(String[] args) {
@@ -68,9 +62,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", 1.0f, "DISPONIBLE");        
+        Producto unProducto2 = new Producto(2, "Producto2", "PLATOPRINCIPAL", 2.0f, "DISPONIBLE");
+        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE", 3.0f, "DISPONIBLE");
 
         productos.add(unProducto1);
         productos.add(unProducto2);
@@ -95,5 +89,6 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        
     }
 }
