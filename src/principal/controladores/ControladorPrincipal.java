@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import usuarios.modelos.*;
 import productos.modelos.*;
 
-/*
- * @author estudiante
- */
 public class ControladorPrincipal {
     
     public static void main(String[] args) {
@@ -87,8 +84,45 @@ public class ControladorPrincipal {
             c.mostrar();
             System.out.println();
         }
+        
+        System.out.println("====== REALIZANDO MODIFICACIONES ======");
+        unEmpleado1.asignarNombre("NuevoNombreEmpleado1");
+        unEmpleado3.asignarApellido("NuevoApellidoEmpleado3");
+        unCliente3.asignarClave("nuevaClaveCliente3");
+        unCliente2.asignarCorreo("nuevocliente2@bar.com");
+        
         System.out.println();
-
-        System.out.println(unProducto1);
+        
+        System.out.println("Clientes");
+        System.out.println("========");
+        for(Cliente c : clientes) {
+            c.mostrar();
+            System.out.println();
+        }
+        System.out.println(); 
+        
+        System.out.println("Empleados");
+        System.out.println("=========");
+        for(Empleado e : empleados) {
+            e.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
+        System.out.println("Encargados");
+        System.out.println("==========");
+        for(Encargado e : encargados) {
+            e.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
+        System.out.println("Productos");
+        System.out.println("=========");
+        for(Producto p : productos) {
+            p.mostrar();
+            System.out.println();
+        }
+        System.out.println();
     }
 }

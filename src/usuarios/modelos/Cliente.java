@@ -1,9 +1,7 @@
 package usuarios.modelos;
 
-/*
- * @author joaquincoro
- */
 public class Cliente {
+    
     private String correo;
     private String clave;
     private String apellido;

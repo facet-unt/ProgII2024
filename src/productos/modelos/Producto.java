@@ -1,7 +1,5 @@
 package productos.modelos;
 
-import usuarios.modelos.Cliente;
-
 public class Producto {
     private int codigo;
     private String nombre;
@@ -9,10 +7,6 @@ public class Producto {
     private float precio;
     private String estado;
 
-    /*
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
     public void mostrar() {
         System.out.println("Datos del producto");
         System.out.println("Codigo: " + codigo);
@@ -20,10 +14,6 @@ public class Producto {
         System.out.println("Precio: " + precio);
         System.out.println("Descripcion: " + descripcion);
         System.out.println("Estado: " + estado);
-    }
-       
-    public String toString(){
-        return descripcion;
     }
 
     public Producto(int codigo, String nombre, String descripcion, String estado, float precio) {
@@ -34,43 +24,43 @@ public class Producto {
         this.estado = estado;
     }
 
-    public String getEstado() {
+    public String verEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void asignarEstado(String estado) {
         this.estado = estado;
     }
 
-    public int getCodigo() {
+    public int verCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void asignarCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public String getNombre() {
+    public String verNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
+    public String verDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
+    public void asignarDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public float getPrecio() {
+    public float verPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void asignarPrecio(float precio) {
         this.precio = precio;
     }
 }
