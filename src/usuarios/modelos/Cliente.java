@@ -1,27 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package usuarios.modelos;
 
-/**
- *
+/*
  * @author joaquincoro
  */
 public class Cliente {
-    String correo = new String();
-    String clave = new String();
-    String apellido = new String();
-    String nombre = new String();
-    
-    public void mostrar(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave de acceso: " + clave);
-        System.out.println(" ");
-    }
-    
     private String correo;
     private String clave;
     private String apellido;
@@ -45,7 +27,6 @@ public class Cliente {
     public Cliente(String c, String a, String n) {
         this(c, "123466", a, n);   
     }
-    
     
     public String verCorreo() {
         return correo;
