@@ -2,17 +2,19 @@ package usuarios.modelos;
 
 public class Cliente {
     
+
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
     
     public void mostrar() {
-        System.out.println("Datos del cliente");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
+        
+        System.out.println("El correo del cliente es:" + correo);
+        System.out.println("La clave del cliente es: " + clave);
+        System.out.println("El apellido del cliente es: " + apellido);
+        System.out.println("El Nombre del cliente es: " + nombre);
+
     }
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
@@ -55,5 +57,4 @@ public class Cliente {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
-
 }
