@@ -54,7 +54,7 @@ public class ControladorPrincipal {
         }
         
         for (Empleado empleado : empleados){
-            empleado.mostrar();
+            empleado.mostrarEmpleado();
         }
         
         for (Encargado encargado : encargados){
