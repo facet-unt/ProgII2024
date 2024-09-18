@@ -53,6 +53,5 @@ public class Encargado {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
+   
 }
