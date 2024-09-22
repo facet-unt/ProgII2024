@@ -3,12 +3,12 @@ package productos.modelos;
 import usuarios.modelos.Cliente;
 
 public class Producto {
-    public int Codigo;
-    public String Nombre = "Arroz";
-    public String Descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-    public String Categoria;
-    public String Estado="Disponible";
-    public float Precio=3.5f;
+    private int Codigo;
+    private String Nombre = "Arroz";
+    private String Descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+    private String Categoria;
+    private String Estado="Disponible";
+    private float Precio=3.5f;
 
     public void mostrar() {
         System.out.println(Nombre);
@@ -18,6 +18,13 @@ public class Producto {
     @Override
     public String toString() {
         return "Producto {" + "Nombre=" + Nombre + "; Descripcion=" + Descripcion + '}';
+    }
+    public Producto(int Codigo, String Nombre, String Categoria, String Estado, float Precio) {
+        this.Codigo = Codigo;
+        this.Nombre = Nombre;
+        this.Categoria = Categoria;
+        this.Estado = Estado;
+        this.Precio = Precio;
     }
        
 }
