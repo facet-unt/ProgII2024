@@ -13,6 +13,9 @@ import productos.modelos.*;
  * @author estudiante
  */
 public class ControladorPrincipal {
+
+    
+
     
     public static void main(String[] args) {
         ArrayList<Cliente> clientes = new ArrayList<>();
@@ -68,9 +71,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1", "Esta muy bueno", 503.2f, "DISPONIBLE", "POSTRES");        
+        Producto unProducto2 = new Producto(2, "Producto2", "Esta bueno", 324.2f, "DISPONIBLE", "ENTRADAS");
+        Producto unProducto3 = new Producto(3, "Producto3", "Esta decente", 2435.2f, "DISPONIBLE", "POSTRES");
 
         productos.add(unProducto1);
         productos.add(unProducto2);
@@ -86,6 +89,8 @@ public class ControladorPrincipal {
 
 
         unCliente1.asignarCorreo("cliente10@bar.com");
+        unCliente1.asignarApellido("CambioApellido1");
+        unCliente1.asignarNombre("CambioNombre1");
         System.out.println("Clientes");
         System.out.println("========");
         for(Cliente c : clientes) {
@@ -94,6 +99,6 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        System.out.println(unProducto1);
     }
+
 }
