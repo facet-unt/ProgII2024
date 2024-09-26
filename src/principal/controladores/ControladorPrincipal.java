@@ -20,6 +20,9 @@ public class ControladorPrincipal {
         ArrayList<Encargado> encargados = new ArrayList<>();
         ArrayList<Producto> productos = new ArrayList<>();
 
+        /*
+        PRIMERA PARTE
+        */
         Cliente unCliente1 = new Cliente("cliente1@bar.com", "claveCliente1", "ApellidoCliente1", "NombreCliente1");        
         Cliente unCliente2 = new Cliente("cliente2@bar.com", "claveCliente2", "ApellidoCliente2", "NombreCliente2");       
         Cliente unCliente3 = new Cliente("cliente3@bar.com", "claveCliente3", "ApellidoCliente3", "NombreCliente3");
@@ -68,9 +71,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", "DISPONIBLE", 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", "PLATO PRINCIPAL", "DISPONIBLE", 2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE", "DISPONIBLE", 3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
+        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 2.0f);
+        Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
 
         productos.add(unProducto1);
         productos.add(unProducto2);
@@ -95,5 +98,8 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        /*
+        FIN PRIMERA PARTE
+        */
     }
 }

@@ -5,8 +5,10 @@ import usuarios.modelos.Cliente;
 public class Producto {
     private int codigo;
     private String descripcion;
-    private String categoria;
-    private String estado;
+//    private String categoria;
+//    private String estado;
+    private Categoria categoria;
+    private Estado estado;
     private float precio;
     
 
@@ -16,13 +18,14 @@ public class Producto {
      */
     public void mostrar() {        
         System.out.println("Producto: "+codigo + " - "+ descripcion + " precio $:"+ precio);
+        System.out.println("Categoría del menú:" +  this.categoria +  " Estado:"+ this.estado);
     }
        
     public String toString(){
-        return descripcion;
+        return "Producto: "+codigo + " - "+ descripcion + " Precio $:"+ precio;
     }
 
-    public Producto(int codigo, String descripcion,String categoria,  String estado, float precio) {
+    public Producto(int codigo, String descripcion,Categoria categoria,  Estado estado, float precio) {
         this.codigo = codigo;
         this.categoria = categoria;
         this.descripcion = descripcion;
@@ -41,11 +44,11 @@ public class Producto {
         this.codigo = codigo;
     }
 
-    public String verCategoria() {
+    public Categoria verCategoria() {
         return categoria;
     }
 
-    public void asignarCategoria(String categoria) {
+    public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
@@ -65,11 +68,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String verEstado() {
+    public Estado verEstado() {
         return estado;
     }
 
-    public void asinarEstado(String estado) {
+    public void asinarEstado(Estado estado) {
         this.estado = estado;
     }
     
