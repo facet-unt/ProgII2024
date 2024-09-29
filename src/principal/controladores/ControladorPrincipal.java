@@ -70,7 +70,7 @@ public class ControladorPrincipal {
             System.out.println();
         }
         System.out.println();
-
+/*
         Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
         Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 2.0f);
         Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
@@ -98,8 +98,11 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        */
         /*
         FIN PRIMERA PARTE
         */
+
+    
     }
 }
