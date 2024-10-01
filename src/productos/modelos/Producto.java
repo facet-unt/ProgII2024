@@ -9,7 +9,7 @@ public class Producto {
     private String estado;
     private String categoria;
 
-    /**
+    /*
      * Este método permite mostrar un Producto
      * @return devuelve nada
      */
@@ -65,11 +65,4 @@ public class Producto {
     public void asignarCategoria(String categoria) {
         this.categoria = categoria;
     }
-    
-    
-     
 }
-
-
-
-
