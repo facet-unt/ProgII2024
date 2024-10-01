@@ -4,8 +4,10 @@
  */
 package pedidos.modelos;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import productos.modelos.Producto;
+import usuarios.modelos.Cliente;
 
 /**
  *
@@ -13,10 +15,15 @@ import productos.modelos.Producto;
  */
 public class Pedido {
     private int numero;
+    private Cliente unCliente;
+    private LocalDateTime fechaYHora;
+    
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
 
-    public Pedido(int numero) {
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente) {
         this.numero = numero;
+        this.fechaYHora = fechaYHora;
+        this.unCliente = unCliente;
     }
     
     public void agregarProducto(Producto unProducto, int cantidad) {
@@ -31,12 +38,14 @@ public class Pedido {
         }
     }
 
-    public int getNumero() {
+    public int verNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void asignarNumero(int numero) {
         this.numero = numero;
     }
+    
+    
     
 }
