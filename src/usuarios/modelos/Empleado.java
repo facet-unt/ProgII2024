@@ -9,15 +9,16 @@ package usuarios.modelos;
  * @author estudiante
  */
 public class Empleado {
-
-    
-    
     
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
     
+    public void mostrar(){
+    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+    }
+
     public Empleado(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
         this.clave = clave;
@@ -58,11 +59,5 @@ public class Empleado {
     }
     
     
-    public void mostrar() {
-        System.out.println("Datos del empleado");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
-    }
+    
 }

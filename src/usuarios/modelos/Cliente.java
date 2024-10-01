@@ -8,12 +8,8 @@ public class Cliente {
     private String apellido;
     private String nombre;
     
-    public void mostrar() {
-        System.out.println("Datos del cliente");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
+    public void mostrar(){
+    System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
