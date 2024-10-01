@@ -8,7 +8,7 @@ public class Encargado {
     private String nombre;
         
     public void mostrar(){
-        System.out.println(apellido);
+        System.out.println("Correo: "+ correo + "\nClave:"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
     @Override
     public String toString() {
