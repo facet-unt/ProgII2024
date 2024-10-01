@@ -18,7 +18,7 @@ public class Producto {
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    public Producto(int codigo, String descripcion, float precio, String estado, String categoria) {
+    public Producto(int codigo, String descripcion, String estado, String categoria, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
