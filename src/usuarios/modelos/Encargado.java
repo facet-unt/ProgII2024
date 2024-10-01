@@ -17,7 +17,7 @@ public class Encargado {
     
     
     public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+    System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
 
     public Encargado(String correo, String clave, String apellido, String nombre) {
