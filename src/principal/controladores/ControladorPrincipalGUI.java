@@ -6,6 +6,9 @@ package principal.controladores;
 
 import javax.swing.UIManager;
 import productos.vistas.VentanaAMProducto;
+import usuarios.vistas.VentanaAMCliente;
+import usuarios.vistas.VentanaAMEmpleado;
+import usuarios.vistas.VentanaAMEncargado;
 
 /**
  *
@@ -29,28 +32,28 @@ public class ControladorPrincipalGUI {
         ventana.setLocationRelativeTo(null);
         ventana.setTitle("Nuevo producto");
         ventana.setVisible(true);
-        
+//        
         //CLIENTE
-      /* 
-        VentanaAMCliente ventana = new VentanaAMCliente(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo cliente");
-        ventana.setVisible(true);
-       */        
+      
+        VentanaAMCliente ventana2 = new VentanaAMCliente(null);
+        ventana2.setLocationRelativeTo(null);
+        ventana2.setTitle("Nuevo cliente");
+        ventana2.setVisible(true);
+           
        //EMPLEADO 
-       /*
-        VentanaAMEmpleado ventana = new VentanaAMEmpleado(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo empleado");
-        ventana.setVisible(true);
-        */
+      
+        VentanaAMEmpleado ventana3 = new VentanaAMEmpleado(null);
+        ventana3.setLocationRelativeTo(null);
+        ventana3.setTitle("Nuevo empleado");
+        ventana3.setVisible(true);
+       
        //ENCARGADO
-       /*
-        VentanaAMEncargado ventana = new VentanaAMEncargado(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo encargado");
-        ventana.setVisible(true);
-       */
+       
+        VentanaAMEncargado ventana4 = new VentanaAMEncargado(null);
+        ventana4.setLocationRelativeTo(null);
+        ventana4.setTitle("Nuevo encargado");
+        ventana4.setVisible(true);
+       
     }
     
     
