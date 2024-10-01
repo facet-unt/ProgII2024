@@ -3,30 +3,71 @@ package productos.modelos;
 import usuarios.modelos.Cliente;
 
 public class Producto {
-    private int Codigo;
-    private String Nombre = "Arroz";
-    private String Descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-    private String Categoria;
-    private String Estado="Disponible";
-    private float Precio=3.5f;
+    private int codigo;
+    private String descripcion;
+    private float precio;
+    private String estado;
+    private String categoria;
 
-    public void mostrar() {
-        System.out.println(Nombre);
-        System.out.println(Precio);
+    /**
+     * Este método permite mostrar un Producto
+     * @return devuelve nada
+     */
+
+    public void mostrar(){
+    System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    @Override
-    public String toString() {
-        return "Producto {" + "Nombre=" + Nombre + "; Descripcion=" + Descripcion + '}';
+    public Producto(int codigo, String descripcion, float precio, String estado, String categoria) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.estado = estado;
+        this.categoria = categoria;
     }
-    public Producto(int Codigo, String Nombre, String Categoria, String Estado, float Precio) {
-        this.Codigo = Codigo;
-        this.Nombre = Nombre;
-        this.Categoria = Categoria;
-        this.Estado = Estado;
-        this.Precio = Precio;
+
+    public int verCodigo() {
+        return codigo;
     }
-       
+
+    public void asignarCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String verDescripcion() {
+        return descripcion;
+    }
+
+    public void asignarDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public float verPrecio() {
+        return precio;
+    }
+
+    public void asignarPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public String verEstado() {
+        return estado;
+    }
+
+    public void asignarEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String verCategoria() {
+        return categoria;
+    }
+
+    public void asignarCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+    
+    
+     
 }
 
 

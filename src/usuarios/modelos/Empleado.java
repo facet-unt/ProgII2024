@@ -1,61 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package usuarios.modelos;
 
+/**
+ *
+ * @author estudiante
+ */
 public class Empleado {
-    private String Correo;
-    private String Clave;
-    private String Apellido;
-    private String Nombre="Leonel";
-        
-    public void mostrar(){
-       System.out.println(Nombre);
-    }
-    @Override
-    public String toString() {
-        return "Empleado " + "Nombre: " + Nombre;
-    }
     
-    public Empleado(String Correo, String Clave, String Apellido, String Nombre) {
-        this.Correo = Correo;
-        this.Clave = Clave;
-        this.Apellido = Apellido;
-        this.Nombre = Nombre;
-    }
-        public String verCorreo() {
-        return Correo;
+    private String correo;
+    private String clave;
+    private String apellido;
+    private String nombre;
+    
+    public void mostrar(){
+    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
 
-    public void asignarCorreo(String Correo) {
-        this.Correo = Correo;
+    public Empleado(String correo, String clave, String apellido, String nombre) {
+        this.correo = correo;
+        this.clave = clave;
+        this.apellido = apellido;
+        this.nombre = nombre;
+    }
+
+    public String verCorreo() {
+        return correo;
+    }
+
+    public void asignarCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String verClave() {
-        return Clave;
+        return clave;
     }
 
-    public void asignarClave(String Clave) {
-        this.Clave = Clave;
+    public void asignarClave(String clave) {
+        this.clave = clave;
     }
 
     public String verApellido() {
-        return Apellido;
+        return apellido;
     }
 
     public void asignarApellido(String apellido) {
-        this.Apellido = apellido;
+        this.apellido = apellido;
     }
 
     public String verNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void asignarNombre(String nombre) {
-        this.Nombre = nombre;
+        this.nombre = nombre;
     }
-
-
-
-
-
-
+    
+    
+    
 }
-
