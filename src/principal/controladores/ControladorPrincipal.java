@@ -72,9 +72,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", 1.0f,"DISPONIBLE");        
-        Producto unProducto2 = new Producto(2, "Producto2", "PLATOPRINCIPAL",2.0f, "DISPONIBLE");
-        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE",3.0f, "DISPONIBLE");
+        Producto unProducto1 = new Producto(1, "Producto1", 1.0f, "ENTRADA","DISPONIBLE");        
+        Producto unProducto2 = new Producto(2, "Producto2",2.0f, "PLATOPRINCIPAL", "DISPONIBLE");
+        Producto unProducto3 = new Producto(3, "Producto3",3.0f, "POSTRE", "DISPONIBLE");
 
         productos.add(unProducto1);
         productos.add(unProducto2);
