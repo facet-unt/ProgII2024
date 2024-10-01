@@ -6,6 +6,8 @@ package principal.controladores;
 
 import javax.swing.UIManager;
 import productos.vistas.VentanaAMProducto;
+import usuarios.vistas.VentanaAMEmpleado;
+import usuarios.vistas.VentanaAMEncargado;
 
 /**
  *
@@ -25,11 +27,12 @@ public class ControladorPrincipalGUI {
         establecerLookAndFeel("Nimbus"); 
         
         // PRODUCTO
-        VentanaAMProducto ventana = new VentanaAMProducto(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo producto");
-        ventana.setVisible(true);
-        
+//        
+//        VentanaAMProducto ventana = new VentanaAMProducto(null);
+//        ventana.setLocationRelativeTo(null);
+//        ventana.setTitle("Nuevo producto");
+//        ventana.setVisible(true);
+//        
         //CLIENTE
       /* 
         VentanaAMCliente ventana = new VentanaAMCliente(null);
@@ -38,19 +41,19 @@ public class ControladorPrincipalGUI {
         ventana.setVisible(true);
        */        
        //EMPLEADO 
-       /*
-        VentanaAMEmpleado ventana = new VentanaAMEmpleado(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo empleado");
-        ventana.setVisible(true);
-        */
+       
+//        VentanaAMEmpleado ventana = new VentanaAMEmpleado(null);
+//        ventana.setLocationRelativeTo(null);
+//        ventana.setTitle("Nuevo empleado");
+//        ventana.setVisible(true);
+//        
        //ENCARGADO
-       /*
+       
         VentanaAMEncargado ventana = new VentanaAMEncargado(null);
         ventana.setLocationRelativeTo(null);
         ventana.setTitle("Nuevo encargado");
         ventana.setVisible(true);
-       */
+       
     }
     
     
