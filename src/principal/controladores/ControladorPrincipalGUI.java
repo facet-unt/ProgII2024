@@ -47,12 +47,12 @@ public class ControladorPrincipalGUI {
         ventanaEmpleado.setTitle("Nuevo empleado");
         ventanaEmpleado.setVisible(true);
 
-//       //ENCARGADO
-//
-//        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
-//        ventanaEncargado.setLocationRelativeTo(null);
-//        ventanaEncargado.setTitle("Nuevo encargado");
-//        ventanaEncargado.setVisible(true);
+       //ENCARGADO
+
+        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
+        ventanaEncargado.setLocationRelativeTo(null);
+        ventanaEncargado.setTitle("Nuevo encargado");
+        ventanaEncargado.setVisible(true);
 
     }
     
