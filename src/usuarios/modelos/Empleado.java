@@ -17,12 +17,8 @@ public class Empleado {
     
     // Metodo mostrar
     
-    public void mostrar() {
-        System.out.println("Datos del empleado");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
+    public void mostrar(){
+    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
     
     // Definicion de los constructores de la clase
@@ -33,7 +29,7 @@ public class Empleado {
         this.apellido = apellido;
         this.nombre = nombre;
     }
-    
+
     // Definicion de los metodos get/set de la clase para las 4 variables de instancia
     
     public String verCorreo() {
