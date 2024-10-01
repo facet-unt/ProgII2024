@@ -8,6 +8,7 @@ import javax.swing.UIManager;
 import usuarios.vistas.VentanaAMCliente;
 import usuarios.vistas.VentanaAMEmpleado;
 import usuarios.vistas.VentanaAMEncargado;
+import productos.vistas.VentanaAMProducto;
 /*
  * @author luis
  */
@@ -27,31 +28,31 @@ public class ControladorPrincipalGUI {
         
         // PRODUCTO
         
-//        VentanaAMProducto ventanaProducto = new VentanaAMProducto(null);
-//        ventanaProducto.setLocationRelativeTo(null);
-//        ventanaProducto.setTitle("Nuevo producto");
-//        ventanaProducto.setVisible(true);
+        VentanaAMProducto ventanaProducto = new VentanaAMProducto(null);
+        ventanaProducto.setLocationRelativeTo(null);
+        ventanaProducto.setTitle("Nuevo producto");
+        ventanaProducto.setVisible(true);
         
         //CLIENTE
-      
-        VentanaAMCliente ventanaCliente = new VentanaAMCliente(null);
-        ventanaCliente.setLocationRelativeTo(null);
-        ventanaCliente.setTitle("Nuevo cliente");
-        ventanaCliente.setVisible(true);
-     
-       //EMPLEADO 
-
-        VentanaAMEmpleado ventanaEmpleado = new VentanaAMEmpleado(null);
-        ventanaEmpleado.setLocationRelativeTo(null);
-        ventanaEmpleado.setTitle("Nuevo empleado");
-        ventanaEmpleado.setVisible(true);
-
-       //ENCARGADO
-
-        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
-        ventanaEncargado.setLocationRelativeTo(null);
-        ventanaEncargado.setTitle("Nuevo encargado");
-        ventanaEncargado.setVisible(true);
+//      
+//        VentanaAMCliente ventanaCliente = new VentanaAMCliente(null);
+//        ventanaCliente.setLocationRelativeTo(null);
+//        ventanaCliente.setTitle("Nuevo cliente");
+//        ventanaCliente.setVisible(true);
+//     
+//       //EMPLEADO 
+//
+//        VentanaAMEmpleado ventanaEmpleado = new VentanaAMEmpleado(null);
+//        ventanaEmpleado.setLocationRelativeTo(null);
+//        ventanaEmpleado.setTitle("Nuevo empleado");
+//        ventanaEmpleado.setVisible(true);
+//
+//       //ENCARGADO
+//
+//        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
+//        ventanaEncargado.setLocationRelativeTo(null);
+//        ventanaEncargado.setTitle("Nuevo encargado");
+//        ventanaEncargado.setVisible(true);
 
     }
     
