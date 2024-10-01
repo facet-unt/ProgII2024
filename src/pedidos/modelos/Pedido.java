@@ -14,7 +14,7 @@ public class Pedido {
     private Cliente unCliente;
     private LocalDateTime fechaYHora;
     
-//    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+    //private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
 
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente) {
         this.numero = numero;
@@ -23,16 +23,16 @@ public class Pedido {
     }
     
     public void agregarProducto(Producto unProducto, int cantidad) {
-//        ProductoDelPedido pdp = new ProductoDelPedido(cantidad, unProducto);
-//        this.productosDelPedido.add(pdp);
+       //roductoDelPedido pdp = new ProductoDelPedido(cantidad, unProducto);
+      //this.productosDelPedido.add(pdp);
     }
     
     public void mostrar() {
         System.out.println(this.numero);
-////        for(ProductoDelPedido pdp : this.productosDelPedido) {
-//            pdp.mostrar();
+      //for(ProductoDelPedido pdp : this.productosDelPedido) {
+          //pdp.mostrar();
         }
-//    }
+    }
 
 //    public int verNumero() {
 //        return numero;
@@ -41,7 +41,5 @@ public class Pedido {
 //    public void asignarNumero(int numero) {
 //        this.numero = numero;
 //    }
-    
-    
-    
-}
+/*     
+}*/
