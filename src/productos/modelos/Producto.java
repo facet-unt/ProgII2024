@@ -4,7 +4,6 @@ import usuarios.modelos.Cliente;
 
 public class Producto {
     private int codigo;
-    private String nombre;
     private String descripcion;
     private float precio;
     private String estado;
@@ -19,9 +18,8 @@ public class Producto {
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    public Producto(int codigo, String nombre, String descripcion, float precio, String estado, String categoria) {
+    public Producto(int codigo, String descripcion, float precio, String estado, String categoria) {
         this.codigo = codigo;
-        this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.estado = estado;
@@ -34,14 +32,6 @@ public class Producto {
 
     public void asignarCodigo(int codigo) {
         this.codigo = codigo;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String verDescripcion() {
