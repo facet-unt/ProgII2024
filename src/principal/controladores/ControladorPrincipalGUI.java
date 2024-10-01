@@ -6,6 +6,7 @@ package principal.controladores;
 
 import javax.swing.UIManager;
 import productos.vistas.VentanaAMProducto;
+import usuarios.vistas.VentanaAMCliente;
 
 /**
  *
@@ -31,12 +32,12 @@ public class ControladorPrincipalGUI {
         ventana.setVisible(true);
         
         //CLIENTE
-      /* 
-        VentanaAMCliente ventana = new VentanaAMCliente(null);
+       
+        VentanaAMCliente ventana1 = new VentanaAMCliente(null);
         ventana.setLocationRelativeTo(null);
         ventana.setTitle("Nuevo cliente");
         ventana.setVisible(true);
-       */        
+              
        //EMPLEADO 
        /*
         VentanaAMEmpleado ventana = new VentanaAMEmpleado(null);
