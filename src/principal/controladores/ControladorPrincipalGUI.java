@@ -34,19 +34,19 @@ public class ControladorPrincipalGUI {
         ventanaProducto.setVisible(true);
         
         //CLIENTE
-//      
-//        VentanaAMCliente ventanaCliente = new VentanaAMCliente(null);
-//        ventanaCliente.setLocationRelativeTo(null);
-//        ventanaCliente.setTitle("Nuevo cliente");
-//        ventanaCliente.setVisible(true);
-//     
-//       //EMPLEADO 
-//
-//        VentanaAMEmpleado ventanaEmpleado = new VentanaAMEmpleado(null);
-//        ventanaEmpleado.setLocationRelativeTo(null);
-//        ventanaEmpleado.setTitle("Nuevo empleado");
-//        ventanaEmpleado.setVisible(true);
-//
+      
+        VentanaAMCliente ventanaCliente = new VentanaAMCliente(null);
+        ventanaCliente.setLocationRelativeTo(null);
+        ventanaCliente.setTitle("Nuevo cliente");
+        ventanaCliente.setVisible(true);
+     
+       //EMPLEADO 
+
+        VentanaAMEmpleado ventanaEmpleado = new VentanaAMEmpleado(null);
+        ventanaEmpleado.setLocationRelativeTo(null);
+        ventanaEmpleado.setTitle("Nuevo empleado");
+        ventanaEmpleado.setVisible(true);
+
 //       //ENCARGADO
 //
 //        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
