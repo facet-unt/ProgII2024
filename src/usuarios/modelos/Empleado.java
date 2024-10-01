@@ -15,14 +15,10 @@ public class Empleado {
     private String apellido;
     private String nombre;
     
-    public void mostrar() {
-        System.out.println("Datos del empleado");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
+    public void mostrar(){
+    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
-//constructor
+
     public Empleado(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
         this.clave = clave;
@@ -37,7 +33,6 @@ public class Empleado {
     public void asignarCorreo(String correo) {
         this.correo = correo;
     }
-    
 
     public String verClave() {
         return clave;
@@ -46,7 +41,6 @@ public class Empleado {
     public void asignarClave(String clave) {
         this.clave = clave;
     }
-    
 
     public String verApellido() {
         return apellido;
@@ -55,7 +49,6 @@ public class Empleado {
     public void asignarApellido(String apellido) {
         this.apellido = apellido;
     }
-    
 
     public String verNombre() {
         return nombre;

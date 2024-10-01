@@ -15,14 +15,11 @@ public class Encargado {
     private String apellido;
     private String nombre;
     
-    public void mostrar() {
-        System.out.println("Datos del encargado");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
+    
+    public void mostrar(){
+    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
-    //constructor
+
     public Encargado(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
         this.clave = clave;
@@ -33,34 +30,36 @@ public class Encargado {
     public String verCorreo() {
         return correo;
     }
-    
+
     public void asignarCorreo(String correo) {
         this.correo = correo;
     }
 
-//
     public String verClave() {
         return clave;
     }
+
     public void asignarClave(String clave) {
         this.clave = clave;
     }
-    
-//
+
     public String verApellido() {
         return apellido;
     }
+
     public void asignarApellido(String apellido) {
         this.apellido = apellido;
     }
-//
+
     public String verNombre() {
         return nombre;
     }
+
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
-//
     
     
+    
+
 }
