@@ -13,7 +13,7 @@ public class Producto {
     
     public Producto(int codigo, String nombre, String descripcion, String estado, float precio) {
         this.codigo = codigo;
-        this.nombre = nombre;
+        //this.nombre = nombre;
         this.descripcion = descripcion;
         this.estado = estado;
         this.precio = precio;

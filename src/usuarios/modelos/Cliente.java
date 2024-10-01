@@ -8,7 +8,6 @@ public class Cliente {
     private String apellido;
     private String nombre;
     
-<<<<<<< HEAD
     // Metodo para mostrar la clase
     
     public void mostrar() {
@@ -17,10 +16,6 @@ public class Cliente {
         System.out.println("Clave: " + clave);
         System.out.println("Apellido: " + apellido);
         System.out.println("Nombre: " + nombre);
-=======
-    public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
->>>>>>> desarrollo
     }
     
     // Definicion de los constructores de clase

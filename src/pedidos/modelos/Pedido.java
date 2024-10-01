@@ -18,7 +18,7 @@ public class Pedido {
     private Cliente unCliente;
     private LocalDateTime fechaYHora;
     
-    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+    //private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
 
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente) {
         this.numero = numero;

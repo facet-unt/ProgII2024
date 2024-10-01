@@ -14,12 +14,8 @@ public class Encargado {
     private String clave;
     private String apellido;
     private String nombre;
-<<<<<<< HEAD
     
     // Definicion del metodo mostrar
-=======
->>>>>>> desarrollo
-    
     
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
@@ -43,32 +39,6 @@ public class Encargado {
     public String verClave() {
         return clave;
     }
-<<<<<<< HEAD
-    
-    // Definicion de los constructores de la clase
-    
-    public Encargado (String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
-    }
-    
-    // Definicion de los metodos get/set de la clase para las 4 variables de instancia
-    
-    public String verCorreo() {
-        return correo;
-    }
-
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String verClave() {
-        return clave;
-    }
-=======
->>>>>>> desarrollo
 
     public void asignarClave(String clave) {
         this.clave = clave;
@@ -89,11 +59,4 @@ public class Encargado {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
-<<<<<<< HEAD
-=======
-    
-    
-    
-
->>>>>>> desarrollo
 }

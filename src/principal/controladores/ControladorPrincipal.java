@@ -107,7 +107,6 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
-<<<<<<< HEAD
         
         // Separacion del antes y dsp
         
@@ -172,7 +171,6 @@ public class ControladorPrincipal {
             p.mostrar();
             System.out.println();
         }
-=======
         //</editor-fold>
         
         //<editor-fold desc="SEGUNDA PARTE" defaultstate="collapsed">
@@ -198,7 +196,6 @@ public class ControladorPrincipal {
         
         
         
->>>>>>> desarrollo
     }
 
 }
