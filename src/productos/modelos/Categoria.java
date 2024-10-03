@@ -8,6 +8,18 @@ package productos.modelos;
  *
  * @author joaquincoro
  */
-public class Categoria {
+public enum Categoria {
+    ENTRADA("Entrada"),
+    PLATOPRINCIPAL("Plato Principal"),
+    POSTRE("Postre");
     
+    private String tipo;
+    private Categoria(String tipo){
+        this.tipo = tipo;
+    }
+    
+    @Override
+    public String toString(){
+        return this.tipo;
+    }
 }
