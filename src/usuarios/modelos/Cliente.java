@@ -1,12 +1,16 @@
 
 package usuarios.modelos;
 
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
+
 public class Cliente {
     
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
+    private ArrayList<Pedido> pedidos;
     
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
