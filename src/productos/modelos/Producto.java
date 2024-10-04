@@ -6,20 +6,19 @@ public class Producto {
     private int codigo;
     private String descripcion;
     private float precio;
-    private String estado;
-    private String categoria;
+    private Estado estado;
+    private Categoria categoria;
 
     /**
-   
+     * Este método permite mostrar un Producto
      * @return devuelve nada
      */
 
     public void mostrar(){
-   System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
-
+    System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    public Producto(int codigo, String descripcion, float precio, String estado, String categoria) {
+    public Producto(int codigo, String descripcion, float precio, Estado estado, Categoria categoria) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -52,18 +51,18 @@ public class Producto {
     }
 
     public String verEstado() {
-        return estado;
+        return estado.toString();
     }
 
-    public void asignarEstado(String estado) {
+    public void asignarEstado(Estado estado) {
         this.estado = estado;
     }
 
     public String verCategoria() {
-        return categoria;
+        return categoria.toString();
     }
 
-    public void asignarCategoria(String categoria) {
+    public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
     

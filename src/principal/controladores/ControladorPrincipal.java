@@ -6,6 +6,11 @@ package principal.controladores;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import static productos.modelos.Categoria.ENTRADA;
+import static productos.modelos.Categoria.PLATOPRINCIPAL;
+import static productos.modelos.Categoria.POSTRE;
+import static productos.modelos.Estado.DISPONIBLE;
+import static productos.modelos.Estado.NODISPONIBLE;
 //import pedidos.modelos.Pedido;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
@@ -59,7 +64,7 @@ public class ControladorPrincipal {
         System.out.println("Empleados");
         System.out.println("=========");
         for(Empleado e : empleados) {
-//            e.mostrar();
+            e.mostrar();
             System.out.println();
         }
         System.out.println();
@@ -80,9 +85,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", 1.0f, "Categoria: ENTRADA", "Estado: DISPONIBLE" );        
-        Producto unProducto2 = new Producto(2, "Producto2", 2.0f ,"Categoria: PLATOPRINCIPAL", "Estado: DISPONIBLE " );
-        Producto unProducto3 = new Producto(3, "Producto3", 3.0f ,"Categoria: POSTRE", "Estado: DISPONIBLE" );
+        Producto unProducto1 = new Producto(1, "Producto1",1.0f ,DISPONIBLE , ENTRADA );        
+        Producto unProducto2 = new Producto(2, "Producto2",2.0f, DISPONIBLE, PLATOPRINCIPAL);
+        Producto unProducto3 = new Producto(3, "Producto3",3.0f, NODISPONIBLE, POSTRE);
 
         productos.add(unProducto1);
         productos.add(unProducto2);
@@ -127,7 +132,7 @@ public class ControladorPrincipal {
 //            p.mostrar();
 //            System.out.println();
 //        }
-        System.out.println();
+//        System.out.println();
        //</editor-fold>
         
         
