@@ -15,29 +15,20 @@ import usuarios.modelos.Cliente;
  * @author luis
  */
 public class Pedido {
+
     private int numero;
-    private Cliente unCliente;
+    private Cliente cliente;
     private LocalDateTime fechaYHora;
     private Estado estado;
-    
-    
+
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente, Estado unEstado) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
-        this.unCliente = unCliente;
-        this.estado=  unEstado;
+        this.cliente = unCliente;
+        this.estado = unEstado;
     }
+
     
-   
-    
-    
-    public void mostrar() {
-        System.out.println("Numero: " + this.numero);
-        unCliente.mostrar();
-        System.out.println(fechaYHora.toString());
-        System.out.println(estado.toString());
-        
-    }
 
     public int verNumero() {
         return numero;
@@ -48,11 +39,11 @@ public class Pedido {
     }
 
     public Cliente verUnCliente() {
-        return unCliente;
+        return cliente;
     }
 
     public void asignarUnCliente(Cliente unCliente) {
-        this.unCliente = unCliente;
+        this.cliente = unCliente;
     }
 
     public Estado verEstado() {
@@ -66,10 +57,23 @@ public class Pedido {
     public void asignarFechaYHora(LocalDateTime fechaYHora) {
         this.fechaYHora = fechaYHora;
     }
-   
-    private String fechaAcadena(LocalDateTime fecha){
+
+    public String verFecha() {
         String patron = "dd/MM/yyyy";
-        String fechaEncadena = fecha.format(DateTimeFormatter.ofPattern(patron));
+        String fechaEncadena = fechaYHora.format(DateTimeFormatter.ofPattern(patron));
         return fechaEncadena;
+    }
+
+    public String verHora() {
+        String hora = fechaYHora.getHour() + ":" + fechaYHora.getMinute();
+        return hora;
+    }
+    public void mostrar(){
+        System.out.println(
+                "Nro: "+this.numero+"\n"
+                +"Fecha: "+this.verFecha()+"            "+"Hora:"+this.verHora()+"\n"
+                +"Cliente: "+this.cliente.toString()+"\n"
+                +"Estado: "+this.estado.toString()+"\n");
+    //la consigna dice que tiene que ser apellido, nombre. se podria separar el String nombre cuando aparece un espacio, pero hay que hacer trim al crear clientes, y no se que hacer con multiples nombres
     }
 }
