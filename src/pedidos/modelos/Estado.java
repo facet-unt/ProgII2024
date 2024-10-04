@@ -4,8 +4,6 @@
  */
 package pedidos.modelos;
 
-import productos.modelos.*;
-
 /**
  *
  * @author estudiante
@@ -17,7 +15,7 @@ public enum Estado {
     SOLICITADO ("Solicitado");
     
     
-    private String valor;
+    private final String valor;
 
     private Estado(String valor) {
         this.valor = valor;
