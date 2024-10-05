@@ -6,8 +6,6 @@ package pedidos.modelos;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 
 /**
@@ -21,11 +19,11 @@ public class Pedido {
     private LocalDateTime fechaYHora;
     private Estado estado;
 
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente, Estado unEstado) {
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = unCliente;
-        this.estado = unEstado;
+        this.estado = estado.SOLICITADO;
     }
 
     
@@ -72,7 +70,7 @@ public class Pedido {
         System.out.println(
                 "Nro: "+this.numero+"\n"
                 +"Fecha: "+this.verFecha()+"            "+"Hora:"+this.verHora()+"\n"
-                +"Cliente: "+this.cliente.toString()+"\n"
+                +"Cliente: "+this.cliente.verNombre()+"\n"
                 +"Estado: "+this.estado.toString()+"\n");
     //la consigna dice que tiene que ser apellido, nombre. se podria separar el String nombre cuando aparece un espacio, pero hay que hacer trim al crear clientes, y no se que hacer con multiples nombres
     }
