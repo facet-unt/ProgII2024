@@ -17,8 +17,12 @@ public class Empleado {
     
     // Metodo mostrar
     
-    public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+    public void mostrar() {
+        System.out.println("Datos del empleado");
+        System.out.println("Correo: " + correo);
+        System.out.println("Clave: " + clave);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Nombre: " + nombre);
     }
     
     // Definicion de los constructores de la clase

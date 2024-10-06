@@ -16,6 +16,7 @@ import usuarios.modelos.Cliente;
 public class Pedido {
     private int numero;
     private Cliente unCliente;
+    private String estado;
     private LocalDateTime fechaYHora;
     
     //private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();

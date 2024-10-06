@@ -31,41 +31,27 @@ public class ControladorPrincipalGUI {
         ventana.setTitle("Nuevo producto");
         ventana.setVisible(true);
         
-        VentanaAMCliente ventanaCliente = new VentanaAMCliente(null);
-        ventanaCliente.setLocationRelativeTo(null);
-        ventanaCliente.setTitle("Nuevo cliente");
-        ventanaCliente.setVisible(true);
-        
-        VentanaAMEmpleado ventanaEmpleado = new VentanaAMEmpleado(null);
-        ventanaEmpleado.setLocationRelativeTo(null);
-        ventanaEmpleado.setTitle("Nuevo empleado");
-        ventanaEmpleado.setVisible(true);
-        
-        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
-        ventanaEncargado.setLocationRelativeTo(null);
-        ventanaEncargado.setTitle("Nuevo encargado");
-        ventanaEncargado.setVisible(true);
         //CLIENTE
-      /* 
-        VentanaAMCliente ventana = new VentanaAMCliente(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo cliente");
-        ventana.setVisible(true);
-       */        
+     
+        VentanaAMCliente ventanac = new VentanaAMCliente(null);
+        ventanac.setLocationRelativeTo(null);
+        ventanac.setTitle("Nuevo cliente");
+        ventanac.setVisible(true);
+             
        //EMPLEADO 
-       /*
-        VentanaAMEmpleado ventana = new VentanaAMEmpleado(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo empleado");
-        ventana.setVisible(true);
-        */
+      
+        VentanaAMEmpleado ventanaem = new VentanaAMEmpleado(null);
+        ventanaem.setLocationRelativeTo(null);
+        ventanaem.setTitle("Nuevo empleado");
+        ventanaem.setVisible(true);
+     
        //ENCARGADO
-       /*
-        VentanaAMEncargado ventana = new VentanaAMEncargado(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo encargado");
-        ventana.setVisible(true);
-       */
+   
+        VentanaAMEncargado ventanaen = new VentanaAMEncargado(null);
+        ventanaen.setLocationRelativeTo(null);
+        ventanaen.setTitle("Nuevo encargado");
+        ventanaen.setVisible(true);
+    
     }
     
     
