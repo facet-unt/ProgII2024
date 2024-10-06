@@ -6,7 +6,7 @@ public class Producto {
     private int codigo;
     private String descripcion;
 //    private String categoria;
-  //  private String estado;
+//    private String estado;
     private Categoria categoria;
     private Estado estado;
     private float precio;
@@ -25,8 +25,8 @@ public class Producto {
         return "Producto: "+codigo + " - "+ descripcion + " Precio $:"+ precio;
     }
 
-    public Producto(int codigo, String descripcion,Categoria categoria,  Estado estado, float precio) {
     //public Producto(int codigo, String descripcion,String categoria,  String estado, float precio) {
+    public Producto(int codigo, String descripcion,Categoria categoria,  Estado estado, float precio) {
         this.codigo = codigo;
         this.categoria = categoria;
         this.descripcion = descripcion;
@@ -45,13 +45,13 @@ public class Producto {
         this.codigo = codigo;
     }
 
-    /*public String verCategoria() {
-        return categoria;
-    }
-
-    public void asignarCategoria(String categoria) {
-        this.categoria = categoria;
-    }*/
+//    public String verCategoria() {
+//        return categoria;
+//    }
+//
+//    public void asignarCategoria(String categoria) {
+//        this.categoria = categoria;
+//    }
 
     public Categoria verCategoria() {
         return categoria;
