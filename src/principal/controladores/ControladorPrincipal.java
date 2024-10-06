@@ -7,6 +7,7 @@ package principal.controladores;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
+import pedidos.modelos.ProductoDelPedido;
 import usuarios.modelos.*;
 import productos.modelos.*;
 
@@ -109,7 +110,7 @@ public class ControladorPrincipal {
         /*
         SEGUNDA PARTE
         */
-        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1);        
+       /* Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1);        
         Pedido unPedido2 = new Pedido(2, LocalDateTime.now(),  unCliente2);        
         Pedido unPedido3 = new Pedido(3, LocalDateTime.now(),  unCliente3);        
         
@@ -124,6 +125,38 @@ public class ControladorPrincipal {
             System.out.println();
         }
         System.out.println();
+        */
+       //</editor-fold>
+        /*
+        TERCERA PARTE
+        */
+        ArrayList<ProductoDelPedido> pdp1 = new ArrayList<>();
+        pdp1.add(new ProductoDelPedido(unProducto1, 1));
+        pdp1.add(new ProductoDelPedido(unProducto2, 2));
+        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), pdp1, unCliente1);        
+        
+        ArrayList<ProductoDelPedido> pdp2 = new ArrayList<>();
+        pdp2.add(new ProductoDelPedido(unProducto1, 10));
+        pdp2.add(new ProductoDelPedido(unProducto2, 20));
+        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), pdp2, unCliente2);        
+        
+        ArrayList<ProductoDelPedido> pdp3 = new ArrayList<>();
+        pdp3.add(new ProductoDelPedido(unProducto1, 100));
+        pdp3.add(new ProductoDelPedido(unProducto2, 200));
+        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(), pdp3, unCliente3);        
+        
+        pedidos.add(unPedido1);
+        pedidos.add(unPedido2);
+        pedidos.add(unPedido3);      
+             
+        System.out.println("Pedidos");
+        System.out.println("=======");
+        for(Pedido p : pedidos) {
+            p.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
        //</editor-fold>
     
     }

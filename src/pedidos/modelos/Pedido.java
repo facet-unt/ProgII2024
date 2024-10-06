@@ -8,6 +8,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 
 /**
@@ -17,13 +19,15 @@ import usuarios.modelos.Cliente;
 public class Pedido {
     private int numero;
     private LocalDateTime fechaYHora;
+    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     private Cliente cliente;
     private Estado estado;
 
-    public Pedido(int numero, LocalDateTime fechaYHora,Cliente cliente) {
+    public Pedido(int numero, LocalDateTime fechaYHora,ArrayList<ProductoDelPedido> productosDelPedido,Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
-        this.estado = Estado.CREANDO;
+        this.estado = Estado.CREADO;
+        this.productosDelPedido=productosDelPedido;
         this.cliente= cliente;
     }
 
@@ -67,6 +71,14 @@ public class Pedido {
         this.estado = estado;
     }
     
+    public ArrayList<ProductoDelPedido> verProductosDelPedido() {
+        return productosDelPedido;
+    }
+
+    public void asignarProductosDelPedido(ArrayList<ProductoDelPedido> productosDelPedido) {
+        this.productosDelPedido = productosDelPedido;
+    }
+    
     public void mostrar(){
         String patron = "hh:mm";
         String horaACadena = this.verHora().format(DateTimeFormatter.ofPattern(patron));
@@ -76,6 +88,13 @@ public class Pedido {
         System.out.println("\t\tHora: " + horaACadena);
         System.out.println("Cliente: " + this.cliente.verApellido() + ", " + this.cliente.verNombre());
         System.out.println("Estado: " + this.estado );
+        System.out.println("\tProducto \tCantidad");
+        System.out.println("\t==========================");
+        for(ProductoDelPedido pp : this.productosDelPedido) {
+            Producto producto = pp.verProducto();
+            int cantidad = pp.verCantidad();
+            System.out.println("\t" + producto + "\t" + cantidad);
+        }
                
         }
     
@@ -85,6 +104,8 @@ public class Pedido {
         String fechaEnCadena = fecha.format(DateTimeFormatter.ofPattern(patron));
         return fechaEnCadena;
     }
+
+   
    
       
       
