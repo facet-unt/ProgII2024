@@ -21,7 +21,7 @@ public class Pedido {
     private Estado estado;
     private LocalDateTime fechaYHora;
 
-    //private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+//    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
     // Definicion de los constructores
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
@@ -43,9 +43,9 @@ public class Pedido {
         this(numero, fechaYHora, cliente, Estado.PROCESANDO);
     }
 
-    public void agregarProducto(Producto unProducto, int cantidad) {
-        // ProductoDelPedido pdp = new ProductoDelPedido(cantidad, unProducto);
-        // this.productosDelPedido.add(pdp);
+    public void agregarProducto(Producto Producto, int cantidad) {
+//         ProductoDelPedido pdp = new ProductoDelPedido(Producto, cantidad);
+//         this.productosDelPedido.add(pdp);
     }
 
     // Definicion del metodo mostrar
