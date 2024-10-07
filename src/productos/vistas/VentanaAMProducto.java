@@ -8,6 +8,8 @@ package productos.vistas;
 import java.awt.Dialog;
 import java.util.ArrayList;
 import javax.swing.JDialog;
+import productos.modelos.Categoria;
+import productos.modelos.Estado;
 import productos.modelos.Producto;
 
 public class VentanaAMProducto extends JDialog {
@@ -83,6 +85,12 @@ public class VentanaAMProducto extends JDialog {
 
         jLabel3.setText("Categoría");
 
+        txtCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCategoriaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,7 +99,6 @@ public class VentanaAMProducto extends JDialog {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnGuardar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCancelar))
@@ -154,8 +161,8 @@ public class VentanaAMProducto extends JDialog {
         float precio = Float.parseFloat(this.txtPrecio.getText().trim());
         String categoria = this.txtCategoria.getText().trim();
         String estado  = this.txtEstado.getText().trim();
-        Producto unProducto = new Producto(codigo, descripcion, precio, estado, categoria);
-        this.productos.add(unProducto);
+//        Producto unProducto = new Producto(codigo, descripcion, precio, estado, categoria);
+//        this.productos.add(unProducto);
         
         System.out.println("Productos");
         System.out.println("=========");
@@ -164,6 +171,10 @@ public class VentanaAMProducto extends JDialog {
             System.out.println();
         }
     }//GEN-LAST:event_btnGuardarClic
+
+    private void txtCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCategoriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCategoriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
