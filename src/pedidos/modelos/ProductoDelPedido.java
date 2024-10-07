@@ -21,6 +21,12 @@ public class ProductoDelPedido {
         this.cantidad = cantidad;
     }
     
+    // Metodo mostrar
+    
+    public void mostrar(){
+        System.out.println(producto.verDescripcion() + "\t\t" + cantidad);
+    }
+    
     // Definicion de los metodos get/set
 
     public int verCantidad() {

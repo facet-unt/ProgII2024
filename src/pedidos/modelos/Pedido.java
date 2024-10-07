@@ -21,7 +21,7 @@ public class Pedido {
     private Estado estado;
     private LocalDateTime fechaYHora;
 
-//    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
     // Definicion de los constructores
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
@@ -43,10 +43,6 @@ public class Pedido {
         this(numero, fechaYHora, cliente, Estado.PROCESANDO);
     }
 
-    public void agregarProducto(Producto Producto, int cantidad) {
-//         ProductoDelPedido pdp = new ProductoDelPedido(Producto, cantidad);
-//         this.productosDelPedido.add(pdp);
-    }
 
     // Definicion del metodo mostrar
     public void mostrar() {
@@ -54,11 +50,26 @@ public class Pedido {
         System.out.println("Fecha: " + fechaYHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\tHora: " + fechaYHora.format(DateTimeFormatter.ofPattern("HH:mm")));
         System.out.println("Cliente: " + cliente.verApellido() + ", " + cliente.verNombre());
         System.out.println("Estado: " + estado.toString());
-        //for(ProductoDelPedido pdp : this.productosDelPedido) {
-        //    pdp.mostrar();
-        //}
+        System.out.println("========================");
+        System.out.println("Producto\tCantidad");
+        System.out.println("========================");
+        for(ProductoDelPedido pdp : this.productosDelPedido) {
+            pdp.mostrar();
+        }
     }
 
+    
+    // Devolver y agregar productos del pedido
+    
+    public void agregarProducto(Producto Producto, int cantidad) {
+         ProductoDelPedido pdp = new ProductoDelPedido(Producto, cantidad);
+         this.productosDelPedido.add(pdp);
+    }
+    
+    public ArrayList<ProductoDelPedido> verProductos() {
+        return this.productosDelPedido;
+    }
+    
     // Definicion de los metodos get/set
     
     public int verNumero() {

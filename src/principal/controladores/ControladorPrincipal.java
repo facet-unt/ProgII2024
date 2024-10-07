@@ -190,6 +190,12 @@ public class ControladorPrincipal {
         System.out.println("Pedidos");
         System.out.println("=======");
         for(Pedido p : pedidos) {
+            int i = 0;
+            for (Producto pro : productos)
+            {
+                p.agregarProducto(pro, 2+i);
+                i++;
+            }
             p.mostrar();
             System.out.println();
         }
