@@ -179,21 +179,21 @@ public class ControladorPrincipal {
         /*
         SEGUNDA PARTE
         */
-//        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1);        
-//        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(),  unCliente2);        
-//        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(),  unCliente3);        
-//        
-//        pedidos.add(unPedido1);
-//        pedidos.add(unPedido2);
-//        pedidos.add(unPedido3);
-//        
-//        System.out.println("Pedidos");
-//        System.out.println("=======");
-//        for(Pedido p : pedidos) {
-//            p.mostrar();
-//            System.out.println();
-//        }
-//        System.out.println();
+        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1);        
+        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), unCliente2);        
+        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(), unCliente3);        
+        
+        pedidos.add(unPedido1);
+        pedidos.add(unPedido2);
+        pedidos.add(unPedido3);
+        
+        System.out.println("Pedidos");
+        System.out.println("=======");
+        for(Pedido p : pedidos) {
+            p.mostrar();
+            System.out.println();
+        }
+        System.out.println();
        //</editor-fold>
         
         
