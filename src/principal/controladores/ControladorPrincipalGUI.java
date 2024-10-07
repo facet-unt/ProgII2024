@@ -5,7 +5,7 @@
 package principal.controladores;
 
 import javax.swing.UIManager;
-import productos.vistas.VentanaAMProducto;
+import usuarios.vistas.VentanaAMCliente;
 
 
 /**
@@ -26,10 +26,10 @@ public class ControladorPrincipalGUI {
         establecerLookAndFeel("Nimbus"); 
         
         // PRODUCTO
-        VentanaAMProducto ventana = new VentanaAMProducto(null);
+       /* VentanaAMProducto ventana = new VentanaAMProducto(null);
         ventana.setLocationRelativeTo(null);
         ventana.setTitle("Nuevo producto");
-        ventana.setVisible(true);
+        ventana.setVisible(true);*/
         
         //CLIENTE
       
