@@ -8,63 +8,11 @@ package usuarios.modelos;
  *
  * @author estudiante
  */
-public class Empleado {
+public class Empleado extends Usuario{
     
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
-    // Metodo mostrar
-    
-    public void mostrar() {
-        System.out.println("Datos del empleado");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
-    }
-    
-    // Definicion de los constructores de la clase
+    // Definicion del constructor que llama al super
     
     public Empleado(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
-    }
-
-    // Definicion de los metodos get/set de la clase para las 4 variables de instancia
-    
-    public String verCorreo() {
-        return correo;
-    }
-
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String verClave() {
-        return clave;
-    }
-
-    public void asignarClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String verApellido() {
-        return apellido;
-    }
-
-    public void asignarApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
+        super(correo, clave, apellido, nombre);
     }
 }
