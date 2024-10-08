@@ -28,6 +28,30 @@ public class Producto {
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
     
+    // Metodos equal y hash
+    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Producto other = (Producto) obj;
+        return this.codigo == other.codigo;
+    }
+    
     // Metodos get/set
     
     public int verCodigo() {
@@ -54,16 +78,16 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String verEstado() {
-        return estado.toString();
+    public Estado verEstado() {
+        return estado;
     }
 
     public void asignarEstado(Estado estado) {
         this.estado = estado;
     }
 
-    public String verCategoria() {
-        return categoria.toString();
+    public Categoria verCategoria() {
+        return categoria;
     }
 
     public void asignarCategoria(Categoria categoria) {

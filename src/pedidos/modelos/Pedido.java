@@ -43,8 +43,8 @@ public class Pedido {
         this(numero, fechaYHora, cliente, Estado.PROCESANDO);
     }
 
-
     // Definicion del metodo mostrar
+    
     public void mostrar() {
         System.out.println("Nro: " + numero);
         System.out.println("Fecha: " + fechaYHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\tHora: " + fechaYHora.format(DateTimeFormatter.ofPattern("HH:mm")));
@@ -58,6 +58,29 @@ public class Pedido {
         }
     }
 
+    // Metodo equals y hash
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + this.numero;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Pedido other = (Pedido) obj;
+        return this.numero == other.numero;
+    }
     
     // Devolver y agregar productos del pedido
     
