@@ -6,6 +6,7 @@ package pedidos.modelos;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import usuarios.modelos.Cliente;
@@ -18,7 +19,9 @@ public class Pedido {
     private int numero;
     private Cliente unCliente;
     private LocalDateTime fechaYHora;
-    private String fechaencadena;
+    private String fechaacadena;
+    private String horaacadena;
+    private Estado estado;
     
     private ArrayList<Pedido> ProductosDelPedido = new ArrayList<>();
 
@@ -34,7 +37,10 @@ public class Pedido {
 //    }
     
     public void mostrar() {
-        System.out.println(this.numero);
+        System.out.println("Nro: " + this.numero);
+        System.out.println("Fecha: " + this.fechaacadena + "   Hora: " + this.horaacadena);
+        System.out.println("Cliente: " + unCliente);
+        System.out.println("Estado: " + Estado.CREADO);
         for(Pedido pdp : this.ProductosDelPedido) {
             pdp.mostrar();
         }
@@ -46,9 +52,44 @@ public class Pedido {
         return fechaencadena;
     
     }
-
+    
+    private String horaacadena(LocalTime hora){
+        String patron = "hh:mm";
+        String horaencadena = hora.format(DateTimeFormatter.ofPattern(patron));
+        return horaencadena;
+    
+    }
+    
+    public Estado verEstado(){
+        return estado;
+    }
+    
+    public void asignarEstado(){
+        this.estado = estado;
+    }
+    
+    public Cliente verCliente(){
+        return unCliente;
+    }
+    
+    public void asignarCliente(Cliente unCliente){
+        this.unCliente = unCliente;
+    }
+    
     public int verNumero() {
         return numero;
+    }
+    
+    public String verHora(){
+        return horaacadena;
+    }
+    
+    public String verFecha(){
+        return fechaacadena;
+    }
+    
+    public void asignarFechayHora(LocalDateTime fechaYHora){
+        this.fechaYHora = fechaYHora;
     }
 
     public void asignarNumero(int numero) {
