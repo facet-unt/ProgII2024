@@ -6,6 +6,8 @@ package pedidos.modelos;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
@@ -35,10 +37,17 @@ public class Pedido {
     }
     
     public void mostrar() {
-        System.out.println(this.numero);
-        for(ProductoDelPedido pdp : this.productosDelPedido) {
-            pdp.mostrar();
-        }
+        System.out.println("Numero del pedido" + numero);
+        System.out.println("Fecha" + numero);
+        
+        
+        
+        
+        
+//        System.out.println(this.numero);
+//        for(ProductoDelPedido pdp : this.productosDelPedido) {
+//            pdp.mostrar();
+//        }
     }
     
     public Estado verEstado() {
@@ -65,12 +74,31 @@ public class Pedido {
         this.unCliente = cliente;
     }
     
-    public LocalDate verFecha() {
-        LocalDate fecha = fechaYHora.toLocalDate();
-        return fecha;
+    public LocalDateTime verFechaHora() {
+        LocalDateTime fechaHora = fechaYHora;
+        return fechaHora;
     }
 
-    public void asignarFecha(LocalDate fecha) {
-        this.LocalDate = fecha;
+    public void asignarFechaHora(LocalDateTime fechaHora) {
+        this.fechaYHora = fechaHora;
+    }
+    public LocalDate verFecha(LocalDateTime fechaHora){
+        LocalDate localDate = fechaHora.toLocalDate();
+        return localDate;
+    
+            }
+    public LocalTime verHora(LocalDateTime fechaHora){
+        LocalTime localTime = fechaHora.toLocalTime();
+        return localTime;
+            }
+    private String fechaACadena(LocalDate fechaHora){
+        String patron = "dd/mm/yyyy";
+        String fechaEnCadena = fechaHora.format(DateTimeFormatter.ofPattern(patron));
+        return fechaEnCadena;
+    }
+    private String horaACadena(LocalTime fechaHora){
+        String patron = "dd:mm";
+        String horaEnCadena = fechaHora.format(DateTimeFormatter.ofPattern(patron));
+        return horaEnCadena;
     }
 }
