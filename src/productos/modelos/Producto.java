@@ -9,10 +9,7 @@ public class Producto {
     private Estado estado;
     private Categoria categoria;
 
-    /**
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
+    
 
     public void mostrar(){
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
