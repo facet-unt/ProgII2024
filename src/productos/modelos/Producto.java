@@ -25,7 +25,11 @@ public class Producto {
      */
 
     public void mostrar(){
-    System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
+        System.out.println("Codigo: " + codigo);
+        System.out.println("Descripcion: " + descripcion);
+        System.out.println("Precio: " + precio);
+        System.out.println("Estado: " + estado);
+        System.out.println("Categoria: " + categoria);
     }
     
     // Metodos equal y hash

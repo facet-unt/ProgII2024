@@ -27,7 +27,6 @@ public abstract class Usuario {
     // Definicion del metodo mostrar
     
     public void mostrar() {
-        System.out.println("Datos del usuario");
         System.out.println("Correo: " + correo);
         System.out.println("Clave: " + clave);
         System.out.println("Apellido: " + apellido);
