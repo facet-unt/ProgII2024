@@ -7,7 +7,6 @@ package principal.controladores;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
-//import pedidos.modelos.Pedido;
 import productos.modelos.Categoria;
 import productos.modelos.Estado;
 import productos.modelos.Producto;
