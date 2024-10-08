@@ -5,10 +5,9 @@
 package principal.controladores;
 
 import java.util.ArrayList;
-import pedidos.modelos.Pedido;
+import pedidos.modelos.*;
 import usuarios.modelos.*;
-import productos.modelos.Producto;
-import productos.modelos.Categoria;
+import productos.modelos.*;
 
 /**
  *
@@ -71,9 +70,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", 1.0f, listaProductos.modelos.Estado.DISPONIBLE, Categoria.ENTRADA);        
-        Producto unProducto2 = new Producto(2, "Producto2", 2.0f, listaProductos.modelos.Estado.NO_DISPONIBLE, Categoria.PLATOPRINCIPAL);
-        Producto unProducto3 = new Producto(3, "Producto3", 3.0f, listaProductos.modelos.Estado.DISPONIBLE, Categoria.POSTRE);
+        Producto unProducto1 = new Producto(1, "Producto1", 1.0f, Estado.DISPONIBLE, Categoria.ENTRADA);        
+        Producto unProducto2 = new Producto(2, "Producto2", 2.0f, Estado.NO_DISPONIBLE, Categoria.PLATOPRINCIPAL);
+        Producto unProducto3 = new Producto(3, "Producto3", 3.0f, Estado.DISPONIBLE, Categoria.POSTRE);
 
         listaProductos.add(unProducto1);
         listaProductos.add(unProducto2);
@@ -100,10 +99,10 @@ public class ControladorPrincipal {
         System.out.println(unProducto1);
         
 
-        pedidos.modelos.Estado estadoPedido= listaPedidos.modelos.Estado.CREADO;
-        Pedido unPedido1 = new Pedido(unCliente1, estadoPedido);
-        Pedido unPedido2 = new Pedido(unCliente2, estadoPedido);
-        Pedido unPedido3 = new Pedido(unCliente3, estadoPedido);
+        
+        Pedido unPedido1 = new Pedido(unCliente1, Estados.CREADO);
+        Pedido unPedido2 = new Pedido(unCliente2, Estados.CREADO);
+        Pedido unPedido3 = new Pedido(unCliente3, Estados.CREADO);
 
         
         listaPedidos.add(unPedido1);

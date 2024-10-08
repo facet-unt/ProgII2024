@@ -7,6 +7,7 @@ package pedidos.modelos;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import usuarios.modelos.Cliente;
 
 /**
@@ -20,9 +21,10 @@ public class Pedido {
     private LocalDate fecha=LocalDate.now();
     private LocalTime hora=LocalTime.now();
     private Cliente cliente;
-    private Estado estado;
+    private Estados estado;
+    private ArrayList <ProductoDelPedido> prodsPedido =new ArrayList<>();
     
-    public Pedido(Cliente cliente, Estado estado){
+    public Pedido(Cliente cliente, Estados estado){
         this.numero=numPedido++;
         this.cliente=cliente;
         this.estado=estado;
@@ -49,7 +51,12 @@ public class Pedido {
         System.out.println("Nro: "+this.numero+"\n"+
                            "Fecha: "+this.fecha+"\t"+"Hora: "+this.verHora()+"\n"+
                            "Cliente: "+this.cliente.verApellido()+" "+this.cliente.verNombre()+"\n"+
-                           "Estado: "+this.estado);
+                           "Estado: "+this.estado+"\n"+
+                           "Producto\tCantidad"+"\n"+
+                           "\t"+"========="+"\n");
+        for(ProductoDelPedido p : prodsPedido){
+            System.out.println(p.verProducto().verDescripcion()+"\t"+p.verCantidad());
+        }
     }
     
     
