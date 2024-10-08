@@ -56,6 +56,13 @@ public class Pedido {
     public void agregarProductos(ProductoDelPedido p){
         if (!prodsPedido.contains(p)){
             prodsPedido.add(p);
+        }else{
+            int aumento=p.verCantidad();
+            int index = prodsPedido.indexOf(p);
+            aumento += prodsPedido.get(index).verCantidad();
+            p.asignarCantidad(aumento);
+            prodsPedido.remove(index);
+            prodsPedido.add(p);
         }
     }
     
