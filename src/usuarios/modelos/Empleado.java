@@ -16,7 +16,7 @@ public class Empleado {
     private String nombre;
     
     public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+    System.out.println("Correo: "+ correo + "\nClave:"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
 
     public Empleado(String correo, String clave, String apellido, String nombre) {
