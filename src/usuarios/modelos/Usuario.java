@@ -4,7 +4,9 @@
  */
 package usuarios.modelos;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import pedidos.modelos.Pedido;
 
 /**
  *
@@ -59,7 +61,9 @@ public abstract class Usuario {
         return Objects.equals(this.correo, other.correo);
     }
     
+    // Definicion del metodo verPedidos
     
+    public abstract ArrayList<Pedido> verPedidos();
     
     // Definicion de los metodos get/set de la clase para las 4 variables de instancia
     
