@@ -74,9 +74,19 @@ public class ControladorPrincipal {
         Producto unProducto2 = new Producto(2, "Producto2", 2.0f, Estado.NO_DISPONIBLE, Categoria.PLATOPRINCIPAL);
         Producto unProducto3 = new Producto(3, "Producto3", 3.0f, Estado.DISPONIBLE, Categoria.POSTRE);
 
-        listaProductos.add(unProducto1);
-        listaProductos.add(unProducto2);
-        listaProductos.add(unProducto3);
+        if (!listaProductos.contains(unProducto1)){
+            listaProductos.add(unProducto1);
+        }
+        if (!listaProductos.contains(unProducto2)){
+            listaProductos.add(unProducto2);
+        }
+        if (!listaProductos.contains(unProducto3)){
+            listaProductos.add(unProducto3);
+        }
+        if (!listaProductos.contains(unProducto3)){
+            listaProductos.add(unProducto3);
+        }
+        
 
         System.out.println("Productos");
         System.out.println("=========");
@@ -98,16 +108,32 @@ public class ControladorPrincipal {
 
         System.out.println(unProducto1);
         
-
+        ProductoDelPedido unProdPedido1 = new ProductoDelPedido(1, unProducto1);
+        ProductoDelPedido unProdPedido2 = new ProductoDelPedido(1, unProducto2);
+        ProductoDelPedido unProdPedido3 = new ProductoDelPedido(1, unProducto3);
         
         Pedido unPedido1 = new Pedido(unCliente1, Estados.CREADO);
         Pedido unPedido2 = new Pedido(unCliente2, Estados.CREADO);
         Pedido unPedido3 = new Pedido(unCliente3, Estados.CREADO);
+        
+        unPedido1.agregarProductos(unProdPedido1);
+        unPedido2.agregarProductos(unProdPedido2);
+        unPedido3.agregarProductos(unProdPedido3);
+        unPedido1.agregarProductos(unProdPedido1);
 
         
-        listaPedidos.add(unPedido1);
-        listaPedidos.add(unPedido2);
-        listaPedidos.add(unPedido3);
+        if (!listaPedidos.contains(unPedido1)){
+            listaPedidos.add(unPedido1);
+        }
+        if (!listaPedidos.contains(unPedido2)){
+            listaPedidos.add(unPedido2);
+        }if (!listaPedidos.contains(unPedido2)){
+            listaPedidos.add(unPedido2);
+        }
+        if (!listaPedidos.contains(unPedido3)){
+            listaPedidos.add(unPedido3);
+        }
+        
         
         System.out.println("Pedidos");
         System.out.println("=========");
@@ -115,5 +141,10 @@ public class ControladorPrincipal {
         for(Pedido p : listaPedidos){
             p.mostrar();
         }
+        
+        
+        unPedido1.agregarProductos(unProdPedido1);
+        unPedido1.agregarProductos(unProdPedido1);
+        unPedido1.agregarProductos(unProdPedido1);
     }
 }

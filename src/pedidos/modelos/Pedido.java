@@ -30,6 +30,12 @@ public class Pedido {
         this.estado=estado;
     }
     
+    public void verProductos(){
+        for (ProductoDelPedido p : prodsPedido){
+            p.verProducto().mostrar();
+        }
+    }
+    
     public String verHora(){
         DateTimeFormatter formato= DateTimeFormatter.ofPattern("HH:mm");
         return hora.format(formato);
@@ -39,12 +45,18 @@ public class Pedido {
         System.out.println(this.fecha);
     }
     
-    public void verNumero(){
-        System.out.println(this.numero);
+    public int verNumero(){
+        return this.numero;
     }
     
     public void verCliente(){
         this.cliente.mostrar();
+    }
+    
+    public void agregarProductos(ProductoDelPedido p){
+        if (!prodsPedido.contains(p)){
+            prodsPedido.add(p);
+        }
     }
     
     public void mostrar(){
@@ -57,6 +69,19 @@ public class Pedido {
         for(ProductoDelPedido p : prodsPedido){
             System.out.println(p.verProducto().verDescripcion()+"\t"+p.verCantidad());
         }
+    }
+    
+    @Override
+    
+    public boolean equals(Object objeto){
+        if (this == objeto){
+            return true;
+        }
+        if (objeto == null || getClass() != objeto.getClass()){
+            return false;
+        }
+        Pedido p  = (Pedido) objeto;
+        return numero == p.verNumero();
     }
     
     

@@ -36,4 +36,17 @@ public class ProductoDelPedido {
     public void asignarCantidad(int cantidad){
         this.cantidad=cantidad;
     }
+    
+    @Override
+    
+    public boolean equals(Object objeto){
+        if (this == objeto){
+            return true;
+        }
+        if (objeto == null || getClass() != objeto.getClass()){
+            return false;
+        }
+        ProductoDelPedido p  = (ProductoDelPedido) objeto;
+        return producto == p.verProducto();
+    }
 }
