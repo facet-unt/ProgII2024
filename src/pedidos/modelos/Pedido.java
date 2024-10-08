@@ -6,6 +6,7 @@ package pedidos.modelos;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import usuarios.modelos.Cliente;
 
 /**
@@ -18,15 +19,15 @@ public class Pedido {
     private Cliente cliente;
     private LocalDateTime fechaYHora;
     private Estado estado;
+    private ArrayList<ProductoDelPedido> pdps;
 
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente) {
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente, ArrayList<ProductoDelPedido> pdps) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = unCliente;
-        this.estado = estado.SOLICITADO;
+        this.estado = estado.CREADO;
+        this.pdps = pdps;
     }
-
-    
 
     public int verNumero() {
         return numero;
@@ -66,13 +67,26 @@ public class Pedido {
         String hora = fechaYHora.getHour() + ":" + fechaYHora.getMinute();
         return hora;
     }
-    public void mostrar(){
+
+    public void mostrar() {
         System.out.println(
-                "Nro: "+this.numero+"\n"
-                +"Fecha: "+this.verFecha()+"            "+"Hora:"+this.verHora()+"\n"
-                +"Cliente: "+this.cliente.verNombre()+"\n"
-                +"Estado: "+this.estado.toString()+"\n");
-    //la consigna dice que tiene que ser apellido, nombre. se podria separar el String nombre cuando aparece un espacio, pero hay que hacer trim al crear clientes, y no se que hacer con multiples nombres
+                "Nro: " + this.numero + "\n"
+                + "Fecha: " + this.verFecha() + "            " + "Hora:" + this.verHora() + "\n"
+                + "Cliente: " + this.cliente.verNombre() + "\n"
+                + "Estado: " + this.estado.toString() + "\n");
+        //la consigna dice que tiene que ser apellido, nombre. se podria separar el String nombre cuando aparece un espacio, pero hay que hacer trim al crear clientes, y no se que hacer con multiples nombres
+    }
+
+    public ArrayList<ProductoDelPedido> verProductosDelPedido() {
+        return pdps;
+    }
+
+    public void agregarProductoDelPedido(ProductoDelPedido pdp) {
+        if (!this.pdps.isEmpty()) {
+            if (!this.pdps.contains(pdp)) {
+                this.pdps.add(pdp);
+            }
+        }
     }
 
     @Override
@@ -96,5 +110,5 @@ public class Pedido {
         final Pedido other = (Pedido) obj;
         return this.numero == other.numero;
     }
-    
+
 }

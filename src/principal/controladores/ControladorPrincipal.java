@@ -8,10 +8,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
 import static productos.modelos.Categoria.ENTRADA;
-import static productos.modelos.Categoria.PLATOPRINCIPAL;
+import static productos.modelos.Categoria.PLATO_PRINCIPAL;
 import static productos.modelos.Categoria.POSTRE;
 import static productos.modelos.Estado.DISPONIBLE;
-import static productos.modelos.Estado.NODISPONIBLE;
+import static productos.modelos.Estado.NO_DISPONIBLE;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
@@ -73,8 +73,8 @@ public class ControladorPrincipal {
         System.out.println();
 
         Producto unProducto1 = new Producto(1, "Producto1", 1.0f, DISPONIBLE, ENTRADA);
-        Producto unProducto2 = new Producto(2, "Producto2", 2.0f, DISPONIBLE, PLATOPRINCIPAL);
-        Producto unProducto3 = new Producto(1, "Producto3", 3.0f, NODISPONIBLE, POSTRE);
+        Producto unProducto2 = new Producto(2, "Producto2", 2.0f, DISPONIBLE, PLATO_PRINCIPAL);
+        Producto unProducto3 = new Producto(1, "Producto3", 3.0f, NO_DISPONIBLE, POSTRE);
         
         if (!productos.contains(unProducto1)){
             productos.add(unProducto1);

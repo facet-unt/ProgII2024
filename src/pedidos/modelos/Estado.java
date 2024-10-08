@@ -13,8 +13,7 @@ import productos.modelos.*;
 public enum Estado {
     CREADO("Creado"),
     PROCESANDO("Procesando"),
-    ENTREGADO("Entregado"),
-    SOLICITADO ("Solicitado");
+    ENTREGADO("Entregado");
     
     
     private String valor;
