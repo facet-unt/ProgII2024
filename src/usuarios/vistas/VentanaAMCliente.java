@@ -140,13 +140,14 @@ public class VentanaAMCliente extends JDialog {
         String apellido = this.txtApellido.getText().trim();
         String nombre = this.txtNombre.getText().trim();
         String clave = new String(this.passClave.getPassword());
-        Cliente unCliente = new Cliente(correo, clave, apellido, nombre);
+        
+        Cliente unCliente = new Cliente(correo, clave, apellido, nombre); //Se crea un cliente
         this.clientes.add(unCliente);
         
         System.out.println("Clientes");
         System.out.println("========");
         for(Cliente c : this.clientes) {
-            c.mostrar();
+            c.mostrar(); //Se llama a la clase mostrar de clientes
             System.out.println();
         }
     }//GEN-LAST:event_btnGuardarClic
