@@ -4,8 +4,10 @@
  */
 package usuarios.modelos;
 
-import productos.modelos.Producto;
-
+/**
+ *
+ * @author estudiante
+ */
 public class Empleado {
 
     /*    public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class Empleado {
         System.out.println(unProducto.toString());
     }*/
     
-   
+    
     private String correo;
     private String clave;
     private String apellido;
@@ -75,4 +77,7 @@ public class Empleado {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    
+    
 }
