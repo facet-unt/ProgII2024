@@ -1,12 +1,16 @@
 
 package usuarios.modelos;
 
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
+
 public class Cliente {
     
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
+    private ArrayList<Pedido> pedidos=new ArrayList();
     
     public void mostrar() {
         System.out.println("Datos del cliente");
@@ -58,6 +62,12 @@ public class Cliente {
 
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
+    }
+    
+    public void verPedidos(){
+        for (Pedido p : this.pedidos){
+            p.mostrar();
+        }
     }
 
 }

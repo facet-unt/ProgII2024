@@ -5,8 +5,10 @@
 package principal.controladores;
 
 import java.util.ArrayList;
+import pedidos.modelos.Pedido;
 import usuarios.modelos.*;
-import productos.modelos.*;
+import productos.modelos.Producto;
+import productos.modelos.Categoria;
 
 /**
  *
@@ -18,7 +20,8 @@ public class ControladorPrincipal {
         ArrayList<Cliente> clientes = new ArrayList<>();
         ArrayList<Empleado> empleados = new ArrayList<>();
         ArrayList<Encargado> encargados = new ArrayList<>();
-        ArrayList<Producto> productos = new ArrayList<>();
+        ArrayList<Producto> listaProductos = new ArrayList<>();
+        ArrayList<Pedido> listaPedidos = new ArrayList<>();
 
         Cliente unCliente1 = new Cliente("cliente1@bar.com", "claveCliente1", "ApellidoCliente1", "NombreCliente1");        
         Cliente unCliente2 = new Cliente("cliente2@bar.com", "claveCliente2", "ApellidoCliente2", "NombreCliente2");       
@@ -68,17 +71,17 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", "DISPONIBLE", 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", "PLATOPRINCIPAL", "DISPONIBLE", 2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE", "DISPONIBLE", 3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1", 1.0f, listaProductos.modelos.Estado.DISPONIBLE, Categoria.ENTRADA);        
+        Producto unProducto2 = new Producto(2, "Producto2", 2.0f, listaProductos.modelos.Estado.NO_DISPONIBLE, Categoria.PLATOPRINCIPAL);
+        Producto unProducto3 = new Producto(3, "Producto3", 3.0f, listaProductos.modelos.Estado.DISPONIBLE, Categoria.POSTRE);
 
-        productos.add(unProducto1);
-        productos.add(unProducto2);
-        productos.add(unProducto3);
+        listaProductos.add(unProducto1);
+        listaProductos.add(unProducto2);
+        listaProductos.add(unProducto3);
 
         System.out.println("Productos");
         System.out.println("=========");
-        for(Producto p : productos) {
+        for(Producto p : listaProductos) {
             p.mostrar();
             System.out.println();
         }
@@ -95,5 +98,23 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        
+
+        pedidos.modelos.Estado estadoPedido= listaPedidos.modelos.Estado.CREADO;
+        Pedido unPedido1 = new Pedido(unCliente1, estadoPedido);
+        Pedido unPedido2 = new Pedido(unCliente2, estadoPedido);
+        Pedido unPedido3 = new Pedido(unCliente3, estadoPedido);
+
+        
+        listaPedidos.add(unPedido1);
+        listaPedidos.add(unPedido2);
+        listaPedidos.add(unPedido3);
+        
+        System.out.println("Pedidos");
+        System.out.println("=========");
+        
+        for(Pedido p : listaPedidos){
+            p.mostrar();
+        }
     }
 }
