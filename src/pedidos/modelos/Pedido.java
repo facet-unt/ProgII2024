@@ -6,6 +6,7 @@ package pedidos.modelos;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Objects;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import pedidos.modelos.ProductodePedido;
@@ -21,7 +22,6 @@ public class Pedido {
     private Estado estado;
     
     private ArrayList<ProductodePedido> lista = new ArrayList<>();
-    
 
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente,Estado estado ) {
         
@@ -32,9 +32,12 @@ public class Pedido {
         this.estado = estado;
     }
     
-     public void agregarProducto(Producto unProducto, int cantidad) {
-        lista.add(new ProductodePedido(cantidad,unProducto));
+     public void agregarProducto(Producto p, int cantidad) {
+        ProductodePedido pdp = new ProductodePedido(cantidad,p);
+        if(!lista.contains(pdp))
+            lista.add(pdp);
      }
+     
 
     @Override
     public int hashCode() {

@@ -23,6 +23,8 @@ public class ProductodePedido {
         this.unProducto = unProducto;
     }
     
+    
+    
     public void mostrar2(){
       System.out.println("Producto: " +this.unProducto.verDescripcion());  
       System.out.println("Cantidad: " +cantidad); 
