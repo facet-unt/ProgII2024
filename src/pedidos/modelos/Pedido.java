@@ -21,6 +21,7 @@ public class Pedido {
     private Estado estado;
     
     private ArrayList<ProductodePedido> lista = new ArrayList<>();
+    
 
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente,Estado estado ) {
         
@@ -34,6 +35,31 @@ public class Pedido {
      public void agregarProducto(Producto unProducto, int cantidad) {
         lista.add(new ProductodePedido(cantidad,unProducto));
      }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.numero;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Pedido other = (Pedido) obj;
+        if (this.numero != other.numero) {
+            return false;
+        }
+        return true;
+    }
  
     
     public void mostrar() {
