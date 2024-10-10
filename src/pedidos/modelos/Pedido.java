@@ -105,10 +105,22 @@ public class Pedido {
     public void asignarFechayHora(LocalDateTime fechaYHora){
         this.fechaYHora = fechaYHora;
     }
-    
 
-    
-    
-    
-    
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Pedido other = (Pedido) obj;
+        return this.numero == other.numero;
+    }
+   
 }

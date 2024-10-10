@@ -1,7 +1,5 @@
 package productos.modelos;
 
-import usuarios.modelos.Cliente;
-
 public class Producto {
     private int codigo;
     private String descripcion;
@@ -16,6 +14,7 @@ public class Producto {
 
     public void mostrar(){
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
+    
     }
 
     public Producto(int codigo, String descripcion, float precio, Estado estado, Categoria categoria) {
@@ -64,6 +63,21 @@ public class Producto {
 
     public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Producto other = (Producto) obj;
+        return this.codigo == other.codigo;
     }
     
     

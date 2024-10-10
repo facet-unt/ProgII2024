@@ -123,6 +123,10 @@ public class ControladorPrincipal {
         pedidos.add(unPedido2);
         pedidos.add(unPedido3);
         
+        unPedido1.agregarProducto(unProducto1, 2);
+        unPedido2.agregarProducto(unProducto2, 5);
+        unPedido3.agregarProducto(unProducto3, 1);
+        
         System.out.println("Pedidos");
         System.out.println("=======");
         for(Pedido p : pedidos) {
