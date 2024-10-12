@@ -10,6 +10,7 @@ import static pedidos.modelos.Estado.CREADO;
 import static pedidos.modelos.Estado.PROCESANDO;
 import static pedidos.modelos.Estado.SOLICITADO;
 import pedidos.modelos.Pedido;
+import pedidos.modelos.ProductoDelPedido;
 //import pedidos.modelos.Pedido;
 import static productos.modelos.Categoria.ENTRADA;
 import static productos.modelos.Categoria.PLATOPRINCIPAL;
@@ -122,9 +123,21 @@ public class ControladorPrincipal {
         /*
         SEGUNDA PARTE
         */
-        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1, SOLICITADO);        
-        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(),  unCliente2, CREADO);        
-        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(),  unCliente3, PROCESANDO);        
+        
+        ProductoDelPedido unProductoDelPedido1 = new ProductoDelPedido(2, unProducto1);
+        ProductoDelPedido unProductoDelPedido2 = new ProductoDelPedido(4, unProducto2);
+        ProductoDelPedido unProductoDelPedido3 = new ProductoDelPedido(5, unProducto3);
+        
+        ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+        
+        
+        productosDelPedido.add(unProductoDelPedido1);
+        productosDelPedido.add(unProductoDelPedido2);
+        productosDelPedido.add(unProductoDelPedido3);
+        
+        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1, SOLICITADO, productosDelPedido);        
+        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(),  unCliente2, CREADO, productosDelPedido);        
+        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(),  unCliente3, PROCESANDO, productosDelPedido);        
         
         pedidos.add(unPedido1);
         pedidos.add(unPedido2);
