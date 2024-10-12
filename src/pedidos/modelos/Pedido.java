@@ -82,7 +82,11 @@ public class Pedido {
         this.productoDelPedido = productoDelPedido;
     }
     
-    
+    private void mostrarProductosDelPedido(){
+    for(ProductoDelPedido productoPedidos: productoDelPedido){
+    System.out.println(productoPedidos.VerDescripcionProducto() +"\t"+ productoPedidos.VerCantidad());
+    }
+    }
     
     
     public void mostrar(){
@@ -92,6 +96,9 @@ public class Pedido {
         System.out.println("Fecha: " + fechaYHora.toLocalDate() + "\tHora: "+ fechaYHora.getHour() + ":" + fechaYHora.getMinute());
         System.out.println("Cliente: " + cliente.verApellido() + "\t " + cliente.verNombre());
         System.out.println("Estado: " + estado);
+        System.out.println("Producto    Cantidad");
+        System.out.println("============================");
+        mostrarProductosDelPedido();
     
     }
     

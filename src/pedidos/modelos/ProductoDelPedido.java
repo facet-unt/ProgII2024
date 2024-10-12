@@ -33,6 +33,10 @@ public class ProductoDelPedido {
     public Producto VerProducto() {
         return producto;
     }
+    
+    public String VerDescripcionProducto(){
+    return producto.verDescripcion();
+    }
 
     public void AsignarProducto(Producto producto) {
         this.producto = producto;
