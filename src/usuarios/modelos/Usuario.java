@@ -1,6 +1,8 @@
 
 package usuarios.modelos;
 
+import java.util.Objects;
+
 public abstract class Usuario {
     
     private String correo;
@@ -51,6 +53,30 @@ public abstract class Usuario {
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 11 * hash + Objects.hashCode(this.correo);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Usuario other = (Usuario) obj;
+        return Objects.equals(this.correo, other.correo);
+    }
+    
+    
     
     
     
