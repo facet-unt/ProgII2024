@@ -1,7 +1,9 @@
 
 package usuarios.modelos;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import pedidos.modelos.Pedido;
 
 public abstract class Usuario {
     
@@ -16,6 +18,8 @@ public abstract class Usuario {
         this.apellido = apellido;
         this.nombre = nombre;
     }
+    
+    public abstract ArrayList<Pedido> verPedidos();
     
 
     public String verCorreo() {
