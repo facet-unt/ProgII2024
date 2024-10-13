@@ -10,7 +10,7 @@ public class Cliente {
     private String clave;
     private String apellido;
     private String nombre;
-    private ArrayList<Pedido> pedidos;
+    private ArrayList<Pedido> pedidos = new ArrayList<>();
     
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
