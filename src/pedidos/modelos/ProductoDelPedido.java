@@ -8,38 +8,41 @@ import productos.modelos.Producto;
 
 /**
  *
- * @author luis
+ * @author diego
  */
 public class ProductoDelPedido {
     private int cantidad;
-    private Producto unProducto;
-
-    public ProductoDelPedido(int cantidad, Producto unProducto) {
+    private Producto producto;
+    
+    // Definicion del constructor
+    
+    public ProductoDelPedido(Producto producto, int cantidad) {
+        this.producto = producto;
         this.cantidad = cantidad;
-        this.unProducto = unProducto;
     }
     
-    public void mostrar() {
-        this.unProducto.mostrar();
-        System.out.println("Cantidad: " + this.cantidad);
-        System.out.println();
+    // Metodo mostrar
+    
+    public void mostrar(){
+        System.out.println(producto.verDescripcion() + "\t\t" + cantidad);
     }
     
+    // Definicion de los metodos get/set
 
-    public int getCantidad() {
+    public int verCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void asignarCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
-    public Producto getUnProducto() {
-        return unProducto;
+    public Producto verProducto() {
+        return producto;
     }
 
-    public void setUnProducto(Producto unProducto) {
-        this.unProducto = unProducto;
+    public void asignarProducto(Producto producto) {
+        this.producto = producto;
     }
     
     

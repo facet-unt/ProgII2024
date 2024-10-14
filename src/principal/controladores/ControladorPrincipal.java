@@ -7,6 +7,8 @@ package principal.controladores;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
+import productos.modelos.Categoria;
+import productos.modelos.Estado;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
@@ -79,9 +81,9 @@ public class ControladorPrincipal {
             System.out.println();
         }
         System.out.println();
-
+        
         Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 2.0f);
+        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f);
         Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
 
         productos.add(unProducto1);
@@ -107,6 +109,70 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
+        
+        // Separacion del antes y dsp
+        
+        System.out.println();
+        System.out.println("========= Modificaciones hechas =========");
+        System.out.println();
+        
+        // Modificaciones a los objetos creados para su posterior muestra en pantalla
+        
+        unCliente1.asignarCorreo("nuevocorreo1@perrito.com");
+        unCliente2.asignarCorreo("nuevocorreo2@perrito.com");
+        unCliente3.asignarCorreo("nuevocorreo27@perrito.com");
+        unCliente1.asignarClave(unCliente1.verClave()+"1233");
+        unCliente2.asignarClave(unCliente2.verClave()+"1233");
+        unCliente3.asignarClave(unCliente3.verClave()+"1233");
+        
+        System.out.println("Clientes");
+        System.out.println("========");
+        for(Cliente c : clientes) {
+            c.mostrar();
+            System.out.println();
+        }
+        System.out.println();   
+        
+        unEmpleado1.asignarCorreo("entelaburantes25@losgatossonmejores.com");
+        unEmpleado2.asignarCorreo("entelaburantes2323@losgatossonmejores.com");
+        unEmpleado3.asignarCorreo("entelaburantes34971@losgatossonmejores.com");
+        unEmpleado1.asignarClave(unEmpleado1.verClave()+"666 :o");
+        unEmpleado2.asignarClave(unEmpleado2.verClave()+"7244!");
+        unEmpleado3.asignarClave(unEmpleado3.verClave()+"!!!!!!!");
+        
+        System.out.println("Empleados");
+        System.out.println("=========");
+        for(Empleado e : empleados) {
+            e.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
+        unEncargado1.asignarCorreo("todosestanbajomiMando@bussinesspersona.com");
+        unEncargado2.asignarCorreo("lomismoqueelotro@bussinesspersona.com");
+        unEncargado3.asignarCorreo("yestetmbesigual@bussinesspersona.com");
+        unEncargado1.asignarClave(unEncargado1.verCorreo());
+        unEncargado2.asignarClave(unEncargado2.verCorreo());
+        unEncargado3.asignarClave(unEncargado3.verCorreo());
+        unEncargado3.asignarNombre("Romina");
+        
+        System.out.println("Encargados");
+        System.out.println("==========");
+        for(Encargado e : encargados) {
+            e.mostrar();
+            System.out.println();
+        }
+        System.out.println();
+        
+        System.out.println("Productos");
+        System.out.println("=========");
+        for(Producto p : productos) {
+            p.asignarEstado(Estado.NO_DISPONIBLE);
+            p.asignarDescripcion("YOGURT");
+            p.asignarCodigo(777);
+            p.mostrar();
+            System.out.println();
+        }
         //</editor-fold>
         
         //<editor-fold desc="SEGUNDA PARTE" defaultstate="collapsed">
@@ -114,8 +180,8 @@ public class ControladorPrincipal {
         SEGUNDA PARTE
         */
         Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1);        
-        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(),  unCliente2);        
-        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(),  unCliente3);        
+        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), unCliente2);        
+        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(), unCliente3);        
         
         pedidos.add(unPedido1);
         pedidos.add(unPedido2);
@@ -124,6 +190,12 @@ public class ControladorPrincipal {
         System.out.println("Pedidos");
         System.out.println("=======");
         for(Pedido p : pedidos) {
+            int i = 0;
+            for (Producto pro : productos)
+            {
+                p.agregarProducto(pro, 2+i);
+                i++;
+            }
             p.mostrar();
             System.out.println();
         }
