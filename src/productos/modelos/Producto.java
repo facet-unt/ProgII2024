@@ -18,23 +18,36 @@ public class Producto {
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    public Producto(int codigo, String descripcion, EstadoProducto estado, CategoriaProducto categoria, float precio) {
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Producto other = (Producto) obj;
+        return this.codigo == other.codigo;
+    }
+    
+    
+
+    public Producto(int codigo, String descripcion, CategoriaProducto categoria, EstadoProducto estado, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
         this.estado = estado;
         this.categoria = categoria;
-    }
-    
-    public String toString(){
-        return "Producto{" +
-               "Código=" + codigo +
-               ", Descripción='" + descripcion +
-               ", Precio=" + precio +
-               ", Estado=" + estado +
-               ", Categoría=" + categoria +
-               '}';
-        
     }
     
     

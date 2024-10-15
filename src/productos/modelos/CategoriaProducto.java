@@ -7,7 +7,18 @@ package productos.modelos;
 
 
 public enum CategoriaProducto {
-    entrada,
-    platoPrincipal,
-    postre
+    entrada("Entrada"),
+    PLATOPRINCIPAL("PLATOPRINCIPAL"),
+    postre("Postre");
+
+    private String clasif;
+
+    private CategoriaProducto(String clasif){
+    this.clasif=clasif;
+    }
+    
+    public String toString(){
+        return this.clasif;
+    }
 }
+    

@@ -9,6 +9,14 @@ package productos.modelos;
  * @author tomas
  */
 public enum EstadoProducto {
-    disponible,
-    noDisponible
+    DISPONIBLE("DISPONIBLE"),NODISPONIBLE("NO DISPONIBLE");
+    
+    private String clasif;
+    
+    private EstadoProducto(String clasif){
+        this.clasif=clasif;
+    }
+    public String toString(){
+        return this.clasif;
+    }
 }

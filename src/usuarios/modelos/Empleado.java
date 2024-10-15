@@ -8,13 +8,10 @@ package usuarios.modelos;
  *
  * @author estudiante
  */
-public class Empleado {
+public class Empleado extends Usuario {
     
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
+
+    @Override
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }

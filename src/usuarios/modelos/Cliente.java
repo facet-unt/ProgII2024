@@ -1,18 +1,19 @@
 
 package usuarios.modelos;
 
-public class Cliente {
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-   
+public class Cliente extends Usuario {
+
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString(){
         return "Apellido y nombre: " + apellido + nombre  + "\n" + "correo: " + correo + "\n";
     }
     
     
+    @Override
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
     }

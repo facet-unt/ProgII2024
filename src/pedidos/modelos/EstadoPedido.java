@@ -7,8 +7,19 @@ package pedidos.modelos;
 
 
 public enum EstadoPedido {
-    creado,
-    solicitado,
-    procesando,
-    entregado
+    creado("Creado"),
+    solicitado("Solicitado"),
+    procesando("Procesando"),
+    entregado("Entregado");
+    
+    private String clasif;
+    
+    //constructor
+    private EstadoPedido(String clasif){
+        this.clasif=clasif;
+    }
+    
+    public String toString(){
+        return this.clasif;
+    }
 }

@@ -4,13 +4,17 @@
  */
 package principal.controladores;
 
+//import java.time.LocalDateTime;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import pedidos.modelos.Pedido;
 //import pedidos.modelos.Pedido;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
 import usuarios.modelos.Encargado;
+import productos.modelos.CategoriaProducto;
+import productos.modelos.EstadoProducto;
 
 /**
  *
@@ -25,14 +29,8 @@ public class ControladorPrincipal {
         ArrayList<Empleado> empleados = new ArrayList<>();
         ArrayList<Encargado> encargados = new ArrayList<>();
         ArrayList<Producto> productos = new ArrayList<>();
-        //ArrayList<Pedido> pedidos = new ArrayList<>();
-        
-        
-        //<editor-fold desc="PRIMERA PARTE" defaultstate="collapsed">
-        /*
-        PRIMERA PARTE
-        */
-        /*
+        ArrayList<Pedido> pedidos = new ArrayList<>();
+
         Cliente unCliente1 = new Cliente("cliente1@bar.com", "claveCliente1", "ApellidoCliente1", "NombreCliente1");        
         Cliente unCliente2 = new Cliente("cliente2@bar.com", "claveCliente2", "ApellidoCliente2", "NombreCliente2");       
         Cliente unCliente3 = new Cliente("cliente3@bar.com", "claveCliente3", "ApellidoCliente3", "NombreCliente3");
@@ -81,9 +79,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", "ENTRADA", "DISPONIBLE", 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", "PLATOPRINCIPAL", "DISPONIBLE", 2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3", "POSTRE", "DISPONIBLE", 3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1", CategoriaProducto.entrada, EstadoProducto.DISPONIBLE, 1.0f);        
+        Producto unProducto2 = new Producto(2, "Producto2", CategoriaProducto.PLATOPRINCIPAL, EstadoProducto.DISPONIBLE, 2.0f);
+        Producto unProducto3 = new Producto(3, "Producto3", CategoriaProducto.postre, EstadoProducto.DISPONIBLE, 3.0f);
 
         productos.add(unProducto1);
         productos.add(unProducto2);
@@ -108,14 +106,8 @@ public class ControladorPrincipal {
         System.out.println();
 
         System.out.println(unProducto1);
-        //</editor-fold>
-        */
-        //<editor-fold desc="SEGUNDA PARTE" defaultstate="collapsed">
-        
-        /*
-        SEGUNDA PARTE
-        */
-        /*
+
+
         Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1);        
         Pedido unPedido2 = new Pedido(2, LocalDateTime.now(),  unCliente2);        
         Pedido unPedido3 = new Pedido(3, LocalDateTime.now(),  unCliente3);        
@@ -131,9 +123,7 @@ public class ControladorPrincipal {
             System.out.println();
         }
         System.out.println();
-       //</editor-fold>
-        */
-        
+
         
     }
 
