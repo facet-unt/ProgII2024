@@ -19,19 +19,19 @@ public class ProductoDelPedido {
         this.unProducto = unProducto;
     }
 
-    public int getCantidad() {
+    public int verCantidad() {
         return cantidad;
     }
 
-//    public void setCantidad(int cantidad) {
-//        this.cantidad = cantidad;
-//    }
-
-    public Producto getUnProducto() {
-        return unProducto;
+    public void AsignarCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
-//    public void setUnProducto(Producto unProducto) {
+    public String verUnProducto() {
+        return unProducto.verDescripcion();
+    }
+
+//    public void AsignarUnProducto(Producto unProducto) {
 //        this.unProducto = unProducto;
 //    }
     
