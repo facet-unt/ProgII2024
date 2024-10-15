@@ -98,6 +98,10 @@ public class Pedido {
         ProductoDelPedido producto = new ProductoDelPedido(cantidad, unProducto);
         this.Productos.add(producto);
     }
+    
+    public ArrayList<ProductoDelPedido> verProductos() {
+        return this.Productos;
+    }
 
     @Override
     public int hashCode() {
