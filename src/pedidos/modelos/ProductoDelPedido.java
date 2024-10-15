@@ -15,6 +15,11 @@ public class ProductoDelPedido {
     private int cantidad;
     private Producto producto;
 
+    public ProductoDelPedido(Producto producto,int cantidad) {
+        this.cantidad = cantidad;
+        this.producto = producto;
+    }
+
     public int verCantidad() {
         return cantidad;
     }
