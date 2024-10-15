@@ -237,13 +237,13 @@ public class ControladorPrincipal_Parte3 {
         if(!pedidos.contains(unPedido4))
             pedidos.add(unPedido4);      
         
-//        System.out.println("Pedidos");
-//        System.out.println("=======");
-//        for(Pedido p : pedidos) {
-//            p.mostrar();
-//            System.out.println();
-//        }
-//        System.out.println();
+        System.out.println("Pedidos");
+        System.out.println("=======");
+        for(Pedido p : pedidos) {
+            p.mostrar();
+            System.out.println();
+        }
+        System.out.println();
         
        //</editor-fold>
        

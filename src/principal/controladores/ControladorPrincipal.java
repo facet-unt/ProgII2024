@@ -72,9 +72,9 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        Producto unProducto1 = new Producto(1, "Producto1", 1.0f, DISPONIBLE, ENTRADA);
-        Producto unProducto2 = new Producto(2, "Producto2", 2.0f, DISPONIBLE, PLATO_PRINCIPAL);
-        Producto unProducto3 = new Producto(1, "Producto3", 3.0f, NO_DISPONIBLE, POSTRE);
+        Producto unProducto1 = new Producto(1, "Producto1", ENTRADA,DISPONIBLE ,1.0f );
+        Producto unProducto2 = new Producto(2, "Producto2",PLATO_PRINCIPAL , DISPONIBLE,2.0f );
+        Producto unProducto3 = new Producto(1, "Producto3", POSTRE, NO_DISPONIBLE,3.0f );
         
         if (!productos.contains(unProducto1)){
             productos.add(unProducto1);
@@ -108,7 +108,7 @@ public class ControladorPrincipal {
          */
         Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), (Cliente)unCliente1);
         Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), (Cliente)unCliente2);
-        Pedido unPedido3 = new Pedido(1, LocalDateTime.now(), (Cliente)unCliente3);
+        Pedido unPedido3 = new Pedido(1, LocalDateTime.now(),(Cliente)unCliente3);
         
         //NO SIRVE: Pedido unPedido4 = new Pedido(4, LocalDateTime.now(), (Cliente)unEncargado1);
         //el (cliente) se llama hacer casting, le avisa al costructor que este usuario es un cliente

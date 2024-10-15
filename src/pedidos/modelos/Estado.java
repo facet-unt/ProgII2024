@@ -11,7 +11,7 @@ import productos.modelos.*;
  * @author estudiante
  */
 public enum Estado {
-    CREADO("Creado"),
+    CREADO("Creando"),
     PROCESANDO("Procesando"),
     ENTREGADO("Entregado");
     
