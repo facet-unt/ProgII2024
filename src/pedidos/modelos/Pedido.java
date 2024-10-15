@@ -24,12 +24,18 @@ public class Pedido {
 
  
 
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado, ArrayList<ProductoDelPedido> productoDelPedido) {
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productoDelPedido, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
-        this.estado = estado;
+        
         this.productoDelPedido = productoDelPedido;
+    }
+    
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado, ArrayList<ProductoDelPedido> productoDelPedido){
+        this(numero,  fechaYHora, productoDelPedido, cliente);
+        this.estado = estado;
+    
     }
     
  
