@@ -9,7 +9,7 @@ package usuarios.modelos;
  *
  * @author Gisela
  */
-public class Usuario {
+public abstract class Usuario {
     
     private String correo;
     private String clave;
@@ -22,38 +22,46 @@ public class Usuario {
         this.apellido = apellido;
         this.nombre = nombre;
     }
+    
+    public Usuario(String c, String a, String n) {
+        this(c, "123466", a, n);   
+    }
 
-    public String getCorreo() {
+    public String verCorreo() {
         return correo;
     }
 
-    public void setCorreo(String correo) {
+    public void asignarCorreo(String correo) {
         this.correo = correo;
     }
 
-    public String getClave() {
+    public String verClave() {
         return clave;
     }
 
-    public void setClave(String clave) {
+    public void asignarClave(String clave) {
         this.clave = clave;
     }
 
-    public String getApellido() {
+    public String verApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void asignarApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public String getNombre() {
+    public String verNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
     
-    
+    public void mostrar(){
+    System.out.println("Correo: "+ correo);
+    System.out.println("Clave: "+ clave); 
+    System.out.println("Cliente: "+ apellido +" "+nombre);
+    }
 }

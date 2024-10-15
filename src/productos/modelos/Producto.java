@@ -2,6 +2,8 @@ package productos.modelos;
 
 import usuarios.modelos.Cliente;
 import java.util.ArrayList;
+
+
 public class Producto {
     private int codigo;
     private String descripcion;
