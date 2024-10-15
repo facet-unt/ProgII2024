@@ -24,11 +24,12 @@ public class Pedido {
     private Cliente cliente;
     private ArrayList<ProductoDelPedido> Productos = new ArrayList<>(); 
     
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productos, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
         estado = estado.CREADO;
+        this.Productos = productos;
         Fecha = this.StringFecha();
         Hora = this.StringHora();
     }
