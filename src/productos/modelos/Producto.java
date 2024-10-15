@@ -9,23 +9,55 @@ public class Producto {
     private Estado estado;
     private Categoria categoria;
 
-    /**
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
-
-    public void mostrar(){
-    System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
-    }
-
-    public Producto(int codigo, String descripcion, float precio, Estado estado, Categoria categoria) {
+    // Definicion del Constructor de clase
+    
+    public Producto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
         this.estado = estado;
         this.categoria = categoria;
     }
+    
+    /**
+     * Este método permite mostrar un Producto
+     * @return devuelve nada
+     */
 
+    public void mostrar(){
+        System.out.println("Codigo: " + codigo);
+        System.out.println("Descripcion: " + descripcion);
+        System.out.println("Precio: " + precio);
+        System.out.println("Estado: " + estado);
+        System.out.println("Categoria: " + categoria);
+    }
+    
+    // Metodos Equal y Hash
+    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Producto other = (Producto) obj;
+        return this.codigo == other.codigo;
+    }
+    
+    // Metodos Ver/Asignar
+    
     public int verCodigo() {
         return codigo;
     }
