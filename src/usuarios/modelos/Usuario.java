@@ -4,6 +4,8 @@
  */
 package usuarios.modelos;
 
+import java.util.Objects;
+
 /**
  *
  * @author estudiante
@@ -18,27 +20,59 @@ public abstract class Usuario {
          System.out.println(correo+"\n"+apellido+"\n"+nombre);
     }
     
-    public abstract String verCorreo();
+    public  String verCorreo(){
+        return this.correo;
+    }
 
-    public abstract void asignarCorreo(String correo);
+    public void asignarCorreo(String correo){
+        this.correo=correo;
+    }
 
-    public abstract String verClave();
+    public String verClave(){
+        return this.clave;
+    }
 
-    public abstract void asignarClave(String clave);
+    public void asignarClave(String clave){
+        this.clave=clave;
+    }
 
-    public abstract String verApellido();
+    public String verApellido(){
+        return this.apellido;
+    }
 
-    public abstract void asignarApellido(String apellido);
+    public void asignarApellido(String apellido){
+        this.apellido=apellido;
+    }
 
-    public abstract String verNombre();
+    public String verNombre(){
+        return this.nombre;
+    }
     
-    public abstract void asignarNombre(String nombre);
+    public void asignarNombre(String nombre){
+        this.nombre=nombre;
+    }
     
     public Usuario(String correo, String nombre, String apellido, String clave){
         this.correo=correo;
         this.nombre=nombre;
         this.apellido=apellido;
         this.clave=clave;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Usuario other = (Usuario) obj;
+        return correo == other.verCorreo();
     }
     
 }

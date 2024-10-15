@@ -20,7 +20,7 @@ public class Producto {
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    public Producto(int codigo, String descripcion, float precio, Estado estado, Categoria categoria) {
+    public Producto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;

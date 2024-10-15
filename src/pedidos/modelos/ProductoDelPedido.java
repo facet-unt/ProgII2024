@@ -16,7 +16,7 @@ public class ProductoDelPedido {
     private int cantidad;
     private Producto producto;
     
-    public ProductoDelPedido(int cantidad, Producto producto){
+    public ProductoDelPedido(Producto producto, int cantidad){
         this.cantidad=cantidad;
         this.producto=producto;
     }

@@ -4,70 +4,66 @@ package usuarios.modelos;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
 
-public class Cliente {
+public class Cliente extends Usuario{
     
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
+    
     private ArrayList<Pedido> pedidos=new ArrayList();
     
+    @Override
     public void mostrar() {
         System.out.println("Datos del cliente");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
+        System.out.println("Correo: " + super.verCorreo());
+        System.out.println("Clave: " + super.verClave());
+        System.out.println("Apellido: " + super.verApellido());
+        System.out.println("Nombre: " + super.verNombre());
     }
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
+        super(correo, clave, apellido, nombre);
     }
         
     public Cliente(String c, String a, String n) {
-        this(c, "123466", a, n);   
+        super(c, "123466", a, n);   
     }
     
-    
+    @Override 
     public String verCorreo() {
-        return correo;
+        return super.verCorreo();
     }
 
     public void asignarCorreo(String correo) {
-        this.correo = correo;
+        super.asignarCorreo(correo);
     }
 
     public String verClave() {
-        return clave;
+        return super.verClave();
     }
 
     public void asignarClave(String clave) {
-        this.clave = clave;
+        super.asignarClave(clave);
     }
 
     public String verApellido() {
-        return apellido;
+        return super.verApellido();
     }
 
     public void asignarApellido(String apellido) {
-        this.apellido = apellido;
+        super.asignarApellido(apellido);
     }
 
     public String verNombre() {
-        return nombre;
+        return super.verNombre();
     }
 
     public void asignarNombre(String nombre) {
-        this.nombre = nombre;
+        super.asignarNombre(nombre);
     }
     
-    public void verPedidos(){
-        for (Pedido p : this.pedidos){
-            p.mostrar();
-        }
+    public ArrayList<Pedido> verPedidos(){
+        return new ArrayList<>(this.pedidos);
+    }
+    public void agregarPedido(Pedido pedido){
+        pedidos.add(pedido);
     }
 
 }

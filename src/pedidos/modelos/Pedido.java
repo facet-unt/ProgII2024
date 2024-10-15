@@ -4,8 +4,7 @@
  */
 package pedidos.modelos;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import usuarios.modelos.Cliente;
@@ -16,18 +15,22 @@ import usuarios.modelos.Cliente;
  */
 public class Pedido {
     
-    private static int numPedido=1;
+    //private static int numPedido=1;
     private int numero;
-    private LocalDate fecha=LocalDate.now();
-    private LocalTime hora=LocalTime.now();
+//    private LocalDate fecha=LocalDate.now();
+//    private LocalTime hora=LocalTime.now();
+    private LocalDateTime fechaYHora;
     private Cliente cliente;
     private Estados estado;
     private ArrayList <ProductoDelPedido> prodsPedido =new ArrayList<>();
     
-    public Pedido(Cliente cliente, Estados estado){
-        this.numero=numPedido++;
+    public Pedido(int numero, LocalDateTime fechaYHora, Estados estado,ProductoDelPedido pdp, Cliente cliente){
+        //this.numero=numPedido++;
+        this.numero=numero;
         this.cliente=cliente;
         this.estado=estado;
+        this.fechaYHora=fechaYHora;
+        prodsPedido.add(pdp);
     }
     
     public void verProductos(){
@@ -38,11 +41,12 @@ public class Pedido {
     
     public String verHora(){
         DateTimeFormatter formato= DateTimeFormatter.ofPattern("HH:mm");
-        return hora.format(formato);
+        return fechaYHora.format(formato);
     }
     
-    public void verFecha(){
-        System.out.println(this.fecha);
+    public String verFecha(){
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/mm/yy");
+        return fechaYHora.format(formato);
     }
     
     public int verNumero(){
@@ -68,7 +72,7 @@ public class Pedido {
     
     public void mostrar(){
         System.out.println("Nro: "+this.numero+"\n"+
-                           "Fecha: "+this.fecha+"\t"+"Hora: "+this.verHora()+"\n"+
+                           "Fecha: "+this.verFecha()+"\t"+"Hora: "+this.verHora()+"\n"+
                            "Cliente: "+this.cliente.verApellido()+" "+this.cliente.verNombre()+"\n"+
                            "Estado: "+this.estado+"\n"+
                            "Producto\tCantidad"+"\n"+
