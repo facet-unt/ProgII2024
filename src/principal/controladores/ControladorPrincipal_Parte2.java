@@ -4,8 +4,12 @@
  */
 package principal.controladores;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
+import pedidos.modelos.ProductoDelPedido;
+import productos.modelos.Categoria;
+import productos.modelos.Estado;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
@@ -132,5 +136,19 @@ public class ControladorPrincipal_Parte2 {
         }
         System.out.println();
         //</editor-fold>
+        
+        Producto unProducto1 = new Producto (1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);
+        productos.add(unProducto1);
+        ProductoDelPedido pdp = new ProductoDelPedido(unProducto1, 3);
+        ArrayList<ProductoDelPedido> pdps = new ArrayList<>();
+        pdps.add(pdp);
+        
+        Pedido unPedido1 = new Pedido (1, LocalDateTime.now(), pdps, (Cliente)unCliente1);
+        
+        pedidos.add(unPedido1);
     }    
+    
+    
+    
+    
 }
