@@ -14,8 +14,6 @@ public class Cliente extends Usuario {
     
     @Override
     public ArrayList<Pedido> verPedidos(){
-        return pedidos;
-    
     }
     
     
