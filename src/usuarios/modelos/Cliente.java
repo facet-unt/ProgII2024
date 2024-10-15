@@ -25,8 +25,7 @@ public class Cliente extends Usuario{
         }
     }
     
-    public void cancelarPedido(Pedido pedido)
-    {
+    public void cancelarPedido(Pedido pedido) {
         if (pedidos.contains(pedido))
             pedidos.remove(pedido);
     }
