@@ -22,7 +22,8 @@ public class Pedido {
     private String Fecha;
     private String Hora;
     private Cliente cliente;
-
+    private ArrayList<ProductoDelPedido> productos = new ArrayList<>(); 
+    
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
@@ -86,4 +87,14 @@ public class Pedido {
     public String getHora() {
         return Hora;
     }
+
+    public ArrayList<ProductoDelPedido> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<ProductoDelPedido> productos) {
+        this.productos = productos;
+    }
+    
+    
 }
