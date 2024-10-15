@@ -21,16 +21,16 @@ public class Pedido {
 //    private LocalTime hora=LocalTime.now();
     private LocalDateTime fechaYHora;
     private Cliente cliente;
-    private Estados estado;
+    private Estado estado;
     private ArrayList <ProductoDelPedido> prodsPedido =new ArrayList<>();
     
-    public Pedido(int numero, LocalDateTime fechaYHora, Estados estado,ProductoDelPedido pdp, Cliente cliente){
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productos, Cliente cliente){
         //this.numero=numPedido++;
         this.numero=numero;
         this.cliente=cliente;
         this.estado=estado;
         this.fechaYHora=fechaYHora;
-        prodsPedido.add(pdp);
+        this.prodsPedido=productos;
     }
     
     public void verProductos(){
@@ -45,7 +45,7 @@ public class Pedido {
     }
     
     public String verFecha(){
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/mm/yy");
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yy");
         return fechaYHora.format(formato);
     }
     

@@ -8,7 +8,7 @@ package pedidos.modelos;
  *
  * @author Ahmed Chaben
  */
-public enum Estados {
+public enum Estado {
     CREADO("Creado"),
     SOLICITADO("Solicitado"),
     PROCESANDO("Procesando"),
@@ -16,7 +16,7 @@ public enum Estados {
     
     private String estado;
     
-    private Estados(String estado){
+    private Estado(String estado){
         this.estado=estado;
     }
     

@@ -62,8 +62,21 @@ public class Cliente extends Usuario{
     public ArrayList<Pedido> verPedidos(){
         return new ArrayList<>(this.pedidos);
     }
+    //Aquí no debería hacer ningún control, ya que con mi increible intelecto he craneado
+    //una forma en que no hay manera que dos pedidos tengan el mismo número, pero mi genio
+    //se ve limitado por una planeación diferente
     public void agregarPedido(Pedido pedido){
-        pedidos.add(pedido);
+        if (!pedidos.contains(pedido)){
+            pedidos.add(pedido);
+        }
+    }
+    
+    public void cancelarPedido(Pedido pedido){
+        if (pedidos.contains(pedido)){
+            pedidos.remove(pedido);
+        }else{
+            System.out.println("No se encuentra el pedido especificado.\n");
+        }
     }
 
 }

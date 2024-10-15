@@ -110,9 +110,9 @@ public class ControladorPrincipal {
         ProductoDelPedido unProdPedido2 = new ProductoDelPedido(1, unProducto2);
         ProductoDelPedido unProdPedido3 = new ProductoDelPedido(1, unProducto3);
         
-        Pedido unPedido1 = new Pedido(unCliente1, Estados.CREADO);
-        Pedido unPedido2 = new Pedido(unCliente2, Estados.CREADO);
-        Pedido unPedido3 = new Pedido(unCliente3, Estados.CREADO);
+        Pedido unPedido1 = new Pedido(unCliente1, Estado.CREADO);
+        Pedido unPedido2 = new Pedido(unCliente2, Estado.CREADO);
+        Pedido unPedido3 = new Pedido(unCliente3, Estado.CREADO);
         
         unPedido1.agregarProductos(unProdPedido1);
         unPedido2.agregarProductos(unProdPedido2);

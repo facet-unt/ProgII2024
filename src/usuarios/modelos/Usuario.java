@@ -4,7 +4,8 @@
  */
 package usuarios.modelos;
 
-import java.util.Objects;
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
 
 /**
  *
@@ -51,6 +52,8 @@ public abstract class Usuario {
     public void asignarNombre(String nombre){
         this.nombre=nombre;
     }
+    
+    public abstract ArrayList<Pedido> verPedidos();
     
     public Usuario(String correo, String nombre, String apellido, String clave){
         this.correo=correo;
