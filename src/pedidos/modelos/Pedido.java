@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pedidos.modelos;
 
 import java.time.LocalDateTime;
@@ -10,10 +6,6 @@ import java.util.ArrayList;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 
-/**
- *
- * @author luis
- */
 public class Pedido {
 
     private int numero;
@@ -22,7 +14,6 @@ public class Pedido {
     private LocalDateTime fechaYHora;
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
-    // Definicion de los constructores
     public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente, Estado estado) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
@@ -34,8 +25,6 @@ public class Pedido {
     public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente) {
         this(numero, fechaYHora, productosdelpedido,cliente, Estado.PROCESANDO);
     }
-
-    // Definicion del metodo mostrar
     
     public void mostrar() {
         System.out.println("Nro: " + numero);
@@ -49,8 +38,6 @@ public class Pedido {
             pdp.mostrar();
         }
     }
-
-    // Metodo equals y hash
 
     @Override
     public int hashCode() {
@@ -74,8 +61,6 @@ public class Pedido {
         return this.numero == other.numero;
     }
     
-    // Devolver y agregar productos del pedido
-    
     public void agregarProducto(Producto Producto, int cantidad) {
         for(ProductoDelPedido pdp : productosDelPedido)
         {
@@ -87,9 +72,7 @@ public class Pedido {
     public ArrayList<ProductoDelPedido> verProductos() {
         return this.productosDelPedido;
     }
-    
-    // Definicion de los metodos get/set
-    
+
     public int verNumero() {
         return numero;
     }

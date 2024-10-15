@@ -9,8 +9,6 @@ public class Producto {
     private Estado estado;
     private Categoria categoria;
 
-    // Definicion del Constructor de clase
-    
     public Producto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
@@ -18,11 +16,6 @@ public class Producto {
         this.estado = estado;
         this.categoria = categoria;
     }
-    
-    /**
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
 
     public void mostrar(){
         System.out.println("Codigo: " + codigo);
@@ -31,9 +24,7 @@ public class Producto {
         System.out.println("Estado: " + estado);
         System.out.println("Categoria: " + categoria);
     }
-    
-    // Metodos Equal y Hash
-    
+ 
     @Override
     public int hashCode() {
         int hash = 7;
@@ -55,9 +46,7 @@ public class Producto {
         final Producto other = (Producto) obj;
         return this.codigo == other.codigo;
     }
-    
-    // Metodos Ver/Asignar
-    
+
     public int verCodigo() {
         return codigo;
     }

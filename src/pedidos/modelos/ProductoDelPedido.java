@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pedidos.modelos;
 
 import java.util.Objects;
@@ -10,21 +6,15 @@ import productos.modelos.Producto;
 public class ProductoDelPedido {
     private int cantidad;
     private Producto producto;
-    
-    // Definicion del constructor
-    
+
     public ProductoDelPedido(Producto producto, int cantidad) {
         this.producto = producto;
         this.cantidad = cantidad;
     }
-    
-    // Metodo mostrar
-    
+
     public void mostrar(){
         System.out.println(producto.verDescripcion() + "\t\t" + cantidad);
     }
-    
-    // Definicion de los metodos get/set
 
     public int verCantidad() {
         return cantidad;
