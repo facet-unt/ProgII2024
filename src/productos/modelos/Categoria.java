@@ -6,21 +6,23 @@ package productos.modelos;
 
 /**
  *
- * @author Usuario
+ * @author diego
  */
 public enum Categoria {
     ENTRADA("Entrada"),
-    PLATOPRINCIPAL("Plato principal"),
+    PLATO_PRINCIPAL("Plato Principal"),
     POSTRE("Postre");
     
     private String valor;
     
-    private Categoria(String valor){
+    private Categoria (String valor)
+    {
         this.valor = valor;
     }
     
     @Override
-    public String toString(){
-        return this.valor;
+    public String toString()
+    {
+        return valor;
     }
 }

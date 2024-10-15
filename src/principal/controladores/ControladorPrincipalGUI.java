@@ -1,10 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package principal.controladores;
 
 import javax.swing.UIManager;
 import productos.vistas.VentanaAMProducto;
-import usuarios.vistas.VentanaAMCliente;
-import usuarios.vistas.VentanaAMEmpleado;
-import usuarios.vistas.VentanaAMEncargado;
+import usuarios.vistas.*;
 
 /**
  *
@@ -30,26 +32,26 @@ public class ControladorPrincipalGUI {
         ventana.setVisible(true);
         
         //CLIENTE
-       
-        VentanaAMCliente ventanaCliente = new VentanaAMCliente(null);
-        ventanaCliente.setLocationRelativeTo(null);
-        ventanaCliente.setTitle("Nuevo cliente");
-        ventanaCliente.setVisible(true);
-               
-       //EMPLEADO 
-       
-        VentanaAMEmpleado ventanaEmpleado = new VentanaAMEmpleado(null);
-        ventanaEmpleado.setLocationRelativeTo(null);
-        ventanaEmpleado.setTitle("Nuevo empleado");
-        ventanaEmpleado.setVisible(true);
-        
-       //ENCARGADO
      
-        VentanaAMEncargado ventanaEncargado = new VentanaAMEncargado(null);
-        ventanaEncargado.setLocationRelativeTo(null);
-        ventanaEncargado.setTitle("Nuevo encargado");
-        ventanaEncargado.setVisible(true);
-       
+        VentanaAMCliente ventanac = new VentanaAMCliente(null);
+        ventanac.setLocationRelativeTo(null);
+        ventanac.setTitle("Nuevo cliente");
+        ventanac.setVisible(true);
+             
+       //EMPLEADO 
+      
+        VentanaAMEmpleado ventanaem = new VentanaAMEmpleado(null);
+        ventanaem.setLocationRelativeTo(null);
+        ventanaem.setTitle("Nuevo empleado");
+        ventanaem.setVisible(true);
+     
+       //ENCARGADO
+   
+        VentanaAMEncargado ventanaen = new VentanaAMEncargado(null);
+        ventanaen.setLocationRelativeTo(null);
+        ventanaen.setTitle("Nuevo encargado");
+        ventanaen.setVisible(true);
+    
     }
     
     
