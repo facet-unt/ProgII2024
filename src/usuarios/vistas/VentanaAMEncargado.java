@@ -8,10 +8,6 @@ import usuarios.modelos.Encargado;
 public class VentanaAMEncargado extends JDialog {
     private ArrayList<Encargado> encargado = new ArrayList<>();
     
-    /**
-     * Constructor
-     * @param ventanaPadre ventana padre 
-     */
     public VentanaAMEncargado(Dialog ventanaPadre) {
         super(ventanaPadre, true);
         initComponents();
