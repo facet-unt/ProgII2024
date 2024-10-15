@@ -9,7 +9,7 @@ package productos.modelos;
  * @author joaquincoro
  */
 public enum Estado{
-    DISPONIBLE("Disponibe"),
+    DISPONIBLE("Disponible"),
     NODISPONIBLE("No Disponible");
     
     private String estado;

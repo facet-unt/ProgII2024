@@ -1,11 +1,15 @@
 package usuarios.modelos;
 
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
+
 public class Cliente {
     
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
+    private ArrayList<Pedido> pedidos = new ArrayList<>();
     
     public void mostrar(){
     System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
@@ -18,9 +22,9 @@ public class Cliente {
         this.nombre = nombre;
     }
         
-    public Cliente(String c, String a, String n) {
-        this(c, "123466", a, n);   
-    }
+//    public Cliente(String c, String a, String n) {
+//        this(c, "123466", a, n);   
+//    }
     
     public String verCorreo() {
         return correo;
