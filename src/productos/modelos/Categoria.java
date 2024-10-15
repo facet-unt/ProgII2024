@@ -22,7 +22,8 @@ public enum Categoria {
     }
     
     @Override
-    public String toString() {
-        return this.valor;
+    public String toString()
+    {
+        return valor;
     }
 }

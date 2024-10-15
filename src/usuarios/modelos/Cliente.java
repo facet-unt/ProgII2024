@@ -2,67 +2,38 @@
 package usuarios.modelos;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import pedidos.modelos.Pedido;
 
-public class Cliente {
+public class Cliente extends Usuario{
     
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
-    ArrayList<Pedido> Pedidos = new ArrayList<>()   ;
-    
-    public void mostrar() {
-        System.out.println("Datos del cliente");
-        System.out.println("Correo: " + correo);
-        System.out.println("Clave: " + clave);
-        System.out.println("Apellido: " + apellido);
-        System.out.println("Nombre: " + nombre);
-    }
+    private ArrayList<Pedido> pedidos = new ArrayList<>();
+    // Definicion de los constructores
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
-    }
-        
-    public Cliente(String c, String a, String n) {
-        this(c, "123466", a, n);   
+        super(correo, clave, apellido, nombre);
     }
     
+    // Metodos para ver agregar y borrar pedido
     
-    public String verCorreo() {
-        return correo;
+    @Override
+    public ArrayList<Pedido> verPedidos() {
+        return pedidos;
     }
-
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
+    
+    // Metodo que agrega pedido, si esta lo sobreescribe
+    public void agregarPedido(Pedido pedido) {
+        if (!pedidos.contains(pedido))
+            pedidos.add(pedido);
+        else {
+            int indice = pedidos.indexOf(pedido);
+            pedidos.set(indice, pedido);
+        }
     }
-
-    public String verClave() {
-        return clave;
+    
+    public void cancelarPedido(Pedido pedido)
+    {
+        if (pedidos.contains(pedido))
+            pedidos.remove(pedido);
     }
-
-    public void asignarClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String verApellido() {
-        return apellido;
-    }
-
-    public void asignarApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
 }

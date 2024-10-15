@@ -6,7 +6,7 @@ package productos.modelos;
 
 /**
  *
- * @author estudiante
+ * @author diego
  */
 public enum Estado {
     DISPONIBLE("Disponible"),
@@ -14,12 +14,14 @@ public enum Estado {
     
     private String valor;
     
-    private Estado (String valor) {
+    private Estado (String valor)
+    {
         this.valor = valor;
     }
     
     @Override
-    public String toString() {
-        return this.valor;
+    public String toString()
+    {
+        return valor;
     }
 }
