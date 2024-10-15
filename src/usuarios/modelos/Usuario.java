@@ -3,35 +3,47 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package usuarios.modelos;
-
 import java.util.Objects;
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
 
 /**
  *
- * @author eloan
+ * @author luis
  */
- public abstract class Usuario {
-     
-    protected String correo;
-    protected String clave;
-    protected String apellido;
-    protected String nombre;
+public abstract class Usuario {
+    private String correo;
+    private String clave;
+    private String apellido;
+    private String nombre;
     
-    /**
-     *
-     */
-    public abstract void mostrar();
-
-
-    public String getCorreo() {
-        
-        return correo;
+    public Usuario(String correo, String clave, String apellido, String nombre) {
+        this.correo = correo;
+        this.clave = clave;
+        this.apellido = apellido;
+        this.nombre = nombre;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 67 * hash + Objects.hashCode(this.correo);
+        hash = 61 * hash + Objects.hashCode(this.correo);
+    
+    // Definicion del metodo mostrar
+    
+    public void mostrar() {
+        System.out.println("Correo: " + correo);
+        System.out.println("Clave: " + clave);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Nombre: " + nombre);
+    }
+    
+    // Metodos equals y hashcode
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.correo);
         return hash;
     }
 
@@ -43,42 +55,50 @@ import java.util.Objects;
         if (obj == null) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass().getSuperclass() != obj.getClass().getSuperclass()) {
             return false;
         }
         final Usuario other = (Usuario) obj;
         return Objects.equals(this.correo, other.correo);
     }
+    
+    // Definicion del metodo verPedidos
+    
+    public abstract ArrayList<Pedido> verPedidos();
+    
+    // Definicion de los metodos get/set de la clase para las 4 variables de instancia
+    
+    public String verCorreo() {
+        return correo;
+    }
 
-    public void setCorreo(String correo) {
+    public void asignarCorreo(String correo) {
         this.correo = correo;
     }
 
-    public String getClave() {
+    public String verClave() {
         return clave;
     }
 
-    public void setClave(String clave) {
+    public void asignarClave(String clave) {
         this.clave = clave;
     }
 
-    public String getApellido() {
+    public String verApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void asignarApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public String getNombre() {
+    public String verNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
     
-    
 
-    
 }

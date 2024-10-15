@@ -1,62 +1,69 @@
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package pedidos.modelos;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
-import productos.modelos.EstadoProducto;
 
-
-
-
+/**
+ *
+ * @author luis
+ */
 public class Pedido {
+
     private int numero;
-    private Cliente unCliente;
+    private Cliente cliente;
+    private Estado estado;
     private LocalDateTime fechaYHora;
-    private EstadoProducto estado;
 
-    public EstadoProducto getEstado() {
-        return estado;
-    }
-
-    public void setEstado(EstadoProducto estado) {
+    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+    
+    // Definicion de los constructores
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
+        this.numero = numero;
+        this.fechaYHora = fechaYHora;
+        this.cliente = cliente;
         this.estado = estado;
     }
     
+    public Pedido(int numero, Cliente cliente, Estado estado) {
+        this(numero, LocalDateTime.now(), cliente, estado);
+    }
     
-    private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
+    public Pedido(int numero, Cliente cliente) {
+        this(numero, LocalDateTime.now(), cliente, Estado.PROCESANDO);
+    }
+    
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
+        this(numero, fechaYHora, cliente, Estado.PROCESANDO);
+    }
 
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente) {
-        this.numero = numero;
-        this.fechaYHora = fechaYHora;
-        this.unCliente = unCliente;
-    }
-    
-    public void agregarProducto(Producto unProducto, int cantidad) {
-        ProductoDelPedido pdp = new ProductoDelPedido(unProducto, cantidad);
-        this.productosDelPedido.add(pdp);
-    }
+    // Definicion del metodo mostrar
     
     public void mostrar() {
-        System.out.println("Nro: " +this.numero);
-        System.out.println("fecha: " +this.fechaYHora.getDayOfMonth()+"/" +this.fechaYHora.getMonthValue()+"/"+this.fechaYHora.getYear()+"              Hora: "+this.fechaYHora.getHour()+":"+this.fechaYHora.getMinute());
-        System.out.println("cliente: " +this.unCliente.getApellido()+","+this.unCliente.getNombre()); 
-        System.out.println("Estado: " +this.estado);
-        System.out.println("Productos       Cantidades");
-        System.out.println("==========================");
-        System.out.println(""+this.productosDelPedido);
+        System.out.println("Nro: " + numero);
+        System.out.println("Fecha: " + fechaYHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\tHora: " + fechaYHora.format(DateTimeFormatter.ofPattern("HH:mm")));
+        System.out.println("Cliente: " + cliente.verApellido() + ", " + cliente.verNombre());
+        System.out.println("Estado: " + estado.toString());
+        System.out.println("========================");
+        System.out.println("Producto\tCantidad");
+        System.out.println("========================");
+        for(ProductoDelPedido pdp : this.productosDelPedido) {
+            pdp.mostrar();
+        }
     }
+
+    // Metodo equals y hash
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 43 * hash + this.numero;
+        int hash = 7;
+        hash = 97 * hash + this.numero;
         return hash;
     }
 
@@ -75,7 +82,19 @@ public class Pedido {
         return this.numero == other.numero;
     }
     
-
+    // Devolver y agregar productos del pedido
+    
+    public void agregarProducto(Producto Producto, int cantidad) {
+         ProductoDelPedido pdp = new ProductoDelPedido(Producto, cantidad);
+         this.productosDelPedido.add(pdp);
+    }
+    
+    public ArrayList<ProductoDelPedido> verProductos() {
+        return this.productosDelPedido;
+    }
+    
+    // Definicion de los metodos get/set
+    
     public int verNumero() {
         return numero;
     }
@@ -83,7 +102,29 @@ public class Pedido {
     public void asignarNumero(int numero) {
         this.numero = numero;
     }
-    
-    
-    
+
+    public Cliente verCliente() {
+        return cliente;
+    }
+
+    public void asignarCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Estado verEstado() {
+        return estado;
+    }
+
+    public void asignarEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public LocalDateTime verFechaYHora() {
+        return fechaYHora;
+    }
+
+    public void asignarFechaYHora(LocalDateTime fechaYHora) {
+        this.fechaYHora = fechaYHora;
+    }
+
 }
