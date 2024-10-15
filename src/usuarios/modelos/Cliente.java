@@ -1,20 +1,18 @@
-
 package usuarios.modelos;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import pedidos.modelos.Pedido;
 
 public class Cliente extends Usuario{
     
     private ArrayList<Pedido> pedidos = new ArrayList<>();
-    // Definicion de los constructores
+    // Definicion de los Constructores
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
         super(correo, clave, apellido, nombre);
     }
     
-    // Metodos para ver agregar y borrar pedido
+    // Metodos para Ver/Agregar y borrar pedido
     
     @Override
     public ArrayList<Pedido> verPedidos() {

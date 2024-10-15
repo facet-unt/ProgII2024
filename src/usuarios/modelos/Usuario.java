@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package usuarios.modelos;
 import java.util.Objects;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
 
-/**
- *
- * @author luis
- */
 public abstract class Usuario {
     private String correo;
     private String clave;
@@ -24,11 +16,6 @@ public abstract class Usuario {
         this.nombre = nombre;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 61 * hash + Objects.hashCode(this.correo);
-    
     // Definicion del metodo mostrar
     
     public void mostrar() {
