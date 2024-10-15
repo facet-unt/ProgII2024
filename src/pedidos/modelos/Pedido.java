@@ -22,18 +22,23 @@ public class Pedido {
     private String Fecha;
     private String Hora;
     private Cliente cliente;
-    private ArrayList<ProductoDelPedido> productos = new ArrayList<>(); 
+    private ArrayList<ProductoDelPedido> Productos = new ArrayList<>(); 
     
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
+        estado = estado.CREADO;
         Fecha = this.StringFecha();
         Hora = this.StringHora();
     }
     
     public void mostrar() {
-        System.out.println("Nro: " + numero + "\nFecha: " + Fecha + "\tHora: " + Hora + "\nCliente: " + cliente + "\nEstado: " + estado);
+        System.out.println("Nro: " + numero + "\nFecha: " + Fecha + "\tHora: " + Hora + "\nCliente: " + cliente.verApellido() + ", " + cliente.verNombre() + "\nEstado: " + estado);
+        System.out.println("Producto    Cantidad" + "\n==========================");
+        for(ProductoDelPedido p: Productos){
+            System.out.println(p.verUnProducto() + "\t" + p.verCantidad());
+        }
     }
     
     private String StringFecha() {
@@ -48,7 +53,7 @@ public class Pedido {
         return StringHora;
     }
     
-    public int getNumero() {
+    public int verNumero() {
         return numero;
     }
 
@@ -56,7 +61,7 @@ public class Pedido {
 //        this.numero = numero;
 //    }
 
-    public LocalDateTime getFechaYHora() {
+    public LocalDateTime verFechaYHora() {
         return fechaYHora;
     }
 
@@ -64,15 +69,15 @@ public class Pedido {
 //        this.fechaYHora = fechaYHora;
 //    }
 
-    public Estado getEstado() {
+    public Estado verEstado() {
         return estado;
     }
 
-    public void setEstado(Estado estado) {
+    public void asignarEstado(Estado estado) {
         this.estado = estado;
     }
 
-    public Cliente getCliente() {
+    public Cliente verCliente() {
         return cliente;
     }
 
@@ -80,21 +85,16 @@ public class Pedido {
 //        this.cliente = cliente;
 //    }
 
-    public String getFecha() {
+    public String verFecha() {
         return Fecha;
     }
 
-    public String getHora() {
+    public String verHora() {
         return Hora;
     }
-
-    public ArrayList<ProductoDelPedido> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(ArrayList<ProductoDelPedido> productos) {
-        this.productos = productos;
-    }
     
-    
+    public void agregarProducto(Producto unProducto, int cantidad){
+        ProductoDelPedido producto = new ProductoDelPedido(cantidad, unProducto);
+        this.Productos.add(producto);
+    }
 }

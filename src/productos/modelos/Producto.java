@@ -1,7 +1,5 @@
 package productos.modelos;
 
-import usuarios.modelos.Cliente;
-
 public class Producto {
     private int codigo;
     private String descripcion;
