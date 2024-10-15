@@ -21,7 +21,7 @@ public class Pedido {
     private Estado estado;
     private ArrayList<ProductoDelPedido> pdps;
 
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente, ArrayList<ProductoDelPedido> pdps) {
+    public Pedido(int numero, LocalDateTime fechaYHora,ArrayList<ProductoDelPedido> pdps ,Cliente unCliente ) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = unCliente;
@@ -72,9 +72,13 @@ public class Pedido {
         System.out.println(
                 "Nro: " + this.numero + "\n"
                 + "Fecha: " + this.verFecha() + "            " + "Hora:" + this.verHora() + "\n"
-                + "Cliente: " + this.cliente.verNombre() + "\n"
-                + "Estado: " + this.estado.toString() + "\n");
-        //la consigna dice que tiene que ser apellido, nombre. se podria separar el String nombre cuando aparece un espacio, pero hay que hacer trim al crear clientes, y no se que hacer con multiples nombres
+                + "Cliente: " + this.cliente.verApellido()+ ", " + this.cliente.verNombre()+ "\n"
+                + "Estado: " + this.estado.toString() + "\n"
+                + "\t"+"Producto"+"\t"+"Cantidad"+"\n"
+                +"\t"+"========================");
+                for (ProductoDelPedido pdp : pdps){
+                System.out.println("\t" + pdp.verProducto().verDescripcion()+ "\t  " +pdp.verCantidad());
+        }
     }
 
     public ArrayList<ProductoDelPedido> verProductosDelPedido() {
