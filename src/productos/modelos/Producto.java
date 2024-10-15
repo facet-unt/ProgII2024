@@ -1,31 +1,64 @@
 package productos.modelos;
 
+import pedidos.modelos.Estado;
 import usuarios.modelos.Cliente;
 
 public class Producto {
     private int codigo;
     private String descripcion;
     private float precio;
-    private String estado;
-    private String categoria;
+    private Estado estado;
+    private Categoria categoria;
 
-    /**
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
-
-    public void mostrar(){
-    System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
-    }
-
-    public Producto(int codigo, String descripcion, float precio, String estado, String categoria) {
+    // Definicion del constructor de clase
+    
+    public Producto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
         this.estado = estado;
         this.categoria = categoria;
     }
+    
+    /**
+     * Este método permite mostrar un Producto
+     * @return devuelve nada
+     */
 
+    public void mostrar(){
+        System.out.println("Codigo: " + codigo);
+        System.out.println("Descripcion: " + descripcion);
+        System.out.println("Precio: " + precio);
+        System.out.println("Estado: " + estado);
+        System.out.println("Categoria: " + categoria);
+    }
+    
+    // Metodos equal y hash
+    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Producto other = (Producto) obj;
+        return this.codigo == other.codigo;
+    }
+    
+    // Metodos get/set
+    
     public int verCodigo() {
         return codigo;
     }
@@ -50,26 +83,22 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String verEstado() {
+    public Estado verEstado() {
         return estado;
     }
 
-    public void asignarEstado(String estado) {
+    public void asignarEstado(Estado estado) {
         this.estado = estado;
     }
 
-    public String verCategoria() {
+    public Categoria verCategoria() {
         return categoria;
     }
 
-    public void asignarCategoria(String categoria) {
+    public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
     
     
      
 }
-
-
-
-
