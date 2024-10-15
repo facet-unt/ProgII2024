@@ -14,7 +14,8 @@ public enum Categoria {
     POSTRE("Postre");
     
     private String tipo;
-    private Categoria(String tipo){
+    
+    Categoria(String tipo){
         this.tipo = tipo;
     }
     

@@ -11,7 +11,9 @@ import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
 import usuarios.modelos.Encargado;
-
+import productos.modelos.Categoria;
+import productos.modelos.Estado;
+        
 /**
  *
  * @author estudiante

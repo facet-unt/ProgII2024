@@ -13,7 +13,8 @@ public enum Estado{
     NODISPONIBLE("No Disponible");
     
     private String estado;
-    private Estado(String estado){
+    
+    Estado(String estado){
         this.estado = estado;
     }
     
