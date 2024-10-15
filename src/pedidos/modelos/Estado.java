@@ -10,6 +10,7 @@ package pedidos.modelos;
  */
 public enum Estado {
     CREADO("Creado"),
+    SOLICITADO("Solicitado"),
     PROCESANDO("Procesando"),
     ENTREGADO("Entregado");
     
