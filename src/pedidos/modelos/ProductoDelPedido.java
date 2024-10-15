@@ -4,6 +4,7 @@
  */
 package pedidos.modelos;
 
+import java.util.Objects;
 import productos.modelos.Producto;
 
 /**
@@ -27,6 +28,32 @@ public class ProductoDelPedido {
         System.out.println(producto.verDescripcion() + "\t\t" + cantidad);
     }
     
+    // Metodo equals y hashcode
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 47 * hash + Objects.hashCode(this.producto);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ProductoDelPedido other = (ProductoDelPedido) obj;
+        return Objects.equals(this.producto, other.producto);
+    }
+    
+    
+    
     // Definicion de los metodos get/set
 
     public int verCantidad() {
@@ -45,5 +72,5 @@ public class ProductoDelPedido {
         this.producto = producto;
     }
     
-    
+
 }
