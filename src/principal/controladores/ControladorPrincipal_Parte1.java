@@ -87,9 +87,9 @@ public class ControladorPrincipal_Parte1 {
         */
         
         Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f);
+        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 2.0f);
         Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
-        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 3.0f);
+        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATOPRINCIPAL, Estado.DISPONIBLE, 3.0f);
         //repetido unProducto4
         Producto unProducto5 = new Producto(5, "Producto5", Categoria.POSTRE, Estado.DISPONIBLE, 48.0f);
 
@@ -128,15 +128,15 @@ public class ControladorPrincipal_Parte1 {
         PEDIDOS y PRODUCTOS DEL PEDIDO
         */
         ArrayList<ProductoDelPedido> pdp1 = new ArrayList<>();
-        ProductoDelPedido pp1 = new ProductoDelPedido(unProducto1, 1);
+        ProductoDelPedido pp1 = new ProductoDelPedido(1, unProducto1);
         if(!pdp1.contains(pp1))
             pdp1.add(pp1);
         
-        ProductoDelPedido pp2 = new ProductoDelPedido(unProducto2, 1);
+        ProductoDelPedido pp2 = new ProductoDelPedido(1, unProducto2);
         if(!pdp1.contains(pp2))
             pdp1.add(pp2);
         
-        ProductoDelPedido pp3 = new ProductoDelPedido(unProducto2, 4);
+        ProductoDelPedido pp3 = new ProductoDelPedido(4, unProducto2);
         if(!pdp1.contains(pp3))
             pdp1.add(pp3);
         
@@ -147,11 +147,11 @@ public class ControladorPrincipal_Parte1 {
         
         
         ArrayList<ProductoDelPedido> pdp2 = new ArrayList<>();
-        ProductoDelPedido pp4 = new ProductoDelPedido(unProducto1, 10);
+        ProductoDelPedido pp4 = new ProductoDelPedido(10, unProducto1);
         if(!pdp2.contains(pp4))
             pdp2.add(pp4);
         
-        ProductoDelPedido pp5 = new ProductoDelPedido(unProducto2, 20);
+        ProductoDelPedido pp5 = new ProductoDelPedido(20, unProducto2);
         if(!pdp2.contains(pp5))
             pdp2.add(pp5);
         
@@ -162,11 +162,11 @@ public class ControladorPrincipal_Parte1 {
             pedidos.add(unPedido2);
         
         ArrayList<ProductoDelPedido> pdp3 = new ArrayList<>();
-        ProductoDelPedido pp6 = new ProductoDelPedido(unProducto3, 100);
+        ProductoDelPedido pp6 = new ProductoDelPedido(100, unProducto3);
         if(!pdp3.contains(pp6))
             pdp3.add(pp6);
         
-        ProductoDelPedido pp7 = new ProductoDelPedido(unProducto2, 200);
+        ProductoDelPedido pp7 = new ProductoDelPedido(200, unProducto2);
         if(!pdp3.contains(pp7))
             pdp3.add(pp7);
         
@@ -177,11 +177,11 @@ public class ControladorPrincipal_Parte1 {
             pedidos.add(unPedido3);      
              
         ArrayList<ProductoDelPedido> pdp4 = new ArrayList<>();
-        ProductoDelPedido pp8 = new ProductoDelPedido(unProducto1, 15);
+        ProductoDelPedido pp8 = new ProductoDelPedido(15, unProducto1);
         if(!pdp4.contains(pp8))
             pdp4.add(pp8);
         
-        ProductoDelPedido pp9 = new ProductoDelPedido(unProducto2, 21);
+        ProductoDelPedido pp9 = new ProductoDelPedido(21, unProducto2);
         if(!pdp4.contains(pp9))
             pdp4.add(pp9);
         
