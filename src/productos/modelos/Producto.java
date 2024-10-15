@@ -35,11 +35,11 @@ public class Producto {
     }
     
     // Metodos equal y hash
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + this.codigo;
+        hash = 79 * hash + this.codigo;
         return hash;
     }
 
@@ -57,6 +57,8 @@ public class Producto {
         final Producto other = (Producto) obj;
         return this.codigo == other.codigo;
     }
+    
+    
     
     // Metodos get/set
     

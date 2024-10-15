@@ -135,16 +135,16 @@ public class ControladorPrincipal_Parte1 {
         ProductoDelPedido pp2 = new ProductoDelPedido(unProducto2, 1);
         if(!pdp1.contains(pp2))
             pdp1.add(pp2);
-        
+
         ProductoDelPedido pp3 = new ProductoDelPedido(unProducto2, 4);
         if(!pdp1.contains(pp3))
             pdp1.add(pp3);
         
         Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), pdp1, unCliente1); 
+        
         //se agrega a la lista de pedidos
         if(!pedidos.contains(unPedido1))
             pedidos.add(unPedido1);
-        
         
         ArrayList<ProductoDelPedido> pdp2 = new ArrayList<>();
         ProductoDelPedido pp4 = new ProductoDelPedido(unProducto1, 10);

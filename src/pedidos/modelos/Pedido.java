@@ -43,6 +43,11 @@ public class Pedido {
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
         this(numero, fechaYHora, cliente, Estado.PROCESANDO);
     }
+    
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> pdp, Cliente cliente) {
+        this(numero, fechaYHora, cliente, Estado.PROCESANDO);
+        this.productosDelPedido = pdp;
+    }
 
     // Definicion del metodo mostrar
     
