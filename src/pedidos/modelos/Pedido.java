@@ -13,6 +13,7 @@ public class Pedido {
     private int numero;
     private Cliente unCliente;
     private LocalDateTime fechaYHora;
+//    private String estado;
     
     //private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
 
@@ -20,6 +21,7 @@ public class Pedido {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.unCliente = unCliente;
+//        this.estado = estado
     }
     
     public void agregarProducto(Producto unProducto, int cantidad) {
