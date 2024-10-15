@@ -6,6 +6,7 @@
 package pedidos.modelos;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import productos.modelos.Producto;
 import pedidos.modelos.Pedido;
 /**
@@ -22,8 +23,31 @@ public class ProductodePedido {
         this.cantidad = cantidad;
         this.unProducto = unProducto;
     }
-    
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.unProducto);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ProductodePedido other = (ProductodePedido) obj;
+        if (!Objects.equals(this.unProducto, other.unProducto)) {
+            return false;
+        }
+        return true;
+    }
     
     public void mostrar2(){
       System.out.println("Producto: " +this.unProducto.verDescripcion());  
@@ -34,7 +58,7 @@ public class ProductodePedido {
         return cantidad;
     }
     
-    public void asgnarcantidad(int cantidad){
+    public void asignarcantidad(int cantidad){
         this.cantidad=cantidad;
     }
     
