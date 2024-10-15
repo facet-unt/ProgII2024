@@ -20,27 +20,19 @@ public class Pedido {
     private Cliente cliente;
     private Estado estado;
     private LocalDateTime fechaYHora;
-
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
     // Definicion de los constructores
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente, Estado estado) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
         this.estado = estado;
+        this.productosDelPedido = productosdelpedido;
     }
     
-    public Pedido(int numero, Cliente cliente, Estado estado) {
-        this(numero, LocalDateTime.now(), cliente, estado);
-    }
-    
-    public Pedido(int numero, Cliente cliente) {
-        this(numero, LocalDateTime.now(), cliente, Estado.PROCESANDO);
-    }
-    
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
-        this(numero, fechaYHora, cliente, Estado.PROCESANDO);
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente) {
+        this(numero, fechaYHora, productosdelpedido,cliente, Estado.PROCESANDO);
     }
 
     // Definicion del metodo mostrar
@@ -85,8 +77,11 @@ public class Pedido {
     // Devolver y agregar productos del pedido
     
     public void agregarProducto(Producto Producto, int cantidad) {
-         ProductoDelPedido pdp = new ProductoDelPedido(Producto, cantidad);
-         this.productosDelPedido.add(pdp);
+        for(ProductoDelPedido pdp : productosDelPedido)
+        {
+            if(!pdp.verProducto().equals(Producto))
+                productosDelPedido.add(pdp);
+        }
     }
     
     public ArrayList<ProductoDelPedido> verProductos() {
