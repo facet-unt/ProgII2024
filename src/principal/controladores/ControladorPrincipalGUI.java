@@ -10,7 +10,7 @@ import usuarios.vistas.*;
 
 /**
  *
- * @author luis
+ * @author G08
  */
 public class ControladorPrincipalGUI {
     public static void main(String[] args) {

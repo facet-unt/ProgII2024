@@ -18,7 +18,7 @@ import usuarios.modelos.Usuario;
 
 /**
  *
- * @author luis
+ * @author G08
  */
 public class ControladorPrincipal_Parte3 {
     public static void main(String[] args) {
@@ -263,13 +263,14 @@ public class ControladorPrincipal_Parte3 {
         System.out.println();
         
         ((Cliente)unCliente1).cancelarPedido(unPedido1);
+        
         System.out.println("Pedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
         for(Pedido p : unCliente1.verPedidos()) {
             p.mostrar();
-            System.out.println();
-        }
-        System.out.println();
-        
+            System.out.println();  
+        }        
+        if(unCliente1.verPedidos().isEmpty())
+            System.out.println("No hay pedidos (pedidos cancelados)");
         //</editor-fold>
     }
     

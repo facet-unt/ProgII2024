@@ -18,7 +18,7 @@ import usuarios.modelos.Usuario;
 
 /**
  *
- * @author luis
+ * @author G08
  */
 public class ControladorPrincipal_Parte2 {
     public static void main(String[] args) {
@@ -137,15 +137,48 @@ public class ControladorPrincipal_Parte2 {
         System.out.println();
         //</editor-fold>
         
+        //<editor-fold desc="Pedido->Cliente" defaultstate="collapsed">
+
+        //Instancio Productos, almaceno (sin repetir) en el ArrayList
         Producto unProducto1 = new Producto (1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);
-        productos.add(unProducto1);
-        ProductoDelPedido pdp = new ProductoDelPedido(unProducto1, 3);
+        
+        if(!productos.contains(unProducto1))          
+            productos.add(unProducto1);
+        
+        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.NO_DISPONIBLE, 139.3f);
+        if(!productos.contains(unProducto2))
+            productos.add(unProducto2);
+        
+        //Instacio ProductoDelPedido para cada Producto, almaceno (sin repetir) en un ArrayList
         ArrayList<ProductoDelPedido> pdps = new ArrayList<>();
-        pdps.add(pdp);
         
+        ProductoDelPedido pdp1 = new ProductoDelPedido(unProducto1, 3);
+        if(!pdps.contains(pdp1))
+            pdps.add(pdp1);
+        
+        ProductoDelPedido pdp2 = new ProductoDelPedido(unProducto2,4);
+        if(!pdps.contains(pdp2))
+            pdps.add(pdp2);
+        
+        //Instancio Pedidos con el ArrayList anterior, almaceno y verifico
         Pedido unPedido1 = new Pedido (1, LocalDateTime.now(), pdps, (Cliente)unCliente1);
+        if(!pedidos.contains(unPedido1))
+            pedidos.add(unPedido1);
         
-        pedidos.add(unPedido1);
+        Pedido unPedido2 = new Pedido (2, LocalDateTime.now(), pdps, (Cliente)unCliente2);
+        if(!pedidos.contains(unPedido2))
+            pedidos.add(unPedido2);
+        
+        //Compruebo el cast de unCliente
+        System.out.println("Pedidos");
+        System.out.println("=======");
+        for(Pedido p : pedidos) {
+            p.mostrar();
+            System.out.println();
+        }
+        
+        //</editor-fold>
+
     }    
     
     

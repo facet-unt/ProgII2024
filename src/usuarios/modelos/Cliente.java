@@ -14,8 +14,6 @@ public class Cliente extends Usuario{
         super(correo, clave, apellido, nombre);
     }
     
-    
-    
     // Metodos para ver agregar y borrar pedido
     
     @Override
