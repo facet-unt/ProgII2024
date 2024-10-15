@@ -108,7 +108,7 @@ public class ControladorPrincipal {
         }
         System.out.println();
 
-        System.out.println(unProducto1);
+        //System.out.println(unProducto1);
         //</editor-fold>
         
         //<editor-fold desc="SEGUNDA PARTE" defaultstate="collapsed">
@@ -122,6 +122,18 @@ public class ControladorPrincipal {
         pedidos.add(unPedido1);
         pedidos.add(unPedido2);
         pedidos.add(unPedido3);
+        
+        unPedido1.agregarProducto(unProducto1, 3);
+        unPedido1.agregarProducto(unProducto2, 5);
+        unPedido1.agregarProducto(unProducto3, 7);
+        
+        unPedido2.agregarProducto(unProducto3, 7);
+        unPedido2.agregarProducto(unProducto1, 13);
+        unPedido2.agregarProducto(unProducto2, 23);
+        
+        unPedido3.agregarProducto(unProducto2, 30);
+        unPedido3.agregarProducto(unProducto3, 51);
+        unPedido3.agregarProducto(unProducto1, 73);
         
         System.out.println("Pedidos");
         System.out.println("=======");
