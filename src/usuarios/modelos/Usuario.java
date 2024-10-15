@@ -23,7 +23,7 @@ public abstract class Usuario {
  }
  
  public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+    System.out.println("Correo: "+ correo + "\nClave: " + clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
  }
 
  public String verCorreo() {
@@ -79,5 +79,9 @@ public abstract class Usuario {
         final Usuario other = (Usuario) obj;
         return Objects.equals(this.correo, other.correo);
     }
+
+    
+    
+    
 }
     
