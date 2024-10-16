@@ -14,6 +14,24 @@ public class Cliente extends Usuario {
     public ArrayList<Pedido> verPedidos() {
         return pedidos;
     }
+    
+    public void agregarPedido(Pedido pedido){
+        if(pedidos.contains(pedido)){
+            int index = pedidos.indexOf(pedido);
+            pedidos.set(index, pedido);
+        }else{
+            pedidos.add(pedido);
+        }
+    }
+    
+    public void cancelarPedido(Pedido pedido){
+        if(pedidos.contains(pedido)){
+            int index = pedidos.indexOf(pedido);
+            pedidos.remove(index);
+        }else{
+            System.out.println("\nNo se encontó el pedido especificado\n");
+        }
+    }
         
 //    public Cliente(String c, String a, String n) {
 //        this(c, "123466", a, n);   
