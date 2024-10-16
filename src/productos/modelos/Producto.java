@@ -9,16 +9,13 @@ public class Producto {
     private Estado estado;
     private Categoria categoria;
 
-    /**
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
+    
 
     public void mostrar(){
     System.out.println("Codigo: "+ codigo + "\nDescripcion: "+ descripcion + "\nCategoria: "+ categoria + "\nEstado: "+ estado + "\nPrecio: "+ precio);
     }
 
-    public Producto(int codigo, String descripcion, float precio, Estado estado, Categoria categoria) {
+    public Producto(int codigo, String descripcion, Categoria categoria, Estado estado,float precio ) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -64,6 +61,28 @@ public class Producto {
 
     public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 73 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Producto other = (Producto) obj;
+        return this.codigo == other.codigo;
     }
     
     

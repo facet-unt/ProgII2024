@@ -9,10 +9,9 @@ package pedidos.modelos;
  * @author estudiante
  */
 public enum Estado {
-    CREADO("Creado"),
+    CREADO("Creando"),
     PROCESANDO("Procesando"),
-    ENTREGADO("Entregado"),
-    SOLICITADO ("Solicitado");
+    ENTREGADO("Entregado");
     
     
     private final String valor;

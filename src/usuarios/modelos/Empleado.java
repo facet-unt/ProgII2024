@@ -4,23 +4,22 @@
  */
 package usuarios.modelos;
 
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
+
 /**
  *
  * @author estudiante
  */
-public class Empleado extends Usuarios {
-    
-  private int antiguedad;
-   
+public class Empleado extends Usuario {
 
-    public Empleado(int antiguedad,String correo, String clave, String apellido, String nombre) {
+    public Empleado(String correo, String clave, String apellido, String nombre) {
         super(correo, clave, apellido, nombre);
-        this.antiguedad=antiguedad;
     }
- 
-  @Override
-    public void mostrar(){
-    System.out.println("Correo: "+ this.verCorreo() + "\nClave: "+ this.verClave() + "\nApellido: "+ this.verApellido() + "\nNombre: "+ this.verApellido());
-    System.out.println("Antiguedad: "+ antiguedad);
+
+    @Override
+    public ArrayList<Pedido> verPedidos() {
+        ArrayList<Pedido> Pedidos = new ArrayList<>();
+        return Pedidos;
     }
 }
