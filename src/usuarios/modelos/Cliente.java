@@ -1,58 +1,50 @@
+/*
+ * Copyright (c) 2024, Lucas Ahumada Checa   &   Juan Pablo Rearte
+ * Todos los derechos reservados.
+ *
+ * Este código es propiedad de [Lucas Ahumada Checa   &   Juan Pablo Rearte] y no puede ser utilizado
+ * sin permiso explícito.
+ */
 package usuarios.modelos;
 
-public class Cliente {
-    
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
-    public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
-    }
+import java.util.ArrayList;
+import pedidos.modelos.Pedido;
+
+public class Cliente extends Usuario {
+
+    private ArrayList<Pedido> pedidos;
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
-    }
-        
-    public Cliente(String c, String a, String n) {
-        this(c, "123466", a, n);   
-    }
-    
-    
-    public String verCorreo() {
-        return correo;
+        super(correo, clave, apellido, nombre);
+        this.pedidos = new ArrayList<>();
     }
 
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
+    public void agregarPedido(Pedido unPedido) {
+
+        if (!this.pedidos.contains(unPedido)) {
+            this.pedidos.add(unPedido);
+            System.out.println("El pedido se agrego.");
+            System.out.println();
+        } else {
+            this.pedidos.remove(unPedido);
+            this.pedidos.add(unPedido);
+            System.out.println("El pedido fue reemplazado.");
+            System.out.println();
+        }
     }
 
-    public String verClave() {
-        return clave;
+    public void cancelarPedido(Pedido pedidoACancelar) {
+        if (this.pedidos.contains(pedidoACancelar)) {
+            this.pedidos.remove(pedidoACancelar);
+            System.out.println("Se cancelo el pedido.");
+        } else {
+            System.out.println("El pedido no existe.");
+        }
+
     }
 
-    public void asignarClave(String clave) {
-        this.clave = clave;
+    @Override
+    public ArrayList<Pedido> verPedidos() {
+        return this.pedidos;
     }
-
-    public String verApellido() {
-        return apellido;
-    }
-
-    public void asignarApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
 }
