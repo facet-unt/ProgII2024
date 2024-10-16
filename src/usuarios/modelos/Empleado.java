@@ -21,6 +21,7 @@ public class Empleado extends Usuario{
         super(correo, clave, apellido, nombre);
     }
     
+    @Override
     public ArrayList<Pedido> verPedidos() {
         return pedidos;
     }

@@ -255,7 +255,7 @@ public class ControladorPrincipal_Parte3 {
         ((Cliente)unCliente1).agregarPedido(unPedido1);
         //pedido repetido
        
-        System.out.println("Pedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
+        System.out.println("\nPedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
         for(Pedido p : unCliente1.verPedidos()) {
             p.mostrar();
             System.out.println();
@@ -263,7 +263,7 @@ public class ControladorPrincipal_Parte3 {
         System.out.println();
         
         ((Cliente)unCliente1).cancelarPedido(unPedido1);
-        System.out.println("Pedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
+        System.out.println("\nPedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
         for(Pedido p : unCliente1.verPedidos()) {
             p.mostrar();
             System.out.println();
