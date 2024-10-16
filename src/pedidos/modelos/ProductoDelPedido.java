@@ -57,6 +57,4 @@ public class ProductoDelPedido {
         final ProductoDelPedido other = (ProductoDelPedido) obj;
         return Objects.equals(this.producto, other.producto);
     }
-    
-    
 }

@@ -106,23 +106,23 @@ public class ControladorPrincipal {
         /*
         SEGUNDA PARTE
          */
-        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), (Cliente)unCliente1);
-        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), (Cliente)unCliente2);
-        Pedido unPedido3 = new Pedido(1, LocalDateTime.now(),(Cliente)unCliente3);
+//        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), (Cliente)unCliente1);
+//        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), (Cliente)unCliente2);
+//        Pedido unPedido3 = new Pedido(1, LocalDateTime.now(),(Cliente)unCliente3);
         
         //NO SIRVE: Pedido unPedido4 = new Pedido(4, LocalDateTime.now(), (Cliente)unEncargado1);
         //el (cliente) se llama hacer casting, le avisa al costructor que este usuario es un cliente
         
-        if (!pedidos.contains(unPedido1)){
-            pedidos.add(unPedido1);
-        }
-        if (!pedidos.contains(unPedido2)){
-            pedidos.add(unPedido2);
-        }
-        if (!pedidos.contains(unPedido3)){
-            pedidos.add(unPedido3);
-        }
-        
+//        if (!pedidos.contains(unPedido1)){
+//            pedidos.add(unPedido1);
+//        }
+//        if (!pedidos.contains(unPedido2)){
+//            pedidos.add(unPedido2);
+//        }
+//        if (!pedidos.contains(unPedido3)){
+//            pedidos.add(unPedido3);
+//        }
+//        
         System.out.println("Pedidos");
         System.out.println("=======");
         for (Pedido p : pedidos) {
@@ -140,13 +140,13 @@ public class ControladorPrincipal {
         System.out.println("funciona? : " + unCliente4.equals(unEmpleado1));
         
         //parte 3 tp 4
-        ((Cliente)unCliente1).agregarPedido(unPedido1);
-        ((Cliente)unCliente1).agregarPedido(unPedido2);
-        ((Cliente)unCliente1).agregarPedido(unPedido3);
+//        ((Cliente)unCliente1).agregarPedido(unPedido1);
+//        ((Cliente)unCliente1).agregarPedido(unPedido2);
+//        ((Cliente)unCliente1).agregarPedido(unPedido3);
         for (Pedido p : ((Cliente)unCliente1).verPedidos()) {
             p.mostrar(); //muestra solo pedido 2 y 3, porque pedido 3 es igual a pedido 1 y lo reemplaza
         }
-        ((Cliente)unCliente1).cancelarPedido(unPedido3);
+//        ((Cliente)unCliente1).cancelarPedido(unPedido3);
         for (Pedido p : ((Cliente)unCliente1).verPedidos()) {
             p.mostrar(); //muestra solo 2
         }
