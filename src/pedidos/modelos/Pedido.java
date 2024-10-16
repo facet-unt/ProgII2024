@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
-import pedidos.modelos.ProductodePedido;
+import pedidos.modelos.ProductoDelPedido;
 
 /**
  *
@@ -21,21 +21,30 @@ public class Pedido {
     private LocalDateTime fechaYHora;
     private Estado estado;
     
-    private ArrayList<ProductodePedido> lista = new ArrayList<>();
+    private ArrayList<ProductoDelPedido> lista = new ArrayList<>();
 
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente,Estado estado ) {
-        
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente unCliente,Estado estado ) { 
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.unCliente = unCliente;
         unCliente.agrgarPedido(this);
         this.estado = estado;
+        
+    }
+    
+    public Pedido(int numero, LocalDateTime fechaYHora,ArrayList<ProductoDelPedido>pdp, Cliente unCliente ){
+       this.numero = numero;
+       this.fechaYHora = fechaYHora;
+       this.lista = pdp;
+       this.unCliente = unCliente;
+       unCliente.agrgarPedido(this);  
+       estado = Estado.PROCESANDO;
     }
     
      public void agregarProducto(Producto p, int cantidad) {
-        ProductodePedido pdp = new ProductodePedido(cantidad,p);
-        if(!lista.contains(pdp))
-            lista.add(pdp);
+        ProductoDelPedido PRO = new ProductoDelPedido(p,cantidad);
+        if(!lista.contains(PRO))
+            lista.add(PRO);
      }
      
 
@@ -72,7 +81,7 @@ public class Pedido {
         System.out.println("Estado: " + this.estado);
         System.out.println("\t\t\tProductos del Pedido:");
         System.out.println("\t\t\t====================");
-        for (ProductodePedido pro : this.lista) {
+        for (ProductoDelPedido pro : this.lista) {
            pro.mostrar2();
         }
     }

@@ -13,15 +13,16 @@ import pedidos.modelos.Pedido;
  *
  * @author Gisela
  */
-public class ProductodePedido {
+public class ProductoDelPedido {
     
-    private int cantidad;
     private Producto unProducto;
+    private int cantidad;
     
     
-    public ProductodePedido(int cantidad, Producto unProducto){
-        this.cantidad = cantidad;
+    public ProductoDelPedido(Producto unProducto,int cantidad){
+    
         this.unProducto = unProducto;
+        this.cantidad = cantidad;
     }
 
     @Override
@@ -42,7 +43,7 @@ public class ProductodePedido {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final ProductodePedido other = (ProductodePedido) obj;
+        final ProductoDelPedido other = (ProductoDelPedido) obj;
         if (!Objects.equals(this.unProducto, other.unProducto)) {
             return false;
         }
