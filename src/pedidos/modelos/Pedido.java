@@ -24,28 +24,18 @@ public class Pedido {
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
     // Definicion de los constructores
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
+   public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente, Estado estado) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
         this.estado = estado;
+        this.productosDelPedido = productosDelPedido;
     }
     
-    public Pedido(int numero, Cliente cliente, Estado estado) {
-        this(numero, LocalDateTime.now(), cliente, estado);
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente) {
+        this(numero, fechaYHora, productosDelPedido, cliente, Estado.PROCESANDO);
     }
-    
-    public Pedido(int numero, Cliente cliente) {
-        this(numero, LocalDateTime.now(), cliente, Estado.PROCESANDO);
-    }
-    
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
-        this(numero, fechaYHora, cliente, Estado.PROCESANDO);
-    }
-
-    public Pedido(int i, LocalDateTime now, ArrayList<ProductoDelPedido> pdp1, Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+ 
 
 
     // Definicion del metodo mostrar

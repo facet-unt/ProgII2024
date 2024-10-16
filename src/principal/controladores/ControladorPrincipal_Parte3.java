@@ -4,14 +4,12 @@
  */
 package principal.controladores;
 
-import static java.time.Clock.system;
-import static java.time.InstantSource.system;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import pedidos.modelos.Estado;
 import pedidos.modelos.Pedido;
 import pedidos.modelos.ProductoDelPedido;
 import productos.modelos.Categoria;
+import productos.modelos.Estado;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
@@ -144,7 +142,6 @@ public class ControladorPrincipal_Parte3 {
         PRODUCTOS
         */
         
-
         Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
         Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f);
         Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
@@ -158,13 +155,8 @@ public class ControladorPrincipal_Parte3 {
             productos.add(unProducto2);
         if(!productos.contains(unProducto3))
             productos.add(unProducto3);
-        
         if(!productos.contains(unProducto4))
             productos.add(unProducto4);
-        else 
-            System.out.println("no agreagdo");
-        
-        
         if(!productos.contains(unProducto5))
             productos.add(unProducto5);
 
@@ -198,7 +190,7 @@ public class ControladorPrincipal_Parte3 {
         //se agrega a la lista de pedidos
         if(!pedidos.contains(unPedido1))
             pedidos.add(unPedido1);
-        System.out.println("agreagdosd a");
+        
         
         ArrayList<ProductoDelPedido> pdp2 = new ArrayList<>();
         ProductoDelPedido pp4 = new ProductoDelPedido(unProducto1, 10);
@@ -209,13 +201,11 @@ public class ControladorPrincipal_Parte3 {
         if(!pdp2.contains(pp5))
             pdp2.add(pp5);
         
-        Pedido unPedido2 = new Pedido(1, LocalDateTime.now(), pdp2, (Cliente)usuarios.get(1));       
+        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), pdp2, (Cliente)usuarios.get(1));       
         
         //se agrega el pedido 2 a la lista de pedidos
         if(!pedidos.contains(unPedido2))
             pedidos.add(unPedido2);
-        else
-            System.out.println("No agreagado");
         
         ArrayList<ProductoDelPedido> pdp3 = new ArrayList<>();
         ProductoDelPedido pp6 = new ProductoDelPedido(unProducto3, 100);

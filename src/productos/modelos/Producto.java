@@ -1,7 +1,8 @@
 package productos.modelos;
 
-import pedidos.modelos.Estado;
+
 import usuarios.modelos.Cliente;
+import productos.modelos.Estado;
 
 public class Producto {
     private int codigo;
