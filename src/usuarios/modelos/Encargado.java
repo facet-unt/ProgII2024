@@ -4,62 +4,25 @@
  */
 package usuarios.modelos;
 
-/**
- *
- * @author estudiante
- */
-public class Encargado {
-    
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
-    
-    public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+import pedidos.modelos.Pedido;
+import java.util.ArrayList;
+import java.util.List;
+/*6. A la clase Encargado: hacerla subclase de Usuario y realizar las modificaciones que considere
+necesarias.*/
+public class Encargado extends Usuario {
+
+    public Encargado(String correo, String apellido, String nombre, String clave) {
+        super(correo, apellido, nombre, clave);
     }
 
-    public Encargado(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
+    @Override
+    public void mostrar() {
+        System.out.println("Encargado: " + this.verApellido() + ", " + this.verNombre());
+        super.mostrar(); // Llama al método mostrar de la superclase
     }
 
-    public String verCorreo() {
-        return correo;
+    @Override
+    public List<Pedido> verPedidos() {
+        return new ArrayList<>(); // Retorna una lista vacía o modifica según la lógica necesaria
     }
-
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String verClave() {
-        return clave;
-    }
-
-    public void asignarClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String verApellido() {
-        return apellido;
-    }
-
-    public void asignarApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    
-    
-
 }

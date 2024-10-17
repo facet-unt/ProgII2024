@@ -17,7 +17,7 @@ public class Producto {
     
     }
 
-    public Producto(int codigo, String descripcion, float precio, Estado estado, Categoria categoria) {
+    public Producto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -45,6 +45,14 @@ public class Producto {
         return precio;
     }
 
+    @Override
+    public String toString() {
+        return " " + "" + descripcion + ' ';
+    }
+
+    
+   
+
     public void asignarPrecio(float precio) {
         this.precio = precio;
     }
@@ -64,6 +72,13 @@ public class Producto {
     public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+//enunciado: Para la clase Producto, se considera que dos productos son iguales si tienen el mismo código.
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 53 * hash + this.codigo;
+        return hash;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -77,13 +92,18 @@ public class Producto {
             return false;
         }
         final Producto other = (Producto) obj;
-        return this.codigo == other.codigo;
+        if (this.codigo != other.codigo) {
+            return false;
+        }
+        return true;
     }
+
     
-    
+    public int compareTo(Producto o) {
+        if(this.categoria.equals(o.categoria)){
+            return this.descripcion.compareTo(o.descripcion);
+        }
+        return this.categoria.compareTo(o.categoria);
+    }
      
 }
-
-
-
-

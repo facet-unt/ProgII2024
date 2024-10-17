@@ -143,7 +143,7 @@ public class VentanaAMEmpleado extends JDialog {
         Empleado unEmpleado = new Empleado(correo, clave, apellido, nombre);
         this.empleados.add(unEmpleado);
         
-        System.out.println("Clientes");
+        System.out.println("Empleados");
         System.out.println("========");
         for(Empleado c : this.empleados) {
             c.mostrar();

@@ -1,63 +1,31 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template*/
 package usuarios.modelos;
 
-/**
- *
- * @author estudiante
- */
-public class Empleado {
-    
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
-    public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave"+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
+
+ 
+ 
+
+import java.util.List;
+import pedidos.modelos.Pedido;
+/*5. A la clase Empleado: hacerla subclase de Usuario y realizar las modificaciones que considere
+necesarias.*/
+public class Empleado extends Usuario {
+
+    public Empleado(String correo, String apellido, String nombre, String clave) {
+        super(correo, apellido, nombre, clave);
     }
 
-    public Empleado(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
+    @Override
+    public void mostrar() {
+        System.out.println("Empleado: " + this.verApellido() + ", " + this.verNombre());
+        super.mostrar(); // Llama al método mostrar de la superclase
     }
 
-    public String verCorreo() {
-        return correo;
+    @Override
+    public List<Pedido> verPedidos() {
+        return super.listaPedidos; // Retorna la lista de pedidos
     }
-
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String verClave() {
-        return clave;
-    }
-
-    public void asignarClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String verApellido() {
-        return apellido;
-    }
-
-    public void asignarApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    
-    
 }
+

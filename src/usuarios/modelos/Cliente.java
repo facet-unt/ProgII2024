@@ -1,59 +1,60 @@
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package usuarios.modelos;
-
-public class Cliente {
-    
-    private String correo;
-    private String clave;
-    private String apellido;
-    private String nombre;
-    
-    public void mostrar(){
-    System.out.println("Correo: "+ correo + "\nClave: "+ clave + "\nApellido: "+ apellido + "\nNombre: "+ nombre);
-    }
+import java.util.ArrayList;
+import java.util.List;
+import pedidos.modelos.Pedido;
+/*4. A la clase Cliente: hacerla subclase de Usuario y realizar las modificaciones que considere
+necesarias. Como se ve son visibles las modificaciones en el*/
+public class Cliente extends Usuario {
 
     public Cliente(String correo, String clave, String apellido, String nombre) {
-        this.correo = correo;
-        this.clave = clave;
-        this.apellido = apellido;
-        this.nombre = nombre;
-    }
-        
-    public Cliente(String c, String a, String n) {
-        this(c, "123466", a, n);   
-    }
-    
-    
-    public String verCorreo() {
-        return correo;
+        super(correo, clave, apellido, nombre); // Llama al constructor de Usuario
     }
 
-    public void asignarCorreo(String correo) {
-        this.correo = correo;
+    public Cliente(String correo, String apellido, String nombre) {
+        this(correo, apellido,nombre,"123466"); // Llama al constructor con clave por defecto
     }
 
-    public String verClave() {
-        return clave;
+    @Override
+    public void mostrar() {
+        System.out.println("Cliente: " + this.verApellido() + ", " + this.verNombre());
+        super.mostrar(); // Llama al método mostrar de la superclase
     }
 
-    public void asignarClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String verApellido() {
-        return apellido;
-    }
-
-    public void asignarApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String verNombre() {
-        return nombre;
-    }
-
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+    @Override
+public List<Pedido> verPedidos() {
+    return listaPedidos; // Devuelve directamente la lista de pedidos
 }
+public void asignarListaPedidos(Pedido p) {
+        if(!listaPedidos.contains(p))
+        listaPedidos.add(p);
+    }
+    
+    public void agregarPedido(Pedido p){
+        p.AsignarCliente(this);
+        if(listaPedidos.contains(p)){
+            for (Pedido p2 : listaPedidos){
+                if(p.equals(p2)){
+                    listaPedidos.remove(p2);
+                    listaPedidos.add(p);
+                }
+            }
+        } else{
+            listaPedidos.add(p);
+        }
+    }
+    public void cancelarPedido(Pedido p){
+        if(listaPedidos.contains(p)){
+            listaPedidos.remove(p);
+        }
+    
+    }       
+}
+
+
+
+

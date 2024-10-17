@@ -1,12 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package pedidos.modelos;
 
 /**
  *
- * @author fabri
+ * @author 54381
  */
 public enum Estado {
     CREADO("Creado"),
@@ -14,14 +15,18 @@ public enum Estado {
     PROCESANDO("Procesando"),
     ENTREGADO("Entregado");
     
-    private String valor;
     
-    private Estado (String valor){
+
+    // Var. de instancia para representar el valor
+    private String valor;
+
+    // Constructor
+    private Estado(String valor) {
         this.valor = valor;
     }
-    
-    public String toString(){
+
+    @Override
+    public String toString() {
         return this.valor;
     }
-    
 }
