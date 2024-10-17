@@ -1,7 +1,5 @@
 package productos.modelos;
 
-
-
 public enum Estado {
     DISPONIBLE("Disponible"),
     NO_DISPONIBLE("No disponible");
