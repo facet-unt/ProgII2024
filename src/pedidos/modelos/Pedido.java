@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pedidos.modelos;
 
 import java.time.LocalDateTime;
@@ -10,10 +6,7 @@ import java.util.ArrayList;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 
-/**
- *
- * @author luis
- */
+
 public class Pedido {
 
     private int numero;
@@ -23,22 +16,15 @@ public class Pedido {
 
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
-    // Definicion de los constructores
-   public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente, Estado estado) {
+   public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
-        this.estado = estado;
         this.productosDelPedido = productosDelPedido;
+        estado = estado.CREADO;
     }
     
-    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente) {
-        this(numero, fechaYHora, productosDelPedido, cliente, Estado.PROCESANDO);
-    }
- 
-
-
-    // Definicion del metodo mostrar
+   
     
     public void mostrar() {
         System.out.println("Nro: " + numero);
@@ -53,12 +39,11 @@ public class Pedido {
         }
     }
 
-    // Metodo equals y hash
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + this.numero;
+        hash = 87 * hash + this.numero;
         return hash;
     }
 

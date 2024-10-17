@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package usuarios.modelos;
 import java.util.Objects;
 import java.util.ArrayList;
 import pedidos.modelos.Pedido;
 
-/**
- *
- * @author luis
- */
 public abstract class Usuario {
     private String correo;
     private String clave;
@@ -25,7 +17,6 @@ public abstract class Usuario {
     }
 
   
-    // Definicion del metodo mostrar
     
     public void mostrar() {
         System.out.println("Correo: " + correo);
@@ -34,12 +25,11 @@ public abstract class Usuario {
         System.out.println("Nombre: " + nombre);
     }
     
-    // Metodos equals y hashcode
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.correo);
+        int hash = 9;
+        hash = 72 * hash + Objects.hashCode(this.correo);
         return hash;
     }
 
@@ -58,11 +48,10 @@ public abstract class Usuario {
         return Objects.equals(this.correo, other.correo);
     }
     
-    // Definicion del metodo verPedidos
+   
     
     public abstract ArrayList<Pedido> verPedidos();
     
-    // Definicion de los metodos get/set de la clase para las 4 variables de instancia
     
     public String verCorreo() {
         return correo;

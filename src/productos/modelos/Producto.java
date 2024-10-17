@@ -1,9 +1,6 @@
 package productos.modelos;
 
 
-import usuarios.modelos.Cliente;
-import productos.modelos.Estado;
-
 public class Producto {
     private int codigo;
     private String descripcion;
@@ -11,7 +8,6 @@ public class Producto {
     private Estado estado;
     private Categoria categoria;
 
-    // Definicion del constructor de clase
     
     public Producto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio) {
         this.codigo = codigo;
@@ -20,11 +16,7 @@ public class Producto {
         this.estado = estado;
         this.categoria = categoria;
     }
-    
-    /**
-     * Este método permite mostrar un Producto
-     * @return devuelve nada
-     */
+   
 
     public void mostrar(){
         System.out.println("Codigo: " + codigo);
@@ -34,12 +26,11 @@ public class Producto {
         System.out.println("Categoria: " + categoria);
     }
     
-    // Metodos equal y hash
     
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + this.codigo;
+        hash = 78 * hash + this.codigo;
         return hash;
     }
 
@@ -58,7 +49,6 @@ public class Producto {
         return this.codigo == other.codigo;
     }
     
-    // Metodos get/set
     
     public int verCodigo() {
         return codigo;
@@ -100,6 +90,5 @@ public class Producto {
         this.categoria = categoria;
     }
     
-    
-     
+   
 }
