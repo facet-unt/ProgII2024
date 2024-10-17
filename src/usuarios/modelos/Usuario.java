@@ -5,7 +5,9 @@
  */
 package usuarios.modelos;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import pedidos.modelos.Pedido;
 
 /**
  *
@@ -17,14 +19,14 @@ public abstract class Usuario {
     private String clave;
     private String apellido;
     private String nombre;
-    
+    //constructor
     public Usuario(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
         this.clave = clave;
         this.apellido = apellido;
         this.nombre = nombre;
     }
-
+    // metodo get y set para las variables 
     public String verCorreo() {
         return correo;
     }
@@ -56,18 +58,17 @@ public abstract class Usuario {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-     public void mostrar(){
+    //metodo para muestra los datos 
+    public void mostrar(){
     System.out.println("Correo: "+ correo);
     System.out.println("Clave: "+ clave); 
     System.out.println("Cliente: "+ apellido +" "+nombre);
      }
-    
-     
+    //comparo que los usuarios no tengan el mismo correo
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(this.correo);
+        int hash = 7;
+        hash = 61 * hash + Objects.hashCode(this.correo);
         return hash;
     }
 
@@ -88,6 +89,7 @@ public abstract class Usuario {
         }
         return true;
     }
-     
+    
+    public abstract ArrayList<Pedido> verPedidos();
      
 }

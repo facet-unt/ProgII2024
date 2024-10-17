@@ -23,7 +23,7 @@ import usuarios.modelos.Usuario;
 public class ControladorPrincipal_Parte3 {
     public static void main(String[] args) {
         ArrayList<Usuario> usuarios = new ArrayList<>();    
-        ArrayList<Producto> productos = new ArrayList<>();
+        ArrayList<Producto> listaproductos = new ArrayList<>();
         ArrayList<Pedido> pedidos = new ArrayList<>();
         
         //<editor-fold desc="USUARIOS" defaultstate="collapsed">
@@ -34,6 +34,7 @@ public class ControladorPrincipal_Parte3 {
         Usuario unCliente2 = new Cliente("cliente2@bar.com", "claveCliente2", "ApellidoCliente2", "NombreCliente2");       
         Usuario unCliente3 = new Cliente("cliente3@bar.com", "claveCliente3", "ApellidoCliente3", "NombreCliente3");
         Usuario unCliente4 = new Cliente("cliente3@bar.com", "claveCliente4", "ApellidoCliente4", "NombreCliente4"); 
+        
         //cliente repetido
         if(!usuarios.contains(unCliente1))
             usuarios.add(unCliente1);
@@ -43,7 +44,7 @@ public class ControladorPrincipal_Parte3 {
             usuarios.add(unCliente3);
         if(!usuarios.contains(unCliente4))
             usuarios.add(unCliente4);
-
+               
 //        System.out.println("Clientes");
 //        System.out.println("========");
 //        for(Usuario u : usuarios) {
@@ -142,23 +143,23 @@ public class ControladorPrincipal_Parte3 {
         PRODUCTOS
         */
         
-        Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
-        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1", productos.modelos.Estado.DISPONIBLE,Categoria.ENTRADA ,1.0f);        
+        Producto unProducto2 = new Producto(2, "Producto2",productos.modelos.Estado.DISPONIBLE, Categoria.PLATOPRINCIPAL,  2.0f);
+        Producto unProducto3 = new Producto(3, "Producto3",productos.modelos.Estado.DISPONIBLE, Categoria.POSTRE,  3.0f);
+        Producto unProducto4 = new Producto(3, "Producto3",productos.modelos.Estado.DISPONIBLE, Categoria.PLATOPRINCIPAL,  3.0f);
         //repetido unProducto4
-        Producto unProducto5 = new Producto(5, "Producto5", Categoria.POSTRE, Estado.DISPONIBLE, 48.0f);
+        Producto unProducto5 = new Producto(5, "Producto5", productos.modelos.Estado.DISPONIBLE, Categoria.POSTRE, 48.0f);
 
-        if(!productos.contains(unProducto1))
-            productos.add(unProducto1);
-        if(!productos.contains(unProducto2))
-            productos.add(unProducto2);
-        if(!productos.contains(unProducto3))
-            productos.add(unProducto3);
-        if(!productos.contains(unProducto4))
-            productos.add(unProducto4);
-        if(!productos.contains(unProducto5))
-            productos.add(unProducto5);
+        if(!listaproductos.contains(unProducto1))
+            listaproductos.add(unProducto1);
+        if(!listaproductos.contains(unProducto2))
+            listaproductos.add(unProducto2);
+        if(!listaproductos.contains(unProducto3))
+            listaproductos.add(unProducto3);
+        if(!listaproductos.contains(unProducto4))
+            listaproductos.add(unProducto4);
+        if(!listaproductos.contains(unProducto5))
+            listaproductos.add(unProducto5);
 
 //        System.out.println("Productos");
 //        System.out.println("=========");
@@ -185,7 +186,7 @@ public class ControladorPrincipal_Parte3 {
         ProductoDelPedido pp3 = new ProductoDelPedido(unProducto2, 4);
         if(!pdp1.contains(pp3))
             pdp1.add(pp3);
-                
+          
         Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), pdp1, (Cliente)usuarios.get(0)); 
         //se agrega a la lista de pedidos
         if(!pedidos.contains(unPedido1))
@@ -201,7 +202,7 @@ public class ControladorPrincipal_Parte3 {
         if(!pdp2.contains(pp5))
             pdp2.add(pp5);
         
-        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), pdp2, (Cliente)usuarios.get(1));       
+        Pedido unPedido2 = new Pedido(2,LocalDateTime.now(), pdp2, (Cliente)usuarios.get(1));       
         
         //se agrega el pedido 2 a la lista de pedidos
         if(!pedidos.contains(unPedido2))
