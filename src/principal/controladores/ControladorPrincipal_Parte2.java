@@ -58,13 +58,10 @@ public class ControladorPrincipal_Parte2 {
 
         if(!usuarios.contains(unEmpleado1))
             usuarios.add(unEmpleado1);
-        
         if(!usuarios.contains(unEmpleado2))
             usuarios.add(unEmpleado2);
-        
         if(!usuarios.contains(unEmpleado3))
             usuarios.add(unEmpleado3);
-        
         if(!usuarios.contains(unEmpleado4))
             usuarios.add(unEmpleado4);
 
@@ -86,13 +83,10 @@ public class ControladorPrincipal_Parte2 {
 
         if(!usuarios.contains(unEncargado1))
             usuarios.add(unEncargado1);
-        
         if(!usuarios.contains(unEncargado2))
             usuarios.add(unEncargado2);
-        
         if(!usuarios.contains(unEncargado3))
             usuarios.add(unEncargado3);
-        
         if(!usuarios.contains(unEncargado4))
             usuarios.add(unEncargado4);
 
@@ -109,7 +103,7 @@ public class ControladorPrincipal_Parte2 {
         //Repetidos
         Usuario unCliente5 = new Cliente("encargado3@bar.com", "claveCliente5", "ApellidoCliente5", "NombreCliente5");
         //cliente repetido con un encargado
-        if(usuarios.contains(unCliente5))
+        if(!usuarios.contains(unCliente5))
             usuarios.add(unCliente5);
         else
             System.out.println("No se puede agregar el cliente5");
@@ -117,7 +111,7 @@ public class ControladorPrincipal_Parte2 {
         Usuario unEncargado5 = new Encargado("empleado2@bar.com", "claveEncargado5", "ApellidoEncargado5", "NombreEncargado5");
         //encargado repetido con un empleado
 
-        if(usuarios.contains(unEncargado5))
+        if(!usuarios.contains(unEncargado5))
             usuarios.add(unEncargado5);
         else
             System.out.println("No se puede agregar el encargado5");
@@ -125,19 +119,18 @@ public class ControladorPrincipal_Parte2 {
         Usuario unEmpleado5 = new Encargado("cliente2@bar.com", "claveEmpleado5", "ApellidoEmpleado5", "NombreEmpleado5");
         //empleado repetido con un cliente
 
-         if(usuarios.contains(unEmpleado5))
+         if(!usuarios.contains(unEmpleado5))
             usuarios.add(unEmpleado5);
         else
             System.out.println("No se puede agregar el unEmpleado5");
          
-        System.out.println("\nLista de usuarios");
+        System.out.println("Lista de usuarios");
         System.out.println("========");
         for(Usuario u : usuarios) {
             u.mostrar();
             System.out.println();
         }
         System.out.println();
-        //</editor-fold>     
+        //</editor-fold>
     }    
-    
 }

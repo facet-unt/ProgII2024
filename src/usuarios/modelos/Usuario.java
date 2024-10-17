@@ -60,6 +60,7 @@ public abstract class Usuario {
     }
     
 
+    
     @Override
     public int hashCode() {
         int hash = 3;
@@ -75,7 +76,7 @@ public abstract class Usuario {
         if (obj == null) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass().getSuperclass() != obj.getClass().getSuperclass()) {
             return false;
         }
         final Usuario other = (Usuario) obj;

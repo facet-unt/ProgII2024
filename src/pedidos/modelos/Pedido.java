@@ -95,7 +95,7 @@ public class Pedido {
     }
     
     public void agregarProducto(Producto unProducto, int cantidad){
-        ProductoDelPedido producto = new ProductoDelPedido(cantidad, unProducto);
+        ProductoDelPedido producto = new ProductoDelPedido(unProducto, cantidad);
         this.Productos.add(producto);
     }
     
