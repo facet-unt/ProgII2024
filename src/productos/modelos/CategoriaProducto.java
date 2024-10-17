@@ -17,6 +17,7 @@ public enum CategoriaProducto {
     this.clasif=clasif;
     }
     
+    @Override
     public String toString(){
         return this.clasif;
     }

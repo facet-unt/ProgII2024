@@ -89,8 +89,7 @@ public class ControladorPrincipal_Parte1 {
         Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
         Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f);
         Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
-        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 3.0f);
-        //repetido unProducto4
+        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 3.0f);//repetido
         Producto unProducto5 = new Producto(5, "Producto5", Categoria.POSTRE, Estado.DISPONIBLE, 48.0f);
 
         if(!productos.contains(unProducto1))
@@ -155,11 +154,15 @@ public class ControladorPrincipal_Parte1 {
         if(!pdp2.contains(pp5))
             pdp2.add(pp5);
         
+        
+        
         Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), pdp2, unCliente2);       
         
         //se agrega el pedido 2 a la lista de pedidos
         if(!pedidos.contains(unPedido2))
             pedidos.add(unPedido2);
+        
+        
         
         ArrayList<ProductoDelPedido> pdp3 = new ArrayList<>();
         ProductoDelPedido pp6 = new ProductoDelPedido(unProducto3, 100);
@@ -187,7 +190,7 @@ public class ControladorPrincipal_Parte1 {
         
         Pedido unPedido4 = new Pedido(3, LocalDateTime.now(), pdp4, unCliente2);        
         
-        //NO se agrega el pedido 4 a la lista de pedidos
+        //NO se agrega el pedido 4 a la lista de pedidos (mismo numero)
         if(!pedidos.contains(unPedido4))
             pedidos.add(unPedido4);      
         

@@ -2,7 +2,6 @@
 package usuarios.modelos;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import pedidos.modelos.Pedido;
 
 public class Cliente extends Usuario{
@@ -14,6 +13,10 @@ public class Cliente extends Usuario{
         super(correo, clave, apellido, nombre);
     }
     
+    public Cliente(String correo, String clave, String apellido, String nombre, ArrayList<Pedido> pedidos) {
+        super(correo, clave, apellido, nombre);        
+        this.pedidos = pedidos;
+    }
     // Metodos para ver agregar y borrar pedido
     
     @Override

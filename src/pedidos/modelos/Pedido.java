@@ -10,10 +10,6 @@ import java.util.ArrayList;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 
-/**
- *
- * @author luis
- */
 public class Pedido {
 
     private int numero;
@@ -23,7 +19,7 @@ public class Pedido {
 
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
-    // Definicion de los constructores
+    //constructores
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
@@ -41,6 +37,12 @@ public class Pedido {
     
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
         this(numero, fechaYHora, cliente, Estado.PROCESANDO);
+    }
+    
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente) {
+        this(numero, fechaYHora, cliente, Estado.CREADO);
+        this.productosDelPedido = productosDelPedido;
+        
     }
 
     // Definicion del metodo mostrar

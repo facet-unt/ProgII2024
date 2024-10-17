@@ -24,13 +24,12 @@ public abstract class Usuario {
         this.nombre = nombre;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 61 * hash + Objects.hashCode(this.correo);
-    
+
     // Definicion del metodo mostrar
     
+    /**
+     *s
+     */
     public void mostrar() {
         System.out.println("Correo: " + correo);
         System.out.println("Clave: " + clave);

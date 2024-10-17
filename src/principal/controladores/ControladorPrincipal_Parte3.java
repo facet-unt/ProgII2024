@@ -174,11 +174,11 @@ public class ControladorPrincipal_Parte3 {
         PEDIDOS y PRODUCTOS DEL PEDIDO
         */
         ArrayList<ProductoDelPedido> pdp1 = new ArrayList<>();
-        ProductoDelPedido pp1 = new ProductoDelPedido(unProducto1, 1);
+        ProductoDelPedido pp1 = new ProductoDelPedido(unProducto1, 4);
         if(!pdp1.contains(pp1))
             pdp1.add(pp1);
         
-        ProductoDelPedido pp2 = new ProductoDelPedido(unProducto2, 1);
+        ProductoDelPedido pp2 = new ProductoDelPedido(unProducto2, 30);
         if(!pdp1.contains(pp2))
             pdp1.add(pp2);
         
@@ -251,20 +251,20 @@ public class ControladorPrincipal_Parte3 {
         /*
         CLIENTE Y PEDIDOS
         */
-        ((Cliente)unCliente1).agregarPedido(unPedido1);
-        ((Cliente)unCliente1).agregarPedido(unPedido1);
+        ((Cliente)unCliente2).agregarPedido(unPedido2);
+        ((Cliente)unCliente2).agregarPedido(unPedido2);
         //pedido repetido
        
-        System.out.println("Pedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
-        for(Pedido p : unCliente1.verPedidos()) {
+        System.out.println("Pedidos de " + unCliente2.verApellido() + ", " + unCliente2.verNombre());
+        for(Pedido p : unCliente2.verPedidos()) {
             p.mostrar();
             System.out.println();
         }
         System.out.println();
         
-        ((Cliente)unCliente1).cancelarPedido(unPedido1);
-        System.out.println("Pedidos de " + unCliente1.verApellido() + ", " + unCliente1.verNombre());
-        for(Pedido p : unCliente1.verPedidos()) {
+        ((Cliente)unCliente2).cancelarPedido(unPedido2);
+        System.out.println("Pedidos de " + unCliente2.verApellido() + ", " + unCliente2.verNombre());
+        for(Pedido p : unCliente2.verPedidos()) {
             p.mostrar();
             System.out.println();
         }

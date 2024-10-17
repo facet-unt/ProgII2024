@@ -5,8 +5,8 @@
 package principal.controladores;
 
 import java.util.ArrayList;
-import pedidos.modelos.Pedido;
-import productos.modelos.Producto;
+//import pedidos.modelos.Pedido;
+//import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
 import usuarios.modelos.Empleado;
 import usuarios.modelos.Encargado;
@@ -19,8 +19,8 @@ import usuarios.modelos.Usuario;
 public class ControladorPrincipal_Parte2 {
     public static void main(String[] args) {
         ArrayList<Usuario> usuarios = new ArrayList<>();    
-        ArrayList<Producto> productos = new ArrayList<>();
-        ArrayList<Pedido> pedidos = new ArrayList<>();
+        //ArrayList<Producto> productos = new ArrayList<>();
+        //ArrayList<Pedido> pedidos = new ArrayList<>();
 
         //<editor-fold desc="USUARIOS" defaultstate="collapsed">
         /*
