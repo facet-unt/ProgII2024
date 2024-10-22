@@ -64,4 +64,20 @@ public class GestorProductos {
             else
                 return PRODUCTO_INEXISTENTE;
     } 
-} 
+}
+
+    public ArrayList<Producto> buscarProductos(String descripcion){
+        
+        String descripcionEnMinuscula  = descripcion.toLowerCase();
+        ArrayList <Producto> recorrer = new ArrayList<>();
+        
+        for(Producto prod : productos){
+            if(prod.verDescripcion().equals(descripcionEnMinuscula)){
+                recorrer.add(prod);
+            }    
+            else
+                System.out.println(PRODUCTO_INEXISTENTE);
+         }
+        return recorrer;
+    }
+}
