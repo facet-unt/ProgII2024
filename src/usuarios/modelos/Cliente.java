@@ -62,11 +62,13 @@ public class Cliente extends Usuario{
     public ArrayList<Pedido> verPedidos(){
         return new ArrayList<>(this.pedidos);
     }
-    //Aquí no debería hacer ningún control, ya que con mi increible intelecto he craneado
-    //una forma en que no hay manera que dos pedidos tengan el mismo número, pero mi genio
-    //se ve limitado por una planeación diferente
+    
     public void agregarPedido(Pedido pedido){
         if (!pedidos.contains(pedido)){
+            pedidos.add(pedido);
+        }else{
+            int index =  pedidos.indexOf(pedido);
+            pedidos.remove(index);
             pedidos.add(pedido);
         }
     }

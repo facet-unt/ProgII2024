@@ -67,6 +67,19 @@ public class Producto {
     public void asignarCategoria(Categoria categoria) {
         this.categoria = categoria;
     }    
+    
+    @Override
+    
+    public boolean equals(Object objeto){
+        if (this == objeto){
+            return true;
+        }
+        if (objeto == null || getClass() != objeto.getClass()){
+            return false;
+        }
+        Producto p  = (Producto) objeto;
+        return codigo == p.verCodigo();
+    }
 }
 
 
