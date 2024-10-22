@@ -3,23 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package usuarios.modelos;
-
-import java.util.ArrayList;
 import java.util.Objects;
+import java.util.ArrayList;
 import pedidos.modelos.Pedido;
 
 /**
  *
- * @author estudiante
+ * @author luis
  */
 public abstract class Usuario {
-    
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
-    
-    // Definicion del constructor de clase
     
     public Usuario(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
@@ -27,9 +23,8 @@ public abstract class Usuario {
         this.apellido = apellido;
         this.nombre = nombre;
     }
-    
-    // Definicion del metodo mostrar
-    
+
+    // Definicion del metodo mostrar    
     public void mostrar() {
         System.out.println("Correo: " + correo);
         System.out.println("Clave: " + clave);
@@ -38,7 +33,6 @@ public abstract class Usuario {
     }
     
     // Metodos equals y hashcode
-
     @Override
     public int hashCode() {
         int hash = 7;
@@ -98,5 +92,6 @@ public abstract class Usuario {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
+    
 
 }
