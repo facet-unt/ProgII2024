@@ -51,6 +51,28 @@ public class GestorProductos {
         public static final String PRODUCTOS_DUPLICADOS = "Ya existe un producto con ese codigo";
         public static final String VALIDACION_EXITO = "Los datos del producto son correctos";
         public static final String PRODUCTO_INEXISTENTE = "No existe el producto especificado";
+    
+    // Defino un metodo que permite validar los datos
+    private String validarDatos (int codigo, String descripcion, float precio, Categoria categoria, Estado estado) {
+        // Realizo las validaciones de datos
+        // Codigo debe ser positivo
+        if (codigo <= 0)
+            return ERROR_CODIGO;
+        // Descripcion debe ser no nula y no vacia
+        if (descripcion == null || descripcion.trim().equals(""))
+            return ERROR_DESCRIPCION;
+        // Precio debe ser positivo
+        if (precio <= 0)
+            return ERROR_PRECIO;
+        // Categoria debe ser no nula
+        if (categoria == null)
+            return ERROR_CATEGORIA;
+        // Estado debe ser no nulo
+        if (estado == null)
+            return ERROR_ESTADO;
+        // Si veriico todo, retorno exito
+        return VALIDACION_EXITO;
+    }
         
     // Defino el metodo para crear productos
     public String crearProducto(int codigo, String descripcion, float precio, Categoria categoria, Estado estado) {
@@ -109,25 +131,8 @@ public class GestorProductos {
         return resultado;
     }
         
-    // Defino un metodo que permite validar los datos
-    private String validarDatos (int codigo, String descripcion, float precio, Categoria categoria, Estado estado) {
-        // Realizo las validaciones de datos
-        // Codigo debe ser positivo
-        if (codigo <= 0)
-            return ERROR_CODIGO;
-        // Descripcion debe ser no nula y no vacia
-        if (descripcion == null || descripcion.trim().equals(""))
-            return ERROR_DESCRIPCION;
-        // Precio debe ser positivo
-        if (precio <= 0)
-            return ERROR_PRECIO;
-        // Categoria debe ser no nula
-        if (categoria == null)
-            return ERROR_CATEGORIA;
-        // Estado debe ser no nulo
-        if (estado == null)
-            return ERROR_ESTADO;
-        // Si veriico todo, retorno exito
-        return VALIDACION_EXITO;
+    // Defino el metodo para mostrar el menu
+    public ArrayList<Producto> menu() {
+        return this.productos;
     }
 }
