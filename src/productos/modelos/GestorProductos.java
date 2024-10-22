@@ -135,4 +135,26 @@ public class GestorProductos {
     public ArrayList<Producto> menu() {
         return this.productos;
     }
+    
+    // Defino el metodo para buscar productos
+    public ArrayList<Producto> buscarProductos (String descripcion) {
+        // Declaro el arreglo a devolver
+        ArrayList<Producto> productosEncontrados = new ArrayList<>();
+        
+        // Convierto la descripcion a minuscula y hago un trim para mayor comparabilidad
+        descripcion = descripcion.toLowerCase().trim();
+        
+        // Recorro el arreglo de productos
+        for (Producto p : this.productos) {
+            // Convierto su descripcion a minuscula y hago un trim
+            String descripcionProducto = p.verDescripcion().toLowerCase().trim();
+            
+            // Si las descripciones coinciden parcialmente, añado el producto a la lista de productos encontrados
+            if (descripcionProducto.contains(descripcion) || descripcion.contains(descripcionProducto))
+                productosEncontrados.add(p);
+        }
+        
+        // Retorno la lista encontrada
+        return productosEncontrados;
+    }
 }
