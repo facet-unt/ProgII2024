@@ -5,8 +5,7 @@
 package principal.controladores;
 
 import javax.swing.UIManager;
-import productos.vistas.VentanaAMProducto;
-import usuarios.vistas.*;
+import productos.vistas.VentanaProductos;
 
 /**
  *
@@ -26,31 +25,33 @@ public class ControladorPrincipalGUI {
         establecerLookAndFeel("Nimbus"); 
         
         // PRODUCTO
-        VentanaAMProducto ventana = new VentanaAMProducto(null);
-        ventana.setLocationRelativeTo(null);
-        ventana.setTitle("Nuevo producto");
-        ventana.setVisible(true);
+        //VentanaAMProducto ventana = new VentanaAMProducto(null);
+        
+        //ventana.setTitle("Nuevo producto");
+        
+        VentanaProductos ventana = new VentanaProductos(null);
+        
         
         //CLIENTE
      
-        VentanaAMCliente ventanac = new VentanaAMCliente(null);
-        ventanac.setLocationRelativeTo(null);
-        ventanac.setTitle("Nuevo cliente");
-        ventanac.setVisible(true);
+//        VentanaAMCliente ventanac = new VentanaAMCliente(null);
+//        ventanac.setLocationRelativeTo(null);
+//        ventanac.setTitle("Nuevo cliente");
+//        ventanac.setVisible(true);
              
        //EMPLEADO 
       
-        VentanaAMEmpleado ventanaem = new VentanaAMEmpleado(null);
-        ventanaem.setLocationRelativeTo(null);
-        ventanaem.setTitle("Nuevo empleado");
-        ventanaem.setVisible(true);
+//        VentanaAMEmpleado ventanaem = new VentanaAMEmpleado(null);
+//        ventanaem.setLocationRelativeTo(null);
+//        ventanaem.setTitle("Nuevo empleado");
+//        ventanaem.setVisible(true);
      
        //ENCARGADO
    
-        VentanaAMEncargado ventanaen = new VentanaAMEncargado(null);
-        ventanaen.setLocationRelativeTo(null);
-        ventanaen.setTitle("Nuevo encargado");
-        ventanaen.setVisible(true);
+//        VentanaAMEncargado ventanaen = new VentanaAMEncargado(null);
+//        ventanaen.setLocationRelativeTo(null);
+//        ventanaen.setTitle("Nuevo encargado");
+//        ventanaen.setVisible(true);
     
     }
     
