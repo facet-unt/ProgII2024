@@ -14,17 +14,21 @@ public class Pedido {
     private LocalDateTime fechaYHora;
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
-    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente, Estado estado) {
+    // Definicion de los constructores
+    public Pedido(int numero, LocalDateTime fechaYHora, Estado estado, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.cliente = cliente;
         this.estado = estado;
-        this.productosDelPedido = productosdelpedido;
     }
     
-    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente) {
-        this(numero, fechaYHora, productosdelpedido,cliente, Estado.PROCESANDO);
+    public Pedido(int numero, Estado estado, Cliente cliente) {
+        this(numero, LocalDateTime.now(), estado, cliente);
     }
+   
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList productosdelpedido, Cliente cliente) {
+        this(numero, fechaYHora, Estado.PROCESANDO, cliente);
+     }
     
     public void mostrar() {
         System.out.println("Nro: " + numero);
@@ -62,17 +66,14 @@ public class Pedido {
     }
     
     public void agregarProducto(Producto Producto, int cantidad) {
-        for(ProductoDelPedido pdp : productosDelPedido)
-        {
-            if(!pdp.verProducto().equals(Producto))
-                productosDelPedido.add(pdp);
-        }
+         ProductoDelPedido pdp = new ProductoDelPedido(Producto, cantidad);
+         this.productosDelPedido.add(pdp);
     }
     
     public ArrayList<ProductoDelPedido> verProductos() {
         return this.productosDelPedido;
     }
-
+    
     public int verNumero() {
         return numero;
     }

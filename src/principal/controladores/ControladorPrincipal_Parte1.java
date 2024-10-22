@@ -81,8 +81,7 @@ public class ControladorPrincipal_Parte1 {
         Producto unProducto1 = new Producto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f);        
         Producto unProducto2 = new Producto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f);
         Producto unProducto3 = new Producto(3, "Producto3", Categoria.POSTRE, Estado.DISPONIBLE, 3.0f);
-        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 3.0f);
-        //repetido unProducto4
+        Producto unProducto4 = new Producto(3, "Producto3", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 3.0f);         //repetido unProducto4
         Producto unProducto5 = new Producto(5, "Producto5", Categoria.POSTRE, Estado.DISPONIBLE, 48.0f);
 
         if(!productos.contains(unProducto1))
@@ -132,7 +131,7 @@ public class ControladorPrincipal_Parte1 {
         if(!pdp1.contains(pp3))
             pdp1.add(pp3);
         
-        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), pdp1, unCliente1); 
+        Pedido unPedido1 = new Pedido(1, LocalDateTime.now(), unCliente1); 
         //se agrega a la lista de pedidos
         if(!pedidos.contains(unPedido1))
             pedidos.add(unPedido1);
@@ -147,7 +146,7 @@ public class ControladorPrincipal_Parte1 {
         if(!pdp2.contains(pp5))
             pdp2.add(pp5);
         
-        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), pdp2, unCliente2);       
+        Pedido unPedido2 = new Pedido(2, LocalDateTime.now(), unCliente2);
         
         //se agrega el pedido 2 a la lista de pedidos
         if(!pedidos.contains(unPedido2))
@@ -162,7 +161,7 @@ public class ControladorPrincipal_Parte1 {
         if(!pdp3.contains(pp7))
             pdp3.add(pp7);
         
-        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(), pdp3, unCliente3);      
+        Pedido unPedido3 = new Pedido(3, LocalDateTime.now(), unCliente3);
         
 //        se agrega el pedido 3 a la lista de pedidos
         if(!pedidos.contains(unPedido3))
@@ -177,7 +176,7 @@ public class ControladorPrincipal_Parte1 {
         if(!pdp4.contains(pp9))
             pdp4.add(pp9);
         
-        Pedido unPedido4 = new Pedido(3, LocalDateTime.now(), pdp4, unCliente2);        
+        Pedido unPedido4 = new Pedido(3, LocalDateTime.now(), unCliente2);
         
         //NO se agrega el pedido 4 a la lista de pedidos
         if(!pedidos.contains(unPedido4))
