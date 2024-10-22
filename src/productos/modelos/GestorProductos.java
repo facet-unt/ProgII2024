@@ -138,6 +138,7 @@ public class GestorProductos {
     
     // Defino el metodo para buscar productos
     public ArrayList<Producto> buscarProductos (String descripcion) {
+        
         // Declaro el arreglo a devolver
         ArrayList<Producto> productosEncontrados = new ArrayList<>();
         
@@ -156,5 +157,15 @@ public class GestorProductos {
         
         // Retorno la lista encontrada
         return productosEncontrados;
+    }
+    
+    // Defino el metodo para verificar si un producto existe
+    public boolean existeEsteProducto (Producto producto) {
+        
+        // Verifico la existencia
+        if (this.productos.contains(producto))
+            return true;
+        else
+            return false;
     }
 }
