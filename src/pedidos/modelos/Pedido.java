@@ -19,8 +19,7 @@ public class Pedido {
     private int numero;
     private LocalDateTime fechaYHora;
     private Estado estado;
-    private String Fecha;
-    private String Hora;
+
     private Cliente cliente;
     private ArrayList<ProductoDelPedido> Productos = new ArrayList<>(); 
     
@@ -30,12 +29,10 @@ public class Pedido {
         this.cliente = cliente;
         estado = estado.CREADO;
         this.Productos = productos;
-        Fecha = this.StringFecha();
-        Hora = this.StringHora();
     }
     
     public void mostrar() {
-        System.out.println("Nro: " + numero + "\nFecha: " + Fecha + "\tHora: " + Hora + "\nCliente: " + cliente.verApellido() + ", " + cliente.verNombre() + "\nEstado: " + estado);
+        System.out.println("Nro: " + numero + "\nFecha: " + this.StringFecha() + "\tHora: " + this.StringHora() + "\nCliente: " + cliente.verApellido() + ", " + cliente.verNombre() + "\nEstado: " + estado);
         System.out.println("Producto    Cantidad" + "\n==========================");
         for(ProductoDelPedido p: Productos){
             System.out.println(p.verUnProducto() + "\t" + p.verCantidad());
@@ -43,7 +40,7 @@ public class Pedido {
     }
     
     private String StringFecha() {
-        String pattern = "dd/mm/yyyy";
+        String pattern = "dd/MM/yyyy";
         String StringFecha = fechaYHora.format(DateTimeFormatter.ofPattern(pattern));
         return StringFecha;
     }
@@ -87,11 +84,11 @@ public class Pedido {
 //    }
 
     public String verFecha() {
-        return Fecha;
+        return this.StringFecha();
     }
 
     public String verHora() {
-        return Hora;
+        return this.StringHora();
     }
     
     public void agregarProducto(Producto unProducto, int cantidad){
