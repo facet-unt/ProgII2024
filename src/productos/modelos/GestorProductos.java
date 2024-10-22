@@ -168,4 +168,21 @@ public class GestorProductos {
         else
             return false;
     }
+    
+    // Defino el metodo para ver productos por categoria
+    public ArrayList<Producto> verProductosPorCategoria (Categoria categoria) {
+        
+        // Defino el arreglo que guarde los productos encontrados
+        ArrayList<Producto> productosEncontrados = new ArrayList<>();
+        
+        // Recorro el arreglo de productos
+        for (Producto p : this.productos) {
+            // Si las categorias coinciden, añado el producto al arreglo
+            if (p.verCategoria().equals(categoria))
+                productosEncontrados.add(p);
+        }
+        
+        // Retorno el arreglo
+        return productosEncontrados;
+    }
 }
