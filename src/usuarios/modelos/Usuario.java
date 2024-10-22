@@ -12,11 +12,13 @@ import pedidos.modelos.Pedido;
  * @author luis
  */
 public abstract class Usuario {
+    // Implementacion de las variables de instancia
     private String correo;
     private String clave;
     private String apellido;
     private String nombre;
     
+    // Definicion del constructor
     public Usuario(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
         this.clave = clave;

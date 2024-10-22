@@ -19,6 +19,8 @@ public class Empleado extends Usuario{
         super(correo, clave, apellido, nombre);
     }
     
+    // Override del metodo verPedidos para que compile
+    
     @Override
     public ArrayList<Pedido> verPedidos() {
         return new ArrayList<>();

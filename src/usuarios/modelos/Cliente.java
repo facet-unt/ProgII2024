@@ -2,20 +2,19 @@
 package usuarios.modelos;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import pedidos.modelos.Pedido;
 
 public class Cliente extends Usuario{
     
+    // Definicion del arraylist de pedidos
     private ArrayList<Pedido> pedidos = new ArrayList<>();
+    
     // Definicion de los constructores
-
     public Cliente(String correo, String clave, String apellido, String nombre) {
         super(correo, clave, apellido, nombre);
     }
     
     // Metodos para ver agregar y borrar pedido
-    
     @Override
     public ArrayList<Pedido> verPedidos() {
         return pedidos;
@@ -31,6 +30,7 @@ public class Cliente extends Usuario{
         }
     }
     
+    // Metodo que cancela un pedido
     public void cancelarPedido(Pedido pedido)
     {
         if (pedidos.contains(pedido))
