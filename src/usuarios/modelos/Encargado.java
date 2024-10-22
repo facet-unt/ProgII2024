@@ -13,8 +13,6 @@ import pedidos.modelos.Pedido;
  */
 public class Encargado extends Usuario{
     
-    private ArrayList<Pedido> pedidos = new ArrayList<>();
-    
     // Definicion del constructor que llama al super
     
     public Encargado(String correo, String clave, String apellido, String nombre) {
@@ -25,6 +23,6 @@ public class Encargado extends Usuario{
     
     @Override
     public ArrayList<Pedido> verPedidos() {
-        return pedidos;
+        return new ArrayList<>();
     }
 }
