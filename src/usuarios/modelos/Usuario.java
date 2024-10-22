@@ -15,6 +15,8 @@ public abstract class Usuario {
         this.apellido = apellido;
         this.nombre = nombre;
     }
+
+    // Definición del metodo mostrar
     
     public void mostrar() {
         System.out.println("Correo: " + correo);
@@ -22,6 +24,8 @@ public abstract class Usuario {
         System.out.println("Apellido: " + apellido);
         System.out.println("Nombre: " + nombre);
     }
+    
+    // Metodos equals y hashcode
 
     @Override
     public int hashCode() {
@@ -45,7 +49,11 @@ public abstract class Usuario {
         return Objects.equals(this.correo, other.correo);
     }
     
+    // Definicion del metodo verPedidos
+    
     public abstract ArrayList<Pedido> verPedidos();
+    
+   // Definición de los metodos Ver/Asignar de la clase para las 4 variables de instancia
     
     public String verCorreo() {
         return correo;
@@ -78,6 +86,4 @@ public abstract class Usuario {
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-
 }
