@@ -23,18 +23,20 @@ public class Cliente extends Usuario {
     }
 
     public void agregarPedido(Pedido unPedido) {
-        
-        if (!listaPedidos.isEmpty() && listaPedidos.contains(unPedido)) {
-            //no se puede usar contains si la lista esta vacia
-            this.cancelarPedido(unPedido);
+
+        if (!listaPedidos.contains(unPedido)) {
+            listaPedidos.add(unPedido);
+        } else {
+            int indice = this.listaPedidos.indexOf(unPedido);
+            this.listaPedidos.set(indice, unPedido);
         }
-        listaPedidos.add(unPedido);
 
     }
 
     public void cancelarPedido(Pedido unPedido) {
-
-        listaPedidos.remove(unPedido);
+        if (listaPedidos.contains(unPedido)) {
+            listaPedidos.remove(unPedido);
+        }
 
     }
 }
