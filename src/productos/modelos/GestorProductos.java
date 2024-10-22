@@ -185,4 +185,20 @@ public class GestorProductos {
         // Retorno el arreglo
         return productosEncontrados;
     }
+    
+    // Defino el metodo para obtener un producto por codigo
+    public Producto obtenerProducto (int codigo) {
+        // Defino el producto a devolver
+        Producto producto = null;
+        
+        // Recorro el arreglo de productos
+        for (Producto p : this.productos) {
+            // Si los codigos coinciden establezco el producto a devolver como el encontrado
+            if (p.verCodigo() == codigo)
+                producto = p;
+        }
+        
+        // Retorno el producto
+        return producto;
+    }
 }
