@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import productos.modelos.Producto;
 import usuarios.modelos.Cliente;
+import pedidos.modelos.Estado;
 
 public class Pedido {
 
@@ -19,24 +20,22 @@ public class Pedido {
 
     private ArrayList<ProductoDelPedido> productosDelPedido = new ArrayList<>();
     
-    //constructores
-    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente, Estado estado) {
+    // Definicion de los constructores
+    public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente) {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
+        if (productosDelPedido != null)
+            this.productosDelPedido = productosDelPedido;
         this.cliente = cliente;
-        this.estado = estado;
-    }
-    
-    public Pedido(int numero, Cliente cliente, Estado estado) {
-        this(numero, LocalDateTime.now(), cliente, estado);
+        this.estado = Estado.CREADO;
     }
     
     public Pedido(int numero, Cliente cliente) {
-        this(numero, LocalDateTime.now(), cliente, Estado.PROCESANDO);
-    }
+        this(numero, LocalDateTime.now(), null, cliente);
+    }    
     
     public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente) {
-        this(numero, fechaYHora, cliente, Estado.PROCESANDO);
+        this(numero, fechaYHora, null, cliente);
     }
     
     public Pedido(int numero, LocalDateTime fechaYHora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente) {

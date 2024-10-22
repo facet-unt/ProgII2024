@@ -24,12 +24,7 @@ public abstract class Usuario {
         this.nombre = nombre;
     }
 
-
-    // Definicion del metodo mostrar
-    
-    /**
-     *s
-     */
+    // Definicion del metodo mostrar    
     public void mostrar() {
         System.out.println("Correo: " + correo);
         System.out.println("Clave: " + clave);
@@ -38,7 +33,6 @@ public abstract class Usuario {
     }
     
     // Metodos equals y hashcode
-
     @Override
     public int hashCode() {
         int hash = 7;
