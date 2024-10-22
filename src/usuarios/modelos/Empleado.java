@@ -13,8 +13,6 @@ import pedidos.modelos.Pedido;
  */
 public class Empleado extends Usuario{
     
-    private ArrayList<Pedido> pedidos = new ArrayList<>();
-    
     // Definicion del constructor que llama al super
     
     public Empleado(String correo, String clave, String apellido, String nombre) {
@@ -22,7 +20,7 @@ public class Empleado extends Usuario{
     }
     
     @Override
-    public ArrayList<Pedido> verPedidos() {
-        return pedidos;
+    public ArrayList<Pedido> verPedidos(){
+        return null;
     }
 }

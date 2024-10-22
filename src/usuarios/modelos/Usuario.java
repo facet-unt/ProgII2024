@@ -84,8 +84,5 @@ public abstract class Usuario {
     }
 
      public abstract ArrayList<Pedido> verPedidos();
-    
-    
-    
 }
     
