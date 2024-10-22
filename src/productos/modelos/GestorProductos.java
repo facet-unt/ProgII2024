@@ -61,20 +61,17 @@ public class GestorProductos {
         if (!resultado.equals(VALIDACION_EXITO))
             return resultado;
         
-        // Verifico si el producto ya existe
-        for (Producto p : this.productos)
-        {
-            if (productos.contains(p))
-                resultado = PRODUCTOS_DUPLICADOS;
-        }
+        // Instancio el producto, luego verifico si ya existe
+        Producto p = new Producto(codigo, descripcion, categoria, estado, precio);
+        if (this.productos.contains(p))
+            resultado = PRODUCTOS_DUPLICADOS;
         
         // Si el producto ya existe, retorno error
         if (!resultado.equals(VALIDACION_EXITO))
             return resultado;
         
-        // Luego, si supero las verificaciones, instancio el producto y lo guardo en el arreglo
+        // Luego, si supero las verificaciones, guardo el producto en el arreglo y retorno exito
         resultado = EXITO;
-        Producto p = new Producto(codigo, descripcion, categoria, estado, precio);
         this.productos.add(p);
         return resultado;
     }
