@@ -78,6 +78,39 @@ public class GestorProductos {
         this.productos.add(p);
         return resultado;
     }
+    
+    // Defino el metodo para modificar productos
+    public String modificarProducto(Producto producto, int codigo, String descripcion, float precio, Categoria categoria, Estado estado) {
+        // Defino donde almacenare el resultado de la validacion de los datos del producto
+        String resultado = validarDatos(codigo, descripcion, precio, categoria, estado);
+        
+        // Si la validacion no se realizo correctamente, retorno error
+        if (!resultado.equals(VALIDACION_EXITO))
+            return resultado;
+        
+        // Verifico que el producto ya existe, de ser asi guardo su indice
+        int indice = 0;
+        for (Producto p : this.productos)
+        {
+            if (p.equals(producto)) {
+                resultado = PRODUCTOS_DUPLICADOS;
+                indice = productos.indexOf(p);
+            }
+        }
+        
+        // Si el producto no existe, retorno error
+        if (!resultado.equals(PRODUCTOS_DUPLICADOS)) {
+            resultado = PRODUCTO_INEXISTENTE;
+            return resultado;
+        }
+            
+        
+        // Luego, si supero las verificaciones, instancio el producto y lo reemplaza en el arreglo
+        resultado = EXITO;
+        Producto p = new Producto(codigo, descripcion, categoria, estado, precio);
+        this.productos.set(indice, p);
+        return resultado;
+    }
         
     // Defino un metodo que permite validar los datos
     private String validarDatos (int codigo, String descripcion, float precio, Categoria categoria, Estado estado) {
