@@ -87,6 +87,13 @@ public class GestorProductos {
         if(recorrer.isEmpty())
             System.out.println(PRODUCTO_INEXISTENTE);
         return recorrer;
+<<<<<<< HEAD
+    }   
+    
+    public ArrayList<Producto> menu(){
+        return productos;
+=======
+>>>>>>> 0d06a5871cbfa4538c6caa8a8161419bbdfa20e4
     }   
     
     public ArrayList<Producto> menu(){
@@ -96,15 +103,33 @@ public class GestorProductos {
     public boolean existeEsteProducto(Producto producto){
         if(productos.contains(producto))
             return true;
+        }
         else
             return false;
     }
     
+    public ArrayList<Producto> verProductosPorCategoria(Categoria categoria){
+        
+        ArrayList <Producto> recorrer2 = new ArrayList <>();
+        
+       for( Producto pds : productos){
+           if(pds.verCategoria().equals(categoria))
+               recorrer2.add(pds);
+       }
+       if(recorrer2.isEmpty())
+           System.out.println(ERROR_CATEGORIA);
+       
+       return recorrer2;
+    }
     
-    
-    
-    
-    
-    
-    
+    public Producto obtenerProducto(Integer codigo) {
+        
+        for(Producto prod : productos){
+            if(prod.verCodigo() == codigo){
+                return prod;
+            }
+        }
+        
+    return null;
+    }
 }

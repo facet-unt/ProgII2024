@@ -7,14 +7,14 @@ public enum Categoria {
     
     private String valor;
     
-    private Categoria (String valor)
-    {
+    private Categoria (String valor) {
         this.valor = valor;
     }
     
     @Override
-    public String toString()
-    {
+    public String toString() {
         return valor;
     }
+    
+    
 }
