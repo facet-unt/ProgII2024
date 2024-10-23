@@ -80,5 +80,9 @@ public class GestorProductos {
                 System.out.println(PRODUCTO_INEXISTENTE);
          }
         return recorrer;
-    }   
+    }
+    
+   public ArrayList<Producto> verProductosPorCategoria(Categoria categoria):{
+        
+    }
 }
