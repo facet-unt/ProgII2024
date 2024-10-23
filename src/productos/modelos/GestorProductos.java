@@ -49,8 +49,7 @@ public class GestorProductos {
         else
             return ERROR_PRODUCTO;      
     }
-    public String modificarProducto(Producto productoAModificar, int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
-            int bandera = 0;
+    public String modificarProducto(Producto productoAModificar, int codigo, String descripcion, float precio, Categoria categoria, Estado estado){          
             for(Producto p : productos){
                 if(p.equals(productoAModificar)){
                 //    p.asignarCodigo(productoAModificar.verCodigo());
@@ -58,10 +57,9 @@ public class GestorProductos {
                     p.asignarPrecio(productoAModificar.verPrecio());
                     p.asignarCategoria(productoAModificar.verCategoria());
                     p.asignarEstado(productoAModificar.verEstado());
-                    bandera = 1;
                     }
         }
-        if(bandera == 0)
+        if(!(productos.contains(productoAModificar)))
             return PRODUCTO_INEXISTENTE;
         else
             return EXITO;
@@ -73,12 +71,31 @@ public class GestorProductos {
         
         for(Producto prod : productos){
             prod.asignarDescripcion(prod.verDescripcion().toLowerCase());
-            if(prod.verDescripcion().equals(descripcionEnMinuscula)){
+            if(descripcionEnMinuscula.equals(prod.verDescripcion())){
                 recorrer.add(prod);
             }    
-            else
-                System.out.println(PRODUCTO_INEXISTENTE);
          }
+        if(recorrer.isEmpty())
+            System.out.println(PRODUCTO_INEXISTENTE);
         return recorrer;
     }   
+    
+    public ArrayList<Producto> menu(){
+    return productos;
+    }
+    
+    public boolean existeEsteProducto(Producto producto){
+        if(productos.contains(producto))
+            return true;
+        else
+            return false;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
