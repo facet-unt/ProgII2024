@@ -20,27 +20,27 @@ import usuarios.modelos.Usuario;
  */
 public class ControladorPrincipalTP5 {
     public static void main(String[] args) {
-        GestorProductos gp = GestorProductos.instanciar();
+        GestorProductos gp = GestorProductos.instanciarGestorProductos();
        // GestorUsuarios gu=GestorUsuarios.instanciar();
         
         System.out.println("#####PRODUCTOS#####");
         /*CREAR PRODUCTO*/
-        System.out.println(gp.crearProducto(1, "Producto1", 1.0f, Categoria.ENTRADA, Estado.DISPONIBLE));
-        System.out.println(gp.crearProducto(2, "Producto2", 2.0f, Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE));
-        System.out.println(gp.crearProducto(3, "Plato3", 3.0f, Categoria.POSTRE, Estado.DISPONIBLE));
-        System.out.println(gp.crearProducto(3, "Producto4", 4.0f, Categoria.POSTRE, Estado.DISPONIBLE));
+        System.out.println(gp.crearProducto(1, "Producto1", Categoria.ENTRADA, Estado.DISPONIBLE, 1.0f));
+        System.out.println(gp.crearProducto(2, "Producto2", Categoria.PLATO_PRINCIPAL, Estado.DISPONIBLE, 2.0f));
+        System.out.println(gp.crearProducto(3, "Plato3", Categoria.POSTRE, Estado.DISPONIBLE,3.0f));
+        System.out.println(gp.crearProducto(3, "Producto4", Categoria.POSTRE, Estado.DISPONIBLE, 4.0f));
         //producto repetido, mismo codigo
-        System.out.println(gp.crearProducto(0, "Producto4", 4.0f, Categoria.POSTRE, Estado.DISPONIBLE));
+        System.out.println(gp.crearProducto(0, "Producto4", Categoria.POSTRE, Estado.DISPONIBLE, 4.0f));
         //código inválido vale 0
-        System.out.println(gp.crearProducto(4, null, 4.0f, Categoria.POSTRE, Estado.DISPONIBLE));
+        System.out.println(gp.crearProducto(4, null, Categoria.POSTRE, Estado.DISPONIBLE, 4.0f));
         //sin descripción -- nula
-        System.out.println(gp.crearProducto(4, "", 4.0f, Categoria.POSTRE, Estado.DISPONIBLE));
+        System.out.println(gp.crearProducto(4, "", Categoria.POSTRE, Estado.DISPONIBLE, 4.0f));
         //descripción inválida  -- cadena vacia
-        System.out.println(gp.crearProducto(4, "Producto4", 0.0f, Categoria.POSTRE, Estado.DISPONIBLE));
+        System.out.println(gp.crearProducto(4, "Producto4", Categoria.POSTRE, Estado.DISPONIBLE, 0.0f));
         //precio inválido  -- precio en 0
-        System.out.println(gp.crearProducto(4, "Producto4", 4.0f, null, Estado.DISPONIBLE));
+        System.out.println(gp.crearProducto(4, "Producto4", null, Estado.DISPONIBLE,4.0f));
         //sin categoría 
-        System.out.println(gp.crearProducto(4, "Producto4", 4.0f, Categoria.POSTRE, null));
+        System.out.println(gp.crearProducto(4, "Producto4", Categoria.POSTRE, null, 4.0f));
         //sin estado
 
         /*RECUPERAR LOS PRODUCTOS CON EL METODO MENU*/

@@ -30,6 +30,10 @@ public class Pedido {
         this(numero, fechaYHora, Estado.PROCESANDO, cliente);
      }
     
+    public Pedido(int numero, LocalDateTime fechaYHora, Cliente cliente){
+        this(numero, fechaYHora, Estado.PROCESANDO, cliente);
+    }
+    
     public void mostrar() {
         System.out.println("Nro: " + numero);
         System.out.println("Fecha: " + fechaYHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\tHora: " + fechaYHora.format(DateTimeFormatter.ofPattern("HH:mm")));

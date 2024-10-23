@@ -6,7 +6,7 @@ public class GestorProductos {
     private ArrayList<Producto> productos = new ArrayList<>();
     private static GestorProductos gestor;
     public static final String EXITO = "Producto creado/modificado con exito";
-    public static final String ERROR_PRODUCTO ="No se pudo crear el producto";
+    public static final String ERROR_PRODUCTO ="No se pudo crear/modificar el producto";
     public static final String ERROR_CODIGO = "El código del producto es incorrecto";
     public static final String ERROR_DESCRIPCION = "La descripción del producto es incorrecta";
     public static final String ERROR_PRECIO = "El precio del producto es incorrecto";
@@ -30,7 +30,7 @@ public class GestorProductos {
     private String validacionParametros(int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
         if(!(codigo>0))
             return ERROR_CODIGO;
-        if(descripcion == null)
+        if(descripcion == null || descripcion.isBlank())
             return ERROR_DESCRIPCION;
         if(!(precio>0))
             return ERROR_PRECIO;
@@ -44,7 +44,7 @@ public class GestorProductos {
             return VALIDACION_ERRONEA;
     }
     
-    public String crearProducto(int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
+    public String crearProducto(int codigo, String descripcion, Categoria categoria, Estado estado, float precio){
         if(validacionParametros(codigo, descripcion, precio, categoria, estado).equals(VALIDACION_EXITO)){
             Producto producto = new Producto(codigo, descripcion, categoria, estado, precio);
               if(productos.contains(producto))
@@ -61,12 +61,16 @@ public class GestorProductos {
     public String modificarProducto(Producto productoAModificar, int codigo, String descripcion, float precio, Categoria categoria, Estado estado){          
             for(Producto p : productos){
                 if(p.equals(productoAModificar)){
-                //    p.asignarCodigo(productoAModificar.verCodigo());
-                    p.asignarDescripcion(productoAModificar.verDescripcion());
-                    p.asignarPrecio(productoAModificar.verPrecio());
-                    p.asignarCategoria(productoAModificar.verCategoria());
-                    p.asignarEstado(productoAModificar.verEstado());
+                    if(validacionParametros(codigo, descripcion, precio, categoria, estado).equals(VALIDACION_EXITO)){
+                  //    p.asignarCodigo(productoAModificar.verCodigo());
+                        p.asignarDescripcion(descripcion);
+                        p.asignarPrecio(precio);
+                        p.asignarCategoria(categoria);
+                        p.asignarEstado(estado);
                     }
+                    else
+                        return VALIDACION_ERRONEA;
+                }
         }
         if(!(productos.contains(productoAModificar)))
             return PRODUCTO_INEXISTENTE;
@@ -114,10 +118,10 @@ public class GestorProductos {
     }
     
     public Producto obtenerProducto(Integer codigo) {
-        
-        for(Producto prod : productos){
-            if(prod.verCodigo() == codigo)
+        for (Producto prod : productos) {
+            if (prod.verCodigo() == codigo) {
                 return prod;
+            }
         }
     return null;
     }
