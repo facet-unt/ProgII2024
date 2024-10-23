@@ -5,6 +5,9 @@
 package usuarios.modelos;
 
 import java.util.ArrayList;
+import static usuarios.modelos.Perfil.CLIENTE;
+import static usuarios.modelos.Perfil.EMPLEADO;
+import static usuarios.modelos.Perfil.ENCARGADO;
 
 /**
  *
@@ -61,7 +64,51 @@ public class GestorUsuarios {
         return VALIDACION_EXITO;
     }
    
-    
+    public String crearUsuario(String correo, String apellido, String nombre, Perfil perfil, String clave, String claveRepetida){
+        
+        String validacion = validador(correo, apellido, nombre, perfil, clave, claveRepetida);
+        
+        if(!validacion.equals(VALIDACION_EXITO)){
+            return validacion;
+        }
+        
+        
+        
+        if(perfil.equals(CLIENTE)){
+            Usuario cliente = new Cliente(correo, clave, apellido, nombre, perfil);
+            if(usuarios.contains(cliente)){
+                return USUARIOS_DUPLICADOS;
+            }
+            
+            usuarios.add(cliente);
+            
+        }
+        
+        if(perfil.equals(EMPLEADO)){
+            Usuario empleado = new Empleado(correo, clave, apellido, nombre, perfil);
+            if(usuarios.contains(empleado)){
+                return USUARIOS_DUPLICADOS;
+            }
+            
+            usuarios.add(empleado);
+        }
+        
+        if(perfil.equals(ENCARGADO)){
+            Usuario encargado = new Encargado(correo, clave, apellido, nombre, perfil);
+            if(usuarios.contains(encargado)){
+                return USUARIOS_DUPLICADOS;
+            }
+            
+            usuarios.add(encargado);
+            
+        }
+        
+        return EXITO;
+            
+        
+        
+        
+    }
     
     
     
