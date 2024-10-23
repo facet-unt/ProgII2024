@@ -35,7 +35,6 @@ public abstract class Usuario {
     }
     
     // Metodos equals y hashcode
-
     @Override
     public int hashCode() {
         int hash = 7;

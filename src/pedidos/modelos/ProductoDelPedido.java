@@ -48,8 +48,8 @@ public class ProductoDelPedido {
     // <editor-fold defaultstate="collapsed" desc="Agrego equals y hash">  
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.producto);
+        int hash = 3;
+        hash = 71 * hash + Objects.hashCode(this.producto);
         return hash;
     }
 
