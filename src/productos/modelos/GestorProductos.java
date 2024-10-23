@@ -6,6 +6,8 @@ public class GestorProductos {
     private ArrayList<Producto> productos = new ArrayList<>();
     private static GestorProductos gestor;
     private int bandera;
+    private String descripcionProd;
+    private String descripcionProd2;
     public static final String EXITO = "Producto creado/modificado con exito";
     public static final String ERROR_PRODUCTO ="No se pudo crear el producto";
     public static final String ERROR_CODIGO = "El código del producto es incorrecto";
@@ -24,7 +26,6 @@ public class GestorProductos {
     public static GestorProductos instanciarGestorProductos(){
         if (gestor == null)
             gestor = new GestorProductos();
-        
         return gestor;
     }
     
@@ -33,16 +34,20 @@ public class GestorProductos {
             return ERROR_CODIGO;
         if(descripcion == null)
             return ERROR_DESCRIPCION;
-        if(!(precio>0.0))
+        if(!(precio>0))
             return ERROR_PRECIO;
         if(categoria == null)
             return ERROR_CATEGORIA;
         if(estado == null)
             return ERROR_ESTADO;
-        if(codigo > 0 && descripcion != null && precio > 0.0 && categoria != null && estado != null ){
+        if(codigo > 0 && descripcion != null && precio > 0 && categoria != null && estado != null ){
             Producto producto = new Producto(codigo, descripcion, categoria, estado, precio);
-            productos.add(producto);
-            return EXITO;
+            if(productos.contains(producto))
+                return PRODUCTOS_DUPLICADOS;
+        else{
+                productos.add(producto);
+                return EXITO;
+            }
         }
         else
             return ERROR_PRODUCTO;      
@@ -51,27 +56,26 @@ public class GestorProductos {
             bandera = 0;
             for(Producto p : productos){
                 if(p.equals(productoAModificar)){
-                    p.asignarCodigo(productoAModificar.verCodigo());
+                //    p.asignarCodigo(productoAModificar.verCodigo());
                     p.asignarDescripcion(productoAModificar.verDescripcion());
                     p.asignarPrecio(productoAModificar.verPrecio());
                     p.asignarCategoria(productoAModificar.verCategoria());
                     p.asignarEstado(productoAModificar.verEstado());
                     bandera = 1;
                     }
-        } 
-            if(bandera == 1)
-                return EXITO;
-            else
-                return PRODUCTO_INEXISTENTE;
-    } 
+        }
+        if(bandera == 0)
+            return PRODUCTO_INEXISTENTE;
+        else
+            return EXITO;
 }
-
+    
     public ArrayList<Producto> buscarProductos(String descripcion){
-        
         String descripcionEnMinuscula  = descripcion.toLowerCase();
         ArrayList <Producto> recorrer = new ArrayList<>();
         
         for(Producto prod : productos){
+            prod.asignarDescripcion(prod.verDescripcion().toLowerCase());
             if(prod.verDescripcion().equals(descripcionEnMinuscula)){
                 recorrer.add(prod);
             }    
@@ -79,5 +83,5 @@ public class GestorProductos {
                 System.out.println(PRODUCTO_INEXISTENTE);
          }
         return recorrer;
-    }
+    }   
 }
