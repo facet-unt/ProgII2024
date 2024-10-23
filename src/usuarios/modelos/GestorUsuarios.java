@@ -130,7 +130,10 @@ public class GestorUsuarios {
         return usuariosApellido;
     }
     
-    
+    public boolean existeEsteUsuario(Usuario usuario){
+        return usuarios.contains(usuario);
+        
+    }
     
     
 }
