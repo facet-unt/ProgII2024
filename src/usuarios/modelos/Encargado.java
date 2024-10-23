@@ -11,8 +11,8 @@ import java.util.List;
 necesarias.*/
 public class Encargado extends Usuario {
 
-    public Encargado(String correo, String apellido, String nombre, String clave) {
-        super(correo, apellido, nombre, clave);
+    public Encargado(String correo, String clave, String apellido, String nombre, String claverepetida, Perfil perfil) {
+        super(correo, apellido, nombre, clave, claverepetida, perfil);
     }
 
     @Override

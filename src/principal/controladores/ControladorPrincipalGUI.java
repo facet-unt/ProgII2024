@@ -5,7 +5,7 @@
 package principal.controladores;
 
 import javax.swing.UIManager;
-import productos.vistas.VentanaProductos;
+import productos.vistas.VentanaAMProducto;
 
 /**
  *
@@ -29,7 +29,7 @@ public class ControladorPrincipalGUI {
         
         //ventana.setTitle("Nuevo producto");
         
-        VentanaProductos ventana = new VentanaProductos(null);
+        VentanaAMProducto ventana = new VentanaAMProducto(null);
         
         
         //CLIENTE

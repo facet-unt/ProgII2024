@@ -11,13 +11,13 @@ import pedidos.modelos.Pedido;
 necesarias. Como se ve son visibles las modificaciones en el*/
 public class Cliente extends Usuario {
 
-    public Cliente(String correo, String clave, String apellido, String nombre) {
-        super(correo, clave, apellido, nombre); // Llama al constructor de Usuario
+    public Cliente(String correo, String clave, String apellido, String nombre, String claverepetida, Perfil perfil) {
+        super(correo, clave, apellido, nombre, claverepetida, perfil); // Llama al constructor de Usuario
     }
 
-    public Cliente(String correo, String apellido, String nombre) {
-        this(correo, apellido,nombre,"123466"); // Llama al constructor con clave por defecto
-    }
+//    public Cliente(String correo, String apellido, String nombre) {
+//        this(correo, apellido,nombre,"123466"); // Llama al constructor con clave por defecto
+//    }
 
     @Override
     public void mostrar() {
