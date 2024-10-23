@@ -111,5 +111,9 @@ public class GestorUsuarios {
     }
     
     
+    public ArrayList<Usuario> verUsuarios(){
+        return usuarios;
+    }
+    
     
 }
