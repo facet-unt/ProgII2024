@@ -18,13 +18,14 @@ public abstract class Usuario {
     private String clave;
     private String apellido;
     private String nombre;
-
+    
     
     public Usuario(String correo, String clave, String apellido, String nombre) {
         this.correo = correo;
         this.clave = clave;
         this.apellido = apellido;
         this.nombre = nombre;
+        
     }
     
     public void mostrar() {
