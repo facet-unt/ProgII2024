@@ -116,4 +116,21 @@ public class GestorUsuarios {
     }
     
     
+    public ArrayList<Usuario> buscarUsuarios(String apellido){
+        ArrayList<Usuario> usuariosApellido = new ArrayList<>();
+        apellido = apellido.toLowerCase().trim();
+        
+        for(Usuario usuario: usuarios){
+            String apellidoUsuario = usuario.verApellido().toLowerCase().trim();
+            if(apellidoUsuario.contains(apellido) || apellido.contains(apellidoUsuario)){
+                usuariosApellido.add(usuario);
+            }
+        }
+        
+        return usuariosApellido;
+    }
+    
+    
+    
+    
 }
