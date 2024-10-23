@@ -21,12 +21,12 @@ public class Producto {
     System.out.println("Precio: \n"+ precio);
     }
 
-    public Producto(int codigo, String descripcion, Estado estado, Categoria categoria, float precio) {
+    public Producto(int codigo, String descripcion,Categoria categoria, Estado estado, float precio) {
         
         this.codigo = codigo;
         this.descripcion = descripcion;
-        this.estado = estado;
         this.categoria = categoria;
+        this.estado = estado;
         this.precio = precio;
     }
 

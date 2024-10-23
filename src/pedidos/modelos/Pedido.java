@@ -27,7 +27,6 @@ public class Pedido {
         this.numero = numero;
         this.fechaYHora = fechaYHora;
         this.unCliente = unCliente;
-        unCliente.agregarPedido(this);
         this.estado = estado;
         
     }
@@ -36,8 +35,7 @@ public class Pedido {
        this.numero = numero;
        this.fechaYHora = fechaYHora;
        this.lista = pdp;
-       this.unCliente = unCliente;
-       unCliente.agregarPedido(this);  
+       this.unCliente = unCliente;  
        estado = Estado.PROCESANDO;
     }
     

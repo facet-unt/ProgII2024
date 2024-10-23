@@ -143,12 +143,12 @@ public class ControladorPrincipal_Parte3 {
         PRODUCTOS
         */
         
-        Producto unProducto1 = new Producto(1, "Producto1", productos.modelos.Estado.DISPONIBLE,Categoria.ENTRADA ,1.0f);        
-        Producto unProducto2 = new Producto(2, "Producto2",productos.modelos.Estado.DISPONIBLE, Categoria.PLATOPRINCIPAL,  2.0f);
-        Producto unProducto3 = new Producto(3, "Producto3",productos.modelos.Estado.DISPONIBLE, Categoria.POSTRE,  3.0f);
-        Producto unProducto4 = new Producto(3, "Producto3",productos.modelos.Estado.DISPONIBLE, Categoria.PLATOPRINCIPAL,  3.0f);
+        Producto unProducto1 = new Producto(1, "Producto1",Categoria.ENTRADA , productos.modelos.Estado.DISPONIBLE,1.0f);        
+        Producto unProducto2 = new Producto(2, "Producto2",Categoria.PLATOPRINCIPAL,productos.modelos.Estado.DISPONIBLE,  2.0f);
+        Producto unProducto3 = new Producto(3, "Producto3",Categoria.POSTRE, productos.modelos.Estado.DISPONIBLE, 3.0f);
+        Producto unProducto4 = new Producto(3, "Producto3",Categoria.PLATOPRINCIPAL,productos.modelos.Estado.DISPONIBLE, 3.0f);
         //repetido unProducto4
-        Producto unProducto5 = new Producto(5, "Producto5", productos.modelos.Estado.DISPONIBLE, Categoria.POSTRE, 48.0f);
+        Producto unProducto5 = new Producto(5, "Producto5",Categoria.POSTRE, productos.modelos.Estado.DISPONIBLE, 48.0f);
 
         if(!listaproductos.contains(unProducto1))
             listaproductos.add(unProducto1);

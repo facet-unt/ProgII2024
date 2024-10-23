@@ -79,19 +79,19 @@ public class ControladorPrincipal {
         System.out.println();
  
 
-        Producto unProducto1 = new Producto(1, "Producto1",productos.modelos.Estado.DISPONIBLE,Categoria.ENTRADA , 1.0f);        
+        Producto unProducto1 = new Producto(1, "Producto1",Categoria.ENTRADA, productos.modelos.Estado.DISPONIBLE , 1.0f);        
                        if(!listaProductos.contains(unProducto1)){
                            listaProductos.add(unProducto1);
                        }
-        Producto unProducto2 = new Producto(2, "Producto2",productos.modelos.Estado.NODISPONIBLE,Categoria.PLATOPRINCIPAL, 2.0f);
+        Producto unProducto2 = new Producto(2, "Producto2",Categoria.PLATOPRINCIPAL,productos.modelos.Estado.NODISPONIBLE, 2.0f);
                         if(!listaProductos.contains(unProducto2)){
                            listaProductos.add(unProducto2);
                        }
-        Producto unProducto3 = new Producto(3, "Producto3",productos.modelos.Estado.DISPONIBLE, Categoria.POSTRE,3.0f);
+        Producto unProducto3 = new Producto(3, "Producto3",Categoria.POSTRE,productos.modelos.Estado.DISPONIBLE,3.0f);
                         if(!listaProductos.contains(unProducto3)){
                            listaProductos.add(unProducto3);
                        }
-        Producto unProducto4 = new Producto(3, "Producto4",productos.modelos.Estado.NODISPONIBLE, Categoria.ENTRADA,3.0f);
+        Producto unProducto4 = new Producto(3, "Producto4",Categoria.ENTRADA,productos.modelos.Estado.NODISPONIBLE,3.0f);
                         if(!listaProductos.contains(unProducto4)){
                            listaProductos.add(unProducto4);
                        }
