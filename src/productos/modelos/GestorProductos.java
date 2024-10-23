@@ -99,11 +99,15 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
         
         productos.set(posicion, productoNuevo);
         
-        return 
+        return EXITO;
         
         
     }
     
+    
+    public ArrayList<Producto> menu(){
+      return productos;
+    }
     
     
     
