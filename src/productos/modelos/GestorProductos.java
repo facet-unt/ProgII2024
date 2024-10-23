@@ -27,7 +27,7 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
     private GestorProductos() {
     }
 
-    public static GestorProductos instanciador (){
+    public static GestorProductos instanciar (){
         if(gestor==null){
         gestor = new GestorProductos();
         }
@@ -35,7 +35,7 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
     }
     
     public String crearProducto(int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
-        if(codigo < 0){
+        if(codigo <= 0){
         return ERROR_CODIGO;
         }
         
@@ -43,7 +43,7 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
         return ERROR_DESCRIPCION;
         }
         
-        if(precio < 0){
+        if(precio <= 0){
             return ERROR_PRECIO;
         }
         
@@ -69,7 +69,7 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
     
     
     public String modificarProducto(Producto productoAModificar, int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
-        if(codigo < 0){
+        if(codigo <= 0){
         return ERROR_CODIGO;
         }
         
@@ -77,7 +77,7 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
         return ERROR_DESCRIPCION;
         }
         
-        if(precio < 0){
+        if(precio <= 0){
             return ERROR_PRECIO;
         }
         
