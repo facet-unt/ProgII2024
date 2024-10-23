@@ -135,5 +135,17 @@ public class GestorUsuarios {
         
     }
     
+    public Usuario obtenerUsuario(String correo){
+         for(Usuario usuario: usuarios){
+             if(usuario.verCorreo().equals(correo)){
+                 return usuario;
+             }
+         
+         
+         }
+         return null;
+    
+    }
+    
     
 }
