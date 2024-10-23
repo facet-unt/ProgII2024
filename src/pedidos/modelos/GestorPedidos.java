@@ -4,7 +4,10 @@
  */
 package pedidos.modelos;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import usuarios.modelos.Cliente;
 
 /**
  *
@@ -33,6 +36,33 @@ public class GestorPedidos {
         }
         return gestor;
     }
+    
+    
+    
+    private String validador(LocalDate fecha, LocalTime hora, ArrayList<ProductoDelPedido> productosDelPedido, Cliente cliente){
+        if(fecha == null){
+            return ERROR_FECHA;
+        }
+        
+        if(hora == null){
+            return ERROR_HORA;
+        }
+        
+        if(productosDelPedido.isEmpty()){
+            return ERROR_PRODUCTOS_DEL_PEDIDO;
+        }
+        
+        if(cliente == null){
+            return ERROR_CLIENTE;
+        }
+        
+        return VALIDACION_EXITO;
+    
+    }
+    
+    
+    
+    
 
     
     
