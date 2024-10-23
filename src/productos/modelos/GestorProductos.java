@@ -146,4 +146,13 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
         
     }
     
+    public Producto obtenerProducto(Integer codigo){
+        for(Producto p : productos){
+            if(p.verCodigo()==codigo){
+                return p;
+            }
+        }
+        return null;
+    }
+    
 }
