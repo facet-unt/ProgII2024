@@ -131,6 +131,19 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
         return productos.contains(producto);
     }
     
-    
+    public ArrayList<Producto> verProductosPorCategoria(Categoria categoria){
+        ArrayList<Producto> productosCategoria = new ArrayList<>();
+        
+        for(Producto p : productos){
+            if(p.verCategoria().equals(categoria.toString())){
+                productosCategoria.add(p);
+                
+            }
+        }
+       
+        return productosCategoria;
+        
+        
+    }
     
 }
