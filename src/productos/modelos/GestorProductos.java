@@ -109,6 +109,21 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
       return productos;
     }
     
+    public ArrayList<Producto> buscarProductos(String descripcion){
+        ArrayList<Producto> productosDescripcion = new ArrayList<>();
+        
+        descripcion = descripcion.toLowerCase().trim();
+        
+        for(Producto p : productos){
+            String descripcionProducto = p.verDescripcion().toLowerCase().trim();
+            
+            if(descripcion.contains(descripcionProducto) || descripcionProducto.contains(descripcion)){
+                productosDescripcion.add(p);
+            }
+        }
+        
+        return productosDescripcion;
     
+    }
     
 }
