@@ -126,4 +126,11 @@ public static final String PRODUCTO_INEXISTENTE = "No existe el producto especif
     
     }
     
+    
+    public boolean existeEsteProducto(Producto producto){
+        return productos.contains(producto);
+    }
+    
+    
+    
 }
