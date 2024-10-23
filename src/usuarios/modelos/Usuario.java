@@ -49,11 +49,7 @@ public abstract class Usuario {
         return Objects.equals(this.correo, other.correo);
     }
     
-    // Definicion del metodo verPedidos
-    
     public abstract ArrayList<Pedido> verPedidos();
-    
-   // Definición de los metodos Ver/Asignar de la clase para las 4 variables de instancia
     
     public String verCorreo() {
         return correo;
