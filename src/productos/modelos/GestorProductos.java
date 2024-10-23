@@ -14,6 +14,7 @@ public class GestorProductos {
     public static final String ERROR_ESTADO = "El estado del producto es incorrecto";
     public static final String PRODUCTOS_DUPLICADOS = "Ya existe un producto con ese codigo";
     public static final String VALIDACION_EXITO = "Los datos del producto son correctos";
+    public static final String VALIDACION_ERRONEA = "Los datos del producto no son correctos"; 
     public static final String PRODUCTO_INEXISTENTE = "No existe el producto especificado";
     
     
@@ -26,7 +27,7 @@ public class GestorProductos {
         return gestor;
     }
     
-    public String crearProducto(int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
+    private String validacionParametros(int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
         if(!(codigo>0))
             return ERROR_CODIGO;
         if(descripcion == null)
@@ -37,18 +38,26 @@ public class GestorProductos {
             return ERROR_CATEGORIA;
         if(estado == null)
             return ERROR_ESTADO;
-        if(codigo > 0 && descripcion != null && precio > 0 && categoria != null && estado != null ){
+        if(codigo > 0 && descripcion != null && precio > 0 && categoria != null && estado != null )
+            return VALIDACION_EXITO;
+        else
+            return VALIDACION_ERRONEA;
+    }
+    
+    public String crearProducto(int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
+        if(validacionParametros(codigo, descripcion, precio, categoria, estado).equals(VALIDACION_EXITO)){
             Producto producto = new Producto(codigo, descripcion, categoria, estado, precio);
-            if(productos.contains(producto))
-                return PRODUCTOS_DUPLICADOS;
-            else{
-                productos.add(producto);
-                return EXITO;
+              if(productos.contains(producto))
+                  return PRODUCTOS_DUPLICADOS;
+              else{
+                  productos.add(producto);
+                  return EXITO;
             }
         }
         else
-            return ERROR_PRODUCTO;      
+            return ERROR_PRODUCTO;     
     }
+    
     public String modificarProducto(Producto productoAModificar, int codigo, String descripcion, float precio, Categoria categoria, Estado estado){          
             for(Producto p : productos){
                 if(p.equals(productoAModificar)){
@@ -81,7 +90,7 @@ public class GestorProductos {
     }   
     
     public ArrayList<Producto> menu(){
-    return productos;
+        return productos;
     }
     
     public boolean existeEsteProducto(Producto producto){
