@@ -37,25 +37,31 @@ public class GestorUsuarios {
         return gestor;
     }
     
-    private boolean validador(String correo, String apellido, String nombre, Perfil perfil, String clave, String claveRepetida){
+    private String validador(String correo, String apellido, String nombre, Perfil perfil, String clave, String claveRepetida){
         if(correo == null || !correo.contains("@")){
-            return false;
+            return ERROR_CORREO;
         }
         if(apellido == null || apellido.isBlank()){
-            return false;
+            return ERROR_APELLIDO;
         }
         if(nombre == null || nombre.isBlank()){
-            return false;
+            return ERROR_NOMBRE;
         }
         if(clave == null || clave.isBlank()){
-            return false;
+            return ERROR_CLAVES;
         }
         if(claveRepetida == null || claveRepetida.isBlank() || !clave.equals(claveRepetida)){
-            return false;
+            return ERROR_CLAVES;
         }
         
-        return true;
+        if(perfil == null){
+            return ERROR_PERFIL;
+        }
+        
+        return VALIDACION_EXITO;
     }
+   
+    
     
     
     
