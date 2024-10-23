@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class GestorProductos {
     private ArrayList<Producto> productos = new ArrayList<>();
     private static GestorProductos gestor;
-    private int bandera;
     public static final String EXITO = "Producto creado/modificado con exito";
     public static final String ERROR_PRODUCTO ="No se pudo crear el producto";
     public static final String ERROR_CODIGO = "El código del producto es incorrecto";
@@ -42,7 +41,7 @@ public class GestorProductos {
             Producto producto = new Producto(codigo, descripcion, categoria, estado, precio);
             if(productos.contains(producto))
                 return PRODUCTOS_DUPLICADOS;
-        else{
+            else{
                 productos.add(producto);
                 return EXITO;
             }
@@ -51,7 +50,7 @@ public class GestorProductos {
             return ERROR_PRODUCTO;      
     }
     public String modificarProducto(Producto productoAModificar, int codigo, String descripcion, float precio, Categoria categoria, Estado estado){
-            bandera = 0;
+            int bandera = 0;
             for(Producto p : productos){
                 if(p.equals(productoAModificar)){
                 //    p.asignarCodigo(productoAModificar.verCodigo());
